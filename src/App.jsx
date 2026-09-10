@@ -104,9 +104,800 @@ function playShareEndDing() {
 }
 
 /* ----------------------------------------------------------------
-   CATEGORY LIBRARY — 4 categories x 25 cards (20 questions + 5 activities)
-   translations: { hi, es, fr, mi, zh, sm }
+   REO PRACTICE — Te Reo Māori practice module across four topics
+   (Locations, Colours, Numbers, Greetings), each spanning Starter to
+   Fluent. Sentence patterns follow the locative/classifying structures
+   and classroom phrases documented in the Te Reo Māori curriculum
+   reference (Tau 4–6 locatives; Section 13 classroom quick-reference
+   phrases, used verbatim, unmodified). Every task has a picture
+   prompt, a keyboard-only control path, an optional hint, and a
+   "listen" pronunciation button.
 ------------------------------------------------------------------- */
+
+const REO_NOUNS = [
+  { id: "pukapuka", mi: "pukapuka", en: "book", emoji: "📚" },
+  { id: "pouaka", mi: "pouaka", en: "box", emoji: "📦" },
+  { id: "rakau", mi: "rākau", en: "tree", emoji: "🌳" },
+  { id: "kuaha", mi: "kūaha", en: "door", emoji: "🚪" },
+  { id: "peke", mi: "pēke", en: "bag", emoji: "🎒" },
+  { id: "whare", mi: "whare", en: "house", emoji: "🏠" },
+  { id: "turu", mi: "tūru", en: "chair", emoji: "🪑" },
+  { id: "motoka", mi: "motokā", en: "car", emoji: "🚗" },
+];
+
+const REO_PREPOSITIONS = [
+  { id: "roto", mi: "roto", en: "in" },
+  { id: "runga", mi: "runga", en: "on / above" },
+  { id: "raro", mi: "raro", en: "under" },
+  { id: "mua", mi: "mua", en: "in front of" },
+  { id: "muri", mi: "muri", en: "behind" },
+];
+
+const REO_PREP_MARKER_STYLE = {
+  roto: { transform: "scale(0.55)", opacity: 0.9, zIndex: 2 },
+  runga: { transform: "translateY(-62%) scale(0.7)", zIndex: 2 },
+  raro: { transform: "translateY(62%) scale(0.7)", zIndex: 2 },
+  mua: { transform: "translateX(-58%) scale(0.7)", zIndex: 2 },
+  muri: { transform: "translateX(28%) scale(0.7)", zIndex: 0 },
+};
+
+const REO_COLOURS = [
+  { id: "whero", mi: "whero", en: "red", hex: "#E15B4F" },
+  { id: "kikorangi", mi: "kikorangi", en: "blue", hex: "#4A90D9" },
+  { id: "kowhai", mi: "kōwhai", en: "yellow", hex: "#F0C24B" },
+  { id: "kakariki", mi: "kākāriki", en: "green", hex: "#4CAF7D" },
+  { id: "ma", mi: "mā", en: "white", hex: "#F5F3EF" },
+  { id: "pango", mi: "pango", en: "black", hex: "#2B2621" },
+  { id: "parauri", mi: "parauri", en: "brown", hex: "#8B5E3C" },
+  { id: "karaka", mi: "karaka", en: "orange", hex: "#E68A3C" },
+];
+
+const REO_NUMBERS = [
+  { id: "tahi", mi: "tahi", en: "one", value: 1 },
+  { id: "rua", mi: "rua", en: "two", value: 2 },
+  { id: "toru", mi: "toru", en: "three", value: 3 },
+  { id: "wha", mi: "whā", en: "four", value: 4 },
+  { id: "rima", mi: "rima", en: "five", value: 5 },
+  { id: "ono", mi: "ono", en: "six", value: 6 },
+  { id: "whitu", mi: "whitu", en: "seven", value: 7 },
+  { id: "waru", mi: "waru", en: "eight", value: 8 },
+  { id: "iwa", mi: "iwa", en: "nine", value: 9 },
+  { id: "tekau", mi: "tekau", en: "ten", value: 10 },
+];
+
+// Sourced verbatim from the classroom quick-reference table — never altered.
+const REO_GREETINGS = [
+  { id: "g1", mi: "Tēnā koutou, e te akomanga!", en: "Greeting the class", emoji: "👋" },
+  { id: "g2", mi: "Whakarongo mai!", en: "Attention signal — listen!", emoji: "👂" },
+  { id: "g3", mi: "E noho.", en: "Sit down", emoji: "🪑" },
+  { id: "g4", mi: "E tū.", en: "Stand up", emoji: "🧍" },
+  { id: "g5", mi: "Whakarārangi mai.", en: "Line up", emoji: "🚶" },
+  { id: "g6", mi: "Ka rawe! Tino pai!", en: "Praise — excellent!", emoji: "🌟" },
+  { id: "g7", mi: "Kia kaha!", en: "Encouragement — be strong!", emoji: "💪" },
+  { id: "g8", mi: "E mārama ana?", en: "Check understanding — does that make sense?", emoji: "🤔" },
+  { id: "g9", mi: "Whakahokia ngā taputapu.", en: "Pack up the equipment", emoji: "🧹" },
+  { id: "g10", mi: "Ka kite anō, e te whānau.", en: "Dismissal — see you again", emoji: "👋" },
+  { id: "g11", mi: "Kia ora.", en: "Hello (informal greeting)", emoji: "😊" },
+  { id: "g12", mi: "Tēnā koe.", en: "Hello (formal, to one person)", emoji: "🙏" },
+  { id: "g13", mi: "Nau mai.", en: "Welcome", emoji: "🤗" },
+  { id: "g14", mi: "Haere rā.", en: "Goodbye (said to the person leaving)", emoji: "👋" },
+  { id: "g15", mi: "E noho rā.", en: "Goodbye (said to the person staying)", emoji: "👋" },
+  { id: "g16", mi: "Mō tōku hē.", en: "My apologies", emoji: "🙏" },
+  { id: "g17", mi: "Tēnā koa.", en: "Please (polite request)", emoji: "🙏" },
+];
+
+// Sourced directly from the Master Knowledge Base (Tau 1 target example, and the
+// O-category possessive examples). No invented vocabulary.
+const REO_WHANAU_TERMS = [
+  { id: "mama", mi: "māmā", en: "mum" },
+  { id: "teina", mi: "teina", en: "younger sibling" },
+  { id: "hoa", mi: "hoa", en: "friend" },
+];
+const REO_WHANAU_TALK = [
+  { id: "wt1", mi: "Ko wai tō kaiako?", en: "Who is your teacher?", emoji: "🧑‍🏫", hint: "Try starting with: Ko..." },
+  { id: "wt2", mi: "Kōrerohia: ko wai ō hoa pai?", en: "Talk about: who are your good friends?", emoji: "🧑‍🤝‍🧑", hint: "Try starting with: Ko..." },
+];
+
+// Sourced sentence pattern "He pai ki ahau te kai." (I like food.) plus the
+// present-continuous example "Kei te kai te tamaiti i te āporo." — both given
+// directly in the Master Knowledge Base.
+const REO_FOOD_NOUN = { id: "aporo", mi: "āporo", en: "apple", emoji: "🍎" };
+const REO_FOOD_TALK = [
+  { id: "ft1", mi: "Kei te kai te tamaiti i te āporo.", en: "The child is eating the apple.", emoji: "🍎", hint: "This uses 'Kei te' for something happening right now." },
+  { id: "ft2", mi: "Kōrerohia: he pai ki a koe te kai?", en: "Talk about: what food do you like?", emoji: "🍽️", hint: "Try starting with: He pai ki ahau te..." },
+];
+
+const REO_LOCATION_TALK = [
+  { id: "lt1", mi: "Kōrerohia: kei hea tō pukapuka pai rawa atu i tō rūma?", en: "Talk about: where is your favourite book in your room?", emoji: "📚", hint: "Try starting with: Kei roto i te..." },
+  { id: "lt2", mi: "Kōrerohia: kei hea te motokā i waho o tō kāinga?", en: "Talk about: where is the car outside your house?", emoji: "🚗", hint: "Try starting with: Kei mua i te..." },
+  { id: "lt3", mi: "Whakaahuatia te rūma ako — kei hea ngā mea katoa?", en: "Describe the classroom — where is everything?", emoji: "🏫", hint: "Try starting with: Kei runga i te..." },
+  { id: "lt4", mi: "Kōrerohia: he aha kei raro i tō tūru ināianei?", en: "Talk about: what's under your chair right now?", emoji: "🪑", hint: "Try starting with: Kei raro i..." },
+  { id: "lt5", mi: "Whakaahuatia tō pēke kura — he aha kei roto?", en: "Describe your school bag — what's inside?", emoji: "🎒", hint: "Try starting with: Kei roto i taku pēke..." },
+  { id: "lt6", mi: "Kōrerohia: kei hea te rākau tino teitei i tō rohe?", en: "Talk about: where's the tallest tree near you?", emoji: "🌳", hint: "Try starting with: Kei..." },
+];
+
+const REO_COLOUR_TALK = [
+  { id: "ct1", mi: "Kōrerohia: he aha te tae o tō pōtae?", en: "Talk about: what colour is your hat?", emoji: "🧢", hint: "Try starting with: He..." },
+  { id: "ct2", mi: "Kōrerohia: he aha ngā tae o te rāinamu?", en: "Talk about: what colours are in a rainbow?", emoji: "🌈", hint: "Try starting with: He whero, he..." },
+  { id: "ct3", mi: "Whakaahuatia tō rūma — he aha ngā tae kei roto?", en: "Describe your room — what colours are inside?", emoji: "🖼️", hint: "Try starting with: He..." },
+  { id: "ct4", mi: "Kōrerohia: he aha te tae pai rawa atu ki a koe?", en: "Talk about: what's your favourite colour?", emoji: "🎨", hint: "Try starting with: Ko taku tae pai..." },
+];
+
+const REO_NUMBER_TALK = [
+  { id: "nt1", mi: "Kōrerohia: e hia ō tuakana, ō taina rānei?", en: "Talk about: how many older/younger siblings do you have?", emoji: "👨‍👩‍👧‍👦", hint: "Try starting with: E..." },
+  { id: "nt2", mi: "Tatauria ngā tūru kei tō akomanga.", en: "Count the chairs in your classroom.", emoji: "🪑", hint: "Try starting with: E... ngā tūru." },
+  { id: "nt3", mi: "Kōrerohia: e hia ō tau?", en: "Talk about: how old are you?", emoji: "🎂", hint: "Try starting with: E... aku tau." },
+  { id: "nt4", mi: "Tatauria ngā pukapuka kei runga i tō tēpu.", en: "Count the books on your table.", emoji: "📚", hint: "Try starting with: E... ngā pukapuka." },
+];
+
+function buildLocationSentence(prep, noun) {
+  return { mi: `Kei ${prep.mi} i te ${noun.mi}.`, en: `It's ${prep.en} the ${noun.en}.` };
+}
+
+// --- Task generators -------------------------------------------------
+
+function generateLocationTasks(level) {
+  if (level === "fluent") return shuffle(REO_LOCATION_TALK.map((p) => ({ id: p.id, kind: "talk", prompt: p })));
+  if (level === "confident") {
+    return shuffle(
+      REO_NOUNS.map((noun, i) => {
+        const prep = REO_PREPOSITIONS[(i + 1) % REO_PREPOSITIONS.length];
+        return {
+          id: `loc-build-${noun.id}`, kind: "builder",
+          visual: { type: "location", noun, prep },
+          promptEn: buildLocationSentence(prep, noun).en,
+          words: ["Kei", prep.mi, "i", "te", `${noun.mi}.`],
+          hint: `The word after "Kei" is the location word.`,
+        };
+      })
+    );
+  }
+  const optionCount = level === "starter" ? 3 : 5;
+  return shuffle(
+    REO_NOUNS.map((noun, i) => {
+      const correct = REO_PREPOSITIONS[i % REO_PREPOSITIONS.length];
+      const distractors = shuffle(REO_PREPOSITIONS.filter((p) => p.id !== correct.id)).slice(0, optionCount - 1);
+      const options = shuffle([correct, ...distractors]).map((p) => ({ id: p.id, label: p.mi }));
+      return {
+        id: `loc-${level}-${noun.id}`, kind: "finisher", direction: "mi-to-en",
+        visual: { type: "location", noun, prep: correct },
+        promptMi: `Kei ___ i te ${noun.mi}.`, promptEn: buildLocationSentence(correct, noun).en,
+        options, correctId: correct.id, hint: `It starts with "${correct.mi[0]}".`,
+        pronounce: buildLocationSentence(correct, noun).mi,
+      };
+    })
+  );
+}
+
+function generateColourTasks(level) {
+  if (level === "fluent") return shuffle(REO_COLOUR_TALK.map((p) => ({ id: p.id, kind: "talk", prompt: p })));
+  if (level === "confident") {
+    return shuffle(
+      REO_NOUNS.map((noun, i) => {
+        const colour = REO_COLOURS[i % REO_COLOURS.length];
+        return {
+          id: `col-build-${noun.id}`, kind: "builder",
+          visual: { type: "colour", noun, colour },
+          promptEn: `The ${noun.en} is ${colour.en}.`,
+          words: ["He", colour.mi, "te", `${noun.mi}.`],
+          hint: `The colour word comes right after "He".`,
+        };
+      })
+    );
+  }
+  const optionCount = level === "starter" ? 3 : 5;
+  return shuffle(
+    REO_NOUNS.map((noun, i) => {
+      const correct = REO_COLOURS[i % REO_COLOURS.length];
+      const distractors = shuffle(REO_COLOURS.filter((c) => c.id !== correct.id)).slice(0, optionCount - 1);
+      const options = shuffle([correct, ...distractors]).map((c) => ({ id: c.id, label: c.mi }));
+      return {
+        id: `col-${level}-${noun.id}`, kind: "finisher", direction: "mi-to-en",
+        visual: { type: "colour", noun, colour: correct },
+        promptMi: `He ___ te ${noun.mi}.`, promptEn: `The ${noun.en} is ${correct.en}.`,
+        options, correctId: correct.id, hint: `It starts with "${correct.mi[0]}".`,
+        pronounce: `He ${correct.mi} te ${noun.mi}.`,
+      };
+    })
+  );
+}
+
+function generateNumberTasks(level) {
+  if (level === "fluent") return shuffle(REO_NUMBER_TALK.map((p) => ({ id: p.id, kind: "talk", prompt: p })));
+  if (level === "confident") {
+    return shuffle(
+      REO_NOUNS.map((noun, i) => {
+        const number = REO_NUMBERS[(i * 2) % REO_NUMBERS.length];
+        return {
+          id: `num-build-${noun.id}`, kind: "builder",
+          visual: { type: "count", noun, number },
+          promptEn: `There are ${number.value} ${noun.en}${number.value > 1 ? "s" : ""}.`,
+          words: ["E", number.mi, "ngā", `${noun.mi}.`],
+          hint: `The number word comes right after "E".`,
+        };
+      })
+    );
+  }
+  const pool = level === "starter" ? REO_NUMBERS.slice(0, 5) : REO_NUMBERS;
+  const optionCount = level === "starter" ? 3 : 5;
+  return shuffle(
+    REO_NOUNS.map((noun, i) => {
+      const correct = pool[i % pool.length];
+      const distractors = shuffle(pool.filter((n) => n.id !== correct.id)).slice(0, optionCount - 1);
+      const options = shuffle([correct, ...distractors]).map((n) => ({ id: n.id, label: n.mi }));
+      return {
+        id: `num-${level}-${noun.id}`, kind: "finisher", direction: "mi-to-en",
+        visual: { type: "count", noun, number: correct },
+        promptMi: `E ___ ngā ${noun.mi}.`, promptEn: `There are ${correct.value} ${noun.en}${correct.value > 1 ? "s" : ""}.`,
+        options, correctId: correct.id, hint: `It starts with "${correct.mi[0]}".`,
+        pronounce: `E ${correct.mi} ngā ${noun.mi}.`,
+      };
+    })
+  );
+}
+
+function generateWhanauTasks(level) {
+  if (level === "fluent") return shuffle(REO_WHANAU_TALK.map((p) => ({ id: p.id, kind: "talk", prompt: p })));
+  if (level === "confident") {
+    return [{
+      id: "wh-build-1", kind: "builder",
+      visual: { type: "icon", emoji: "🧑‍🏫" },
+      promptEn: "My teacher is Pare.",
+      words: ["Ko", "Pare", "taku", "kaiako."],
+      hint: `"Ko" introduces who someone is.`,
+    }];
+  }
+  const optionCount = level === "starter" ? 3 : 5;
+  return shuffle(
+    REO_WHANAU_TERMS.map((term) => {
+      const distractors = shuffle(REO_WHANAU_TERMS.filter((t) => t.id !== term.id)).slice(0, Math.min(optionCount - 1, REO_WHANAU_TERMS.length - 1));
+      const options = shuffle([term, ...distractors]).map((t) => ({ id: t.id, label: t.en }));
+      return {
+        id: `wh-${level}-${term.id}`, kind: "finisher", direction: "mi-to-en",
+        visual: { type: "icon", emoji: "👨‍👩‍👧" },
+        promptMi: term.mi, promptEn: `What does "${term.mi}" mean?`,
+        options, correctId: term.id, hint: `Starts with "${term.en[0]}".`,
+        pronounce: term.mi,
+      };
+    })
+  );
+}
+
+function generateFoodTasks(level) {
+  if (level === "fluent") return shuffle(REO_FOOD_TALK.map((p) => ({ id: p.id, kind: "talk", prompt: p })));
+  const foodNouns = [...REO_NOUNS, REO_FOOD_NOUN];
+  if (level === "confident") {
+    return shuffle(
+      foodNouns.map((noun) => ({
+        id: `fd-build-${noun.id}`, kind: "builder",
+        visual: { type: "icon", emoji: noun.emoji },
+        promptEn: `I like the ${noun.en}.`,
+        words: ["He", "pai", "ki", "ahau", "te", `${noun.mi}.`],
+        hint: `"He pai ki ahau te..." means "I like the..."`,
+      }))
+    );
+  }
+  const optionCount = level === "starter" ? 3 : 5;
+  return shuffle(
+    foodNouns.map((noun) => {
+      const distractors = shuffle(foodNouns.filter((n) => n.id !== noun.id)).slice(0, optionCount - 1);
+      const options = shuffle([noun, ...distractors]).map((n) => ({ id: n.id, label: n.mi }));
+      return {
+        id: `fd-${level}-${noun.id}`, kind: "finisher", direction: "mi-to-en",
+        visual: { type: "icon", emoji: noun.emoji },
+        promptMi: `He pai ki ahau te ___.`, promptEn: `I like the ${noun.en}.`,
+        options, correctId: noun.id, hint: `It starts with "${noun.mi[0]}".`,
+        pronounce: `He pai ki ahau te ${noun.mi}.`,
+      };
+    })
+  );
+}
+function generateGreetingTasks(level) {
+  if (level === "fluent") {
+    return shuffle(REO_GREETINGS.map((g) => ({
+      id: `gr-talk-${g.id}`, kind: "talk",
+      prompt: { mi: g.mi, en: `Practise saying this to your class: ${g.en}.`, emoji: g.emoji, hint: "Say it out loud, then use it for real today!" },
+    })));
+  }
+  const optionCount = level === "starter" ? 3 : 5;
+  const direction = level === "confident" ? "en-to-mi" : "mi-to-en";
+  return shuffle(
+    REO_GREETINGS.map((g) => {
+      const distractors = shuffle(REO_GREETINGS.filter((o) => o.id !== g.id)).slice(0, optionCount - 1);
+      const pool = shuffle([g, ...distractors]);
+      const options = pool.map((o) => ({ id: o.id, label: direction === "en-to-mi" ? o.mi : o.en }));
+      return {
+        id: `gr-${level}-${g.id}`, kind: "finisher", direction,
+        visual: { type: "icon", emoji: g.emoji },
+        promptMi: direction === "en-to-mi" ? g.en : g.mi,
+        promptEn: direction === "en-to-mi" ? g.mi : g.en,
+        options, correctId: g.id,
+        hint: direction === "en-to-mi" ? `It starts with "${g.mi[0]}".` : `Think about when you'd hear this.`,
+        pronounce: g.mi,
+      };
+    })
+  );
+}
+
+const REO_LEVEL_META = {
+  starter: { label: "🌱 Starter" },
+  developing: { label: "🌿 Developing" },
+  confident: { label: "🌳 Confident" },
+  fluent: { label: "🌟 Fluent" },
+};
+
+const REO_TOPICS = {
+  locations: { label: "📍 Locations", generate: generateLocationTasks },
+  colours: { label: "🎨 Colours", generate: generateColourTasks },
+  numbers: { label: "🔢 Numbers", generate: generateNumberTasks },
+  greetings: { label: "🙋 Greetings", generate: generateGreetingTasks },
+  whanau: { label: "👨‍👩‍👧 Whānau", generate: generateWhanauTasks },
+  food: { label: "🍎 Food", generate: generateFoodTasks },
+};
+
+// Real-life categories a teacher can combine — each maps to one or more
+// underlying topics. Selecting several categories draws a combined pool.
+const REO_CATEGORIES = {
+  everyday: { label: "👋 Everyday", topics: ["greetings", "colours"] },
+  school: { label: "🏫 School", topics: ["locations", "greetings"] },
+  home: { label: "🏠 Home", topics: ["locations"] },
+  whanau: { label: "👨‍👩‍👧 Whānau", topics: ["whanau", "greetings"] },
+  food: { label: "🍎 Food", topics: ["food"] },
+  travel: { label: "🚌 Travel & Places", topics: ["locations"] },
+  conversation: { label: "💬 Conversation", topics: ["greetings", "whanau"] },
+  numbers: { label: "🔢 Numbers", topics: ["numbers"] },
+};
+
+// --- Pronunciation (best-effort Web Speech API, no external audio files) --
+
+function speakMaori(text) {
+  if (typeof window === "undefined" || !window.speechSynthesis) return;
+  window.speechSynthesis.cancel();
+  const utter = new SpeechSynthesisUtterance(text);
+  const voices = window.speechSynthesis.getVoices();
+  const maoriVoice = voices.find((v) => /mi[-_]?nz/i.test(v.lang));
+  const nzVoice = voices.find((v) => /en[-_]?nz/i.test(v.lang));
+  utter.voice = maoriVoice || nzVoice || null;
+  utter.lang = maoriVoice ? "mi-NZ" : "en-NZ";
+  utter.rate = 0.82;
+  window.speechSynthesis.speak(utter);
+}
+
+function PronounceButton({ text, keyLabel }) {
+  return (
+    <button className="reo-pronounce-btn" onClick={() => speakMaori(text)} title="Listen (or press P)">
+      🔊 {keyLabel ? <span className="reo-key-badge">P</span> : "Whakarongo"}
+    </button>
+  );
+}
+
+// --- Visual prompt -----------------------------------------------------
+
+function ReoVisual({ visual }) {
+  if (!visual) return null;
+  if (visual.type === "location") {
+    const markerStyle = REO_PREP_MARKER_STYLE[visual.prep.id] || {};
+    return (
+      <div className="location-scene">
+        <span className="location-scene-noun">{visual.noun.emoji}</span>
+        <span className="location-scene-marker" style={markerStyle}>⭐</span>
+      </div>
+    );
+  }
+  if (visual.type === "colour") {
+    return (
+      <div className="colour-scene" style={{ background: visual.colour.hex }}>
+        <span className="colour-scene-noun">{visual.noun.emoji}</span>
+      </div>
+    );
+  }
+  if (visual.type === "count") {
+    return (
+      <div className="count-scene">
+        {Array.from({ length: visual.number.value }).map((_, i) => (
+          <span key={i} className="count-scene-item">{visual.noun.emoji}</span>
+        ))}
+      </div>
+    );
+  }
+  if (visual.type === "icon") {
+    return (
+      <div className="blob" style={{ background: "linear-gradient(135deg, #DFF6F2 0%, #C9F0E9 100%)" }}>
+        <span className="blob-emoji">{visual.emoji}</span>
+      </div>
+    );
+  }
+  return null;
+}
+
+// --- Task components -----------------------------------------------------
+
+const OPTION_KEYS = ["a", "b", "c", "d", "e"];
+
+function ReoFinisherTask({ task, registerKeyHandler, onAnswered, showEnglish }) {
+  const [selected, setSelected] = useState(null);
+  const [showHint, setShowHint] = useState(false);
+
+  function choose(opt) {
+    if (selected) return;
+    setSelected(opt);
+    if (onAnswered) onAnswered(opt.id === task.correctId);
+  }
+
+  useEffect(() => {
+    setSelected(null);
+    setShowHint(false);
+  }, [task.id]);
+
+  useEffect(() => {
+    return registerKeyHandler((e) => {
+      const key = e.key.toLowerCase();
+      if (key === "h") { setShowHint((s) => !s); return; }
+      if (key === "p") { speakMaori(task.pronounce || task.promptMi); return; }
+      const idx = OPTION_KEYS.indexOf(key);
+      if (idx !== -1 && task.options[idx]) choose(task.options[idx]);
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [task, selected]);
+
+  const answered = !!selected;
+  const isCorrect = answered && selected.id === task.correctId;
+  const hasBlank = task.promptMi.includes("___");
+  const [before, after] = hasBlank ? task.promptMi.split("___") : [task.promptMi, ""];
+
+  return (
+    <div className="reo-task">
+      <span className="reo-task-kind">💬 {hasBlank ? "Finish the sentence" : "Match it"}</span>
+      <ReoVisual visual={task.visual} />
+      {showEnglish && <p className="reo-english-hint">{task.promptEn}</p>}
+
+      {hasBlank ? (
+        <h1 className="reo-sentence">
+          {before}<span className="reo-blank">{answered ? selected.label : "___"}</span>{after}
+        </h1>
+      ) : (
+        <h1 className="reo-sentence">{task.promptMi}</h1>
+      )}
+
+      <div className="reo-options">
+        {task.options.map((opt, i) => (
+          <button
+            key={opt.id}
+            className={`reo-option ${answered && opt.id === selected.id ? (isCorrect ? "correct" : "incorrect") : ""} ${answered && opt.id === task.correctId && !isCorrect ? "reveal-correct" : ""}`}
+            onClick={() => choose(opt)}
+            disabled={answered}
+          >
+            <span className="reo-key-badge">{OPTION_KEYS[i].toUpperCase()}</span> {opt.label}
+          </button>
+        ))}
+      </div>
+
+      <div className="reo-task-footer">
+        {task.pronounce && <PronounceButton text={task.pronounce} keyLabel />}
+        <button className="reo-hint-btn" onClick={() => setShowHint((s) => !s)}>
+          💡 Hint <span className="reo-key-badge">H</span>
+        </button>
+      </div>
+
+      {showHint && !answered && <p className="reo-hint-text">💡 {task.hint}</p>}
+      {answered && (
+        <p className={`reo-feedback ${isCorrect ? "good" : "oops"}`}>
+          {isCorrect ? "✅ Tika! That's right." : `❌ Not quite — it's "${task.options.find((o) => o.id === task.correctId)?.label}".`}
+        </p>
+      )}
+    </div>
+  );
+}
+
+function ReoBuilderTask({ task, registerKeyHandler, onAnswered, showEnglish }) {
+  const [bank, setBank] = useState(() => shuffle(task.words.map((w, i) => ({ word: w, key: i }))));
+  const [answer, setAnswer] = useState([]);
+  const [checked, setChecked] = useState(false);
+  const [correct, setCorrect] = useState(false);
+  const [showHint, setShowHint] = useState(false);
+
+  useEffect(() => {
+    setBank(shuffle(task.words.map((w, i) => ({ word: w, key: i }))));
+    setAnswer([]);
+    setChecked(false);
+    setShowHint(false);
+  }, [task.id]);
+
+  function addToAnswer(tile) {
+    if (checked || !tile) return;
+    setAnswer((a) => [...a, tile]);
+    setBank((b) => b.filter((t) => t.key !== tile.key));
+  }
+  function removeLast() {
+    if (checked || answer.length === 0) return;
+    const tile = answer[answer.length - 1];
+    setAnswer((a) => a.slice(0, -1));
+    setBank((b) => [...b, tile]);
+  }
+  function removeFromAnswer(tile) {
+    if (checked) return;
+    setAnswer((a) => a.filter((t) => t.key !== tile.key));
+    setBank((b) => [...b, tile]);
+  }
+  function handleDrop(e) {
+    e.preventDefault();
+    if (checked) return;
+    const key = Number(e.dataTransfer.getData("text/plain"));
+    addToAnswer(bank.find((t) => t.key === key));
+  }
+  function check() {
+    const isCorrect = answer.map((t) => t.word).join(" ") === task.words.join(" ");
+    setCorrect(isCorrect);
+    setChecked(true);
+    if (onAnswered) onAnswered(isCorrect);
+  }
+  function reset() {
+    setBank(shuffle(task.words.map((w, i) => ({ word: w, key: i }))));
+    setAnswer([]);
+    setChecked(false);
+  }
+
+  useEffect(() => {
+    return registerKeyHandler((e) => {
+      const key = e.key.toLowerCase();
+      if (key === "h") { setShowHint((s) => !s); return; }
+      if (key === "p") { speakMaori(task.words.join(" ")); return; }
+      if (key === "r") { reset(); return; }
+      if (key === "backspace") { removeLast(); return; }
+      if (key === "enter") { if (bank.length === 0) check(); return; }
+      const num = parseInt(e.key, 10);
+      if (!isNaN(num) && num >= 1 && num <= bank.length) addToAnswer(bank[num - 1]);
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [task, bank, answer, checked]);
+
+  return (
+    <div className="reo-task">
+      <span className="reo-task-kind">🧩 Build the sentence</span>
+      <ReoVisual visual={task.visual} />
+      {showEnglish && <p className="reo-english-hint">{task.promptEn}</p>}
+
+      <div className="reo-answer-row" onDragOver={(e) => e.preventDefault()} onDrop={handleDrop}>
+        {answer.length === 0 && <span className="reo-answer-placeholder">Tap, drag, or press number keys to add words in order</span>}
+        {answer.map((tile) => (
+          <button key={tile.key} className="reo-tile answer" onClick={() => removeFromAnswer(tile)}>{tile.word}</button>
+        ))}
+      </div>
+
+      <div className="reo-word-bank">
+        {bank.map((tile, i) => (
+          <button
+            key={tile.key}
+            className="reo-tile"
+            draggable
+            onDragStart={(e) => e.dataTransfer.setData("text/plain", String(tile.key))}
+            onClick={() => addToAnswer(tile)}
+          >
+            <span className="reo-key-badge small">{i + 1}</span> {tile.word}
+          </button>
+        ))}
+      </div>
+
+      <div className="reo-builder-buttons">
+        <button className="btn btn-secondary" onClick={reset} disabled={answer.length === 0}>↺ Reset <span className="reo-key-badge">R</span></button>
+        <button className="btn btn-primary" onClick={check} disabled={checked || bank.length > 0}>✓ Check <span className="reo-key-badge">⏎</span></button>
+      </div>
+      <div className="reo-task-footer">
+        <PronounceButton text={task.words.join(" ")} keyLabel />
+        <button className="reo-hint-btn" onClick={() => setShowHint((s) => !s)}>💡 Hint <span className="reo-key-badge">H</span></button>
+      </div>
+
+      {showHint && <p className="reo-hint-text">💡 {task.hint} Full sentence: "{task.words.join(" ")}"</p>}
+      {checked && (
+        <p className={`reo-feedback ${correct ? "good" : "oops"}`}>
+          {correct ? "✅ Tika! Perfect order." : `❌ Not quite — it's "${task.words.join(" ")}"`}
+        </p>
+      )}
+    </div>
+  );
+}
+
+function ReoTalkTask({ task, registerKeyHandler, showEnglish }) {
+  const [showHint, setShowHint] = useState(false);
+
+  useEffect(() => setShowHint(false), [task.id]);
+
+  useEffect(() => {
+    return registerKeyHandler((e) => {
+      const key = e.key.toLowerCase();
+      if (key === "h") setShowHint((s) => !s);
+      if (key === "p") speakMaori(task.prompt.mi);
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [task]);
+
+  return (
+    <div className="reo-task">
+      <span className="reo-task-kind">🗣️ Talk about it</span>
+      <ReoVisual visual={{ type: "icon", emoji: task.prompt.emoji }} />
+      <h1 className="title-en">{task.prompt.mi}</h1>
+      {showEnglish && <h2 className="title-hi">{task.prompt.en}</h2>}
+      <div className="reo-task-footer">
+        <PronounceButton text={task.prompt.mi} keyLabel />
+        {task.prompt.hint && (
+          <button className="reo-hint-btn" onClick={() => setShowHint((s) => !s)}>💡 Hint <span className="reo-key-badge">H</span></button>
+        )}
+      </div>
+      {showHint && task.prompt.hint && <p className="reo-hint-text">💡 {task.prompt.hint}</p>}
+    </div>
+  );
+}
+
+function ReoCategorySelector({ selected, setSelected }) {
+  function toggle(code) {
+    setSelected((s) => (s.includes(code) ? s.filter((c) => c !== code) : [...s, code]));
+  }
+  return (
+    <div className="reo-category-block">
+      <div className="reo-category-grid" role="group" aria-label="Real-life categories">
+        {Object.entries(REO_CATEGORIES).map(([code, meta]) => (
+          <button
+            key={code}
+            className={`age-option reo-category-pill ${selected.includes(code) ? "active" : ""}`}
+            onClick={() => toggle(code)}
+            aria-pressed={selected.includes(code)}
+          >
+            {selected.includes(code) ? "✓ " : ""}{meta.label}
+          </button>
+        ))}
+      </div>
+      <div className="reo-category-actions">
+        <button className="reo-mini-btn" onClick={() => setSelected(Object.keys(REO_CATEGORIES))}>Select All</button>
+        <button className="reo-mini-btn" onClick={() => setSelected([])}>Clear</button>
+      </div>
+    </div>
+  );
+}
+
+function ReoLevelSelector({ level, setLevel }) {
+  return (
+    <div className="age-selector" role="group" aria-label="Reo practice level">
+      {Object.entries(REO_LEVEL_META).map(([code, meta]) => (
+        <button key={code} className={`age-option ${level === code ? "active" : ""}`} onClick={() => setLevel(code)}>
+          {meta.label}
+        </button>
+      ))}
+    </div>
+  );
+}
+
+function buildReoTaskPool(categories, level) {
+  const topicIds = new Set();
+  categories.forEach((c) => (REO_CATEGORIES[c]?.topics || []).forEach((t) => topicIds.add(t)));
+  if (topicIds.size === 0) return [];
+  const seen = new Set();
+  const pool = [];
+  topicIds.forEach((t) => {
+    REO_TOPICS[t].generate(level).forEach((task) => {
+      if (!seen.has(task.id)) { seen.add(task.id); pool.push(task); }
+    });
+  });
+  return shuffle(pool);
+}
+
+function ReoPracticeScreen({ onHome }) {
+  const [categories, setCategories] = useState(["everyday"]);
+  const [level, setLevel] = useState("starter");
+  const [tasks, setTasks] = useState(() => buildReoTaskPool(["everyday"], "starter"));
+  const [index, setIndex] = useState(0);
+  const [animKey, setAnimKey] = useState(0);
+  const [showStudentInfo, setShowStudentInfo] = useState(false);
+  const [showEnglish, setShowEnglish] = useState(true);
+  const keyHandlerRef = React.useRef(null);
+
+  useEffect(() => {
+    setTasks(buildReoTaskPool(categories, level));
+    setIndex(0);
+    setAnimKey((k) => k + 1);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [categories.join(","), level]);
+
+  const total = tasks.length;
+  const current = tasks[index];
+
+  function advance() {
+    setAnimKey((k) => k + 1);
+    setIndex((i) => (i + 1 < tasks.length ? i + 1 : i));
+  }
+  function goNext() { advance(); }
+  function goBack() {
+    setAnimKey((k) => k + 1);
+    setIndex((i) => Math.max(0, i - 1));
+  }
+  function reshuffle() {
+    setTasks(buildReoTaskPool(categories, level));
+    setIndex(0);
+    setAnimKey((k) => k + 1);
+  }
+
+  // Lightweight adaptive repetition: a wrong answer re-inserts the same task
+  // a few places ahead so it comes back around sooner; correct answers just move on.
+  function handleAnswered(isCorrect) {
+    if (isCorrect) return;
+    setTasks((t) => {
+      const copy = [...t];
+      const reinsertAt = Math.min(index + 3, copy.length);
+      copy.splice(reinsertAt, 0, { ...current, id: `${current.id}-retry-${Date.now()}` });
+      return copy;
+    });
+  }
+
+  function registerKeyHandler(fn) {
+    keyHandlerRef.current = fn;
+    return () => { if (keyHandlerRef.current === fn) keyHandlerRef.current = null; };
+  }
+
+  useEffect(() => {
+    function handleKey(e) {
+      const key = e.key.toLowerCase();
+      if (key === "arrowright" || key === "n") { e.preventDefault(); goNext(); return; }
+      if (key === "arrowleft" || key === "b") { e.preventDefault(); goBack(); return; }
+      if (key === "s") { e.preventDefault(); reshuffle(); return; }
+      if (keyHandlerRef.current) keyHandlerRef.current(e);
+    }
+    window.addEventListener("keydown", handleKey);
+    return () => window.removeEventListener("keydown", handleKey);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [index, tasks, categories, level]);
+
+  return (
+    <div className="game-screen">
+      <div style={{ marginBottom: 8, display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap", justifyContent: "center" }}>
+        <Logo onClick={onHome} />
+      </div>
+
+      <p className="reo-tagline">Kōrero Reo — choose your capability and real-life categories, then start.</p>
+      <ReoLevelSelector level={level} setLevel={setLevel} />
+      <div style={{ height: 12 }} />
+      <ReoCategorySelector selected={categories} setSelected={setCategories} />
+
+      <button className={`reo-english-toggle ${showEnglish ? "on" : ""}`} onClick={() => setShowEnglish((s) => !s)} aria-pressed={showEnglish}>
+        <span className="reo-english-toggle-dot" />
+        {showEnglish ? "🇬🇧 English translation: On" : "🇬🇧 English translation: Off"}
+      </button>
+
+      {total === 0 ? (
+        <div className="game-card">
+          <p className="reo-english-hint">Select at least one category above to start practising.</p>
+        </div>
+      ) : (
+        <>
+          <div className="game-card" key={animKey}>
+            {current.kind === "finisher" && <ReoFinisherTask task={current} registerKeyHandler={registerKeyHandler} onAnswered={handleAnswered} showEnglish={showEnglish} />}
+            {current.kind === "builder" && <ReoBuilderTask task={current} registerKeyHandler={registerKeyHandler} onAnswered={handleAnswered} showEnglish={showEnglish} />}
+            {current.kind === "talk" && <ReoTalkTask task={current} registerKeyHandler={registerKeyHandler} showEnglish={showEnglish} />}
+          </div>
+
+          <div className="nav-bar">
+            <button className="btn btn-secondary" onClick={goBack} disabled={index === 0} aria-label="Previous">← Back <span className="reo-key-badge">B</span></button>
+            <div className="progress" aria-live="polite">Task {index + 1} / {total}</div>
+            <button className="btn btn-primary" onClick={goNext} aria-label="Next">Next → <span className="reo-key-badge">N</span></button>
+          </div>
+
+          <div className="shuffle-row">
+            <button className="btn btn-secondary shuffle-btn" onClick={reshuffle}>🔀 Shuffle <span className="reo-key-badge">S</span></button>
+          </div>
+
+          <p className="reo-keys-legend">
+            ⌨️ Keyboard: A–E select an answer · 1–9 add a word tile · Backspace undoes · Enter checks ·
+            H = hint · P = pronounce · N/→ = next · B/← = back · S = shuffle
+          </p>
+        </>
+      )}
+
+      <button className="student-mode-card" onClick={() => setShowStudentInfo((s) => !s)}>
+        <span className="student-mode-badge">Coming Soon</span>
+        <span className="student-mode-title">🎓 Student Mode</span>
+        <span className="student-mode-desc">A simpler, self-directed practice experience just for tamariki — see, hear, speak, build, repeat.</span>
+      </button>
+    </div>
+  );
+}
 
 const CATEGORIES = [
   {
@@ -585,9 +1376,9 @@ function AutopilotSettingsModal({ settings, setSettings, onStart, onClose }) {
   );
 }
 
-function AutopilotRunner({ deck, settings, primaryLanguage, secondaryLanguage, ageGroup, onExit }) {
+function AutopilotRunner({ deck, startIndex, settings, primaryLanguage, secondaryLanguage, ageGroup, onExit }) {
   const [order] = useState(() => (settings.order === "random" ? shuffle(deck) : deck));
-  const [index, setIndex] = useState(0);
+  const [index, setIndex] = useState(() => (settings.order === "random" ? 0 : Math.min(startIndex || 0, deck.length - 1)));
   const [phase, setPhase] = useState("discuss"); // 'discuss' | 'share'
   const [timeLeft, setTimeLeft] = useState(settings.duration);
   const [paused, setPaused] = useState(false);
@@ -624,6 +1415,30 @@ function AutopilotRunner({ deck, settings, primaryLanguage, secondaryLanguage, a
     setTimeLeft(settings.shareDuration);
     setShowRevealPopup(true);
     setTimeout(() => setShowRevealPopup(false), 4500);
+  }
+
+  // Manual overrides — the teacher can still skip forward/back or jump to a
+  // random card at any time, even while Autopilot is running the timers.
+  function manualNext() {
+    if (index >= total - 1) {
+      setFinished(true);
+    } else {
+      setIndex((i) => i + 1);
+    }
+  }
+
+  function manualBack() {
+    if (index === 0) return;
+    setIndex((i) => i - 1);
+  }
+
+  function manualShuffleTo() {
+    if (total <= 1) return;
+    setIndex((i) => {
+      let next = i;
+      while (next === i) next = Math.floor(Math.random() * total);
+      return next;
+    });
   }
 
   // Countdown ticking
@@ -698,6 +1513,18 @@ function AutopilotRunner({ deck, settings, primaryLanguage, secondaryLanguage, a
         <div className="autopilot-timer-clock">{formatTime(timeLeft)}</div>
       </div>
 
+      <div className="autopilot-manual-row">
+        <button className="autopilot-nav-btn" onClick={manualBack} disabled={index === 0} aria-label="Previous card">
+          ⏮ Back
+        </button>
+        <button className="autopilot-nav-btn" onClick={manualShuffleTo} aria-label="Jump to a random card">
+          🔀 Shuffle
+        </button>
+        <button className="autopilot-nav-btn" onClick={manualNext} aria-label="Next card">
+          Next ⏭
+        </button>
+      </div>
+
       <div className="autopilot-controls">
         <button className="btn btn-secondary" onClick={() => setPaused((p) => !p)}>
           {paused ? "▶ Resume" : "⏸ Pause"}
@@ -741,7 +1568,7 @@ function CategoryCard({ category, primaryLanguage, secondaryLanguage, onSelect }
   );
 }
 
-function HomeScreen({ primaryLanguage, secondaryLanguage, ageGroup, setAgeGroup, randomSelectEnabled, setRandomSelectEnabled, onSelectCategory }) {
+function HomeScreen({ primaryLanguage, secondaryLanguage, ageGroup, setAgeGroup, randomSelectEnabled, setRandomSelectEnabled, onSelectCategory, onOpenReo }) {
   return (
     <div className="home-screen">
       <div className="home-hero">
@@ -754,6 +1581,14 @@ function HomeScreen({ primaryLanguage, secondaryLanguage, ageGroup, setAgeGroup,
           <CategoryCard key={cat.id} category={cat} primaryLanguage={primaryLanguage} secondaryLanguage={secondaryLanguage} onSelect={onSelectCategory} />
         ))}
       </div>
+
+      <button className="reo-launch-btn" onClick={onOpenReo}>
+        <span className="reo-launch-emoji">🗣️</span>
+        <span className="reo-launch-text">
+          <span className="reo-launch-title">Reo Practice — Kōrero Reo</span>
+          <span className="reo-launch-desc">Sentence starters, finishers & a drag-and-drop builder, with picture prompts. Starter to Fluent.</span>
+        </span>
+      </button>
 
       <div className="home-random-row">
         <AgeGroupSelector ageGroup={ageGroup} setAgeGroup={setAgeGroup} />
@@ -804,7 +1639,6 @@ function CompletionScreen({ onRestart, onShuffle, onHome }) {
     </div>
   );
 }
-
 function GameScreen({ category, primaryLanguage, secondaryLanguage, ageGroup, randomSelectEnabled, onHome }) {
   const [deck, setDeck] = useState(() => shuffle(getCardsForAge(category, ageGroup)));
   const [index, setIndex] = useState(0);
@@ -896,6 +1730,7 @@ function GameScreen({ category, primaryLanguage, secondaryLanguage, ageGroup, ra
       {autopilotRunning ? (
         <AutopilotRunner
           deck={deck}
+          startIndex={index}
           settings={autopilotSettings}
           primaryLanguage={primaryLanguage}
           secondaryLanguage={secondaryLanguage}
@@ -1044,6 +1879,11 @@ export default function App() {
 
   function goHome() {
     setScreen("home");
+    setCategory(null);
+  }
+
+  function openReo() {
+    setScreen("reo");
     setCategory(null);
   }
 
@@ -1507,6 +2347,169 @@ export default function App() {
           color: #2B2621;
           line-height: 1;
         }
+        .autopilot-manual-row {
+          display: flex;
+          gap: 8px;
+          margin-top: 18px;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+        .autopilot-nav-btn {
+          font-family: 'Nunito', sans-serif;
+          font-weight: 700;
+          font-size: 13px;
+          background: #FFFFFF;
+          border: 2px solid #EFE6DA;
+          border-radius: 999px;
+          padding: 8px 14px;
+          cursor: pointer;
+          color: #9C9284;
+        }
+        .autopilot-nav-btn:hover { border-color: #D9CCB9; color: #4A4339; }
+        .autopilot-nav-btn:disabled { opacity: 0.35; cursor: not-allowed; }
+
+        /* Reo Practice launch banner (home screen) */
+        .reo-launch-btn {
+          width: 100%;
+          max-width: 640px;
+          margin-top: 22px;
+          background: linear-gradient(135deg, #DFF6F2 0%, #C9F0E9 100%);
+          border: none;
+          border-radius: 24px;
+          padding: 20px 24px;
+          display: flex;
+          align-items: center;
+          gap: 16px;
+          text-align: left;
+          cursor: pointer;
+          transition: transform 180ms ease, box-shadow 180ms ease;
+        }
+        .reo-launch-btn:hover { transform: translateY(-3px); box-shadow: 0 16px 30px -12px rgba(43,38,33,0.2); }
+        .reo-launch-emoji { font-size: 40px; flex-shrink: 0; }
+        .reo-launch-text { display: flex; flex-direction: column; gap: 4px; }
+        .reo-launch-title { font-family: 'Baloo 2', sans-serif; font-weight: 700; font-size: 19px; color: #1F6E63; }
+        .reo-launch-desc { font-family: 'Nunito', sans-serif; font-weight: 600; font-size: 13px; color: #3E7A70; line-height: 1.4; }
+
+        /* Reo Practice task screen */
+        .reo-tagline { color: #9C9284; font-weight: 600; font-size: 14px; margin: 4px 0 12px; text-align: center; }
+        .reo-task { display: flex; flex-direction: column; align-items: center; width: 100%; }
+        .reo-task-kind {
+          font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 13px;
+          color: #2BB3A3; background: #DFF6F2; padding: 7px 16px; border-radius: 999px; margin-bottom: 18px;
+        }
+        .location-scene {
+          position: relative; width: 140px; height: 140px; margin-bottom: 18px;
+          display: flex; align-items: center; justify-content: center;
+        }
+        .location-scene-noun { font-size: 72px; z-index: 1; }
+        .location-scene-marker { position: absolute; font-size: 34px; }
+        .reo-english-hint { color: #9C9284; font-weight: 600; font-size: 15px; margin: 0 0 10px; }
+        .reo-sentence { font-family: 'Baloo 2', sans-serif; font-weight: 700; font-size: 28px; color: #2B2621; margin: 0 0 20px; text-align: center; }
+        .reo-blank { color: #FF6B57; border-bottom: 3px dashed #FFB9AC; padding: 0 4px; }
+        .reo-options { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-bottom: 14px; }
+        .reo-option {
+          font-family: 'Baloo 2', sans-serif; font-weight: 700; font-size: 17px;
+          background: #FFFFFF; border: 2px solid #EFE6DA; border-radius: 16px; padding: 12px 20px; cursor: pointer;
+        }
+        .reo-option:hover:not(:disabled) { border-color: #D9CCB9; }
+        .reo-option.correct { background: #E4F7EC; border-color: #4CAF7D; color: #2E8B57; }
+        .reo-option.incorrect { background: #FFE9E5; border-color: #FF6B57; color: #C1442C; }
+        .reo-option.reveal-correct { background: #E4F7EC; border-color: #4CAF7D; color: #2E8B57; }
+        .reo-option:disabled { cursor: default; }
+        .reo-feedback { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 15px; margin-top: 4px; }
+        .reo-feedback.good { color: #2E8B57; }
+        .reo-feedback.oops { color: #C1442C; }
+        .reo-answer-row {
+          min-height: 56px; width: 100%; max-width: 420px; background: #FFF7ED; border: 2px dashed #EFE6DA;
+          border-radius: 16px; padding: 10px; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; justify-content: center; margin-bottom: 16px;
+        }
+        .reo-answer-placeholder { color: #B0A695; font-weight: 600; font-size: 13px; }
+        .reo-word-bank { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; margin-bottom: 18px; }
+        .reo-tile {
+          font-family: 'Baloo 2', sans-serif; font-weight: 700; font-size: 16px;
+          background: #FFFFFF; border: 2px solid #EFE6DA; border-radius: 12px; padding: 10px 16px; cursor: grab;
+        }
+        .reo-tile:hover { border-color: #D9CCB9; }
+        .reo-tile.answer { background: #FFE7E1; border-color: #FF6B57; color: #C1442C; cursor: pointer; }
+        .reo-builder-buttons { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+
+        /* New Reo Practice visuals */
+        .colour-scene {
+          width: 140px; height: 140px; border-radius: 50%; margin-bottom: 18px;
+          display: flex; align-items: center; justify-content: center;
+          box-shadow: inset 0 0 0 4px rgba(255,255,255,0.5);
+        }
+        .colour-scene-noun { font-size: 62px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.25)); }
+        .count-scene {
+          display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; align-items: center;
+          max-width: 280px; margin-bottom: 18px; min-height: 100px;
+        }
+        .count-scene-item { font-size: 34px; }
+
+        .reo-task-footer { display: flex; gap: 12px; align-items: center; justify-content: center; margin: 6px 0 4px; flex-wrap: wrap; }
+        .reo-pronounce-btn, .reo-hint-btn {
+          font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 13px;
+          background: #FFFFFF; border: 2px solid #EFE6DA; border-radius: 999px;
+          padding: 8px 14px; cursor: pointer; color: #4A4339; display: flex; align-items: center; gap: 6px;
+        }
+        .reo-pronounce-btn:hover, .reo-hint-btn:hover { border-color: #D9CCB9; }
+        .reo-hint-text {
+          font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 14px; color: #B9761F;
+          background: #FFF6E7; border-radius: 12px; padding: 10px 14px; margin-top: 8px; text-align: center;
+        }
+        .reo-key-badge {
+          display: inline-flex; align-items: center; justify-content: center;
+          min-width: 20px; height: 20px; font-size: 11px; font-weight: 800;
+          background: #2B2621; color: #FFFFFF; border-radius: 6px; padding: 0 4px;
+        }
+        .reo-key-badge.small { min-width: 16px; height: 16px; font-size: 10px; }
+        .reo-keys-legend {
+          margin-top: 16px; font-size: 12px; color: #B0A695; text-align: center; max-width: 640px; line-height: 1.6;
+        }
+
+        .reo-category-block { width: 100%; max-width: 680px; display: flex; flex-direction: column; align-items: center; gap: 10px; margin-bottom: 8px; }
+
+        .reo-english-toggle {
+          font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 13px;
+          background: #FFFFFF; border: 2px solid #EFE6DA; border-radius: 999px;
+          padding: 9px 16px; cursor: pointer; color: #9C9284; margin-bottom: 14px;
+          display: flex; align-items: center; gap: 8px;
+        }
+        .reo-english-toggle-dot { width: 10px; height: 10px; border-radius: 50%; background: #D9CCB9; }
+        .reo-english-toggle.on { border-color: #2BB3A3; color: #1F6E63; background: #E7F7F4; }
+        .reo-english-toggle.on .reo-english-toggle-dot { background: #2BB3A3; }
+        .reo-category-grid { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+        .reo-category-pill { font-size: 13px; }
+        .reo-category-actions { display: flex; gap: 10px; }
+        .reo-mini-btn {
+          font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 12px;
+          background: none; border: none; color: #9C9284; text-decoration: underline; cursor: pointer; padding: 2px 4px;
+        }
+        .reo-mini-btn:hover { color: #4A4339; }
+
+        .student-mode-card {
+          margin-top: 26px; width: 100%; max-width: 640px; background: #F3F1EC;
+          border: 2px dashed #D9CCB9; border-radius: 20px; padding: 16px 20px;
+          display: flex; flex-direction: column; align-items: center; gap: 4px; cursor: pointer; text-align: center;
+        }
+        .student-mode-badge {
+          font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 11px; letter-spacing: 0.5px;
+          background: #2B2621; color: #FFFFFF; border-radius: 999px; padding: 3px 10px; margin-bottom: 4px;
+        }
+        .student-mode-title { font-family: 'Baloo 2', sans-serif; font-weight: 700; font-size: 17px; color: #4A4339; }
+        .student-mode-desc { font-family: 'Nunito', sans-serif; font-weight: 600; font-size: 12px; color: #9C9284; max-width: 480px; }
+
+        /* Creator credit */
+        .creator-credit {
+          margin-top: 28px;
+          text-align: center;
+          font-family: 'Nunito', sans-serif;
+          font-size: 12px;
+          color: #C2B8A8;
+        }
+        .creator-credit a { color: #C2B8A8; text-decoration: underline; }
+        .creator-credit a:hover { color: #9C9284; }
+
         .autopilot-controls {
           display: flex;
           gap: 14px;
@@ -1828,7 +2831,10 @@ export default function App() {
           randomSelectEnabled={randomSelectEnabled}
           setRandomSelectEnabled={setRandomSelectEnabled}
           onSelectCategory={selectCategory}
+          onOpenReo={openReo}
         />
+      ) : screen === "reo" ? (
+        <ReoPracticeScreen onHome={goHome} />
       ) : (
         <>
           <div style={{ marginBottom: 8, display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap", justifyContent: "center" }}>
@@ -1839,6 +2845,13 @@ export default function App() {
           <GameScreen category={category} primaryLanguage={primaryLanguage} secondaryLanguage={secondaryLanguage} ageGroup={ageGroup} randomSelectEnabled={randomSelectEnabled} onHome={goHome} />
         </>
       )}
+
+      <div className="creator-credit">
+        Created by Richard Simpson —{" "}
+        <a href="https://richard-simpson-portfolio.vercel.app/" target="_blank" rel="noopener noreferrer">
+          richard-simpson-portfolio.vercel.app
+        </a>
+      </div>
     </div>
   );
 }
