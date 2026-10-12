@@ -899,6 +899,474 @@ function ReoPracticeScreen({ onHome }) {
   );
 }
 
+/* ===================== TUTOR ZONE / ZONA DE TUTORÍA ===================== */
+/* Colombian Spanish practice. Every UI label: English line, Spanish line directly beneath. */
+
+const TZ_LEVELS = {
+  A1: { es: "Principiante", en: "Beginner", code: "A1" },
+  A2: { es: "Elemental", en: "Elementary", code: "A2" },
+  B1: { es: "Intermedio", en: "Intermediate", code: "B1" },
+  B2: { es: "Intermedio alto", en: "Upper intermediate", code: "B2" },
+};
+
+const TZ_CATS = {
+  personal: { emoji: "🙋", es: "Personal", en: "Personal" },
+  travel: { emoji: "✈️", es: "Viajes", en: "Travel" },
+  tech: { emoji: "💻", es: "Tecnología", en: "Technology" },
+  sports: { emoji: "🚴", es: "Deportes y aire libre", en: "Sports & Outdoors" },
+  food: { emoji: "🍽️", es: "Comida y salir", en: "Food & Going Out" },
+};
+
+// fill: [emoji, sentence with ___, English, options, correctIndex]
+// build: [emoji, Spanish sentence, English]   talk: [emoji, Spanish question, English]
+const TZ_DATA = {
+  personal: {
+    note: { es: "Nota colombiana: en Colombia mucha gente usa “usted” incluso con amigos o familia. “Tú” es común en la costa y entre jóvenes, y en algunas regiones andinas se usa “vos”. Si dudas, usa “usted”.", en: "Colombian note: in Colombia many people use “usted” even with friends or family. “Tú” is common on the coast and among young people, and “vos” is used in some Andean regions. If in doubt, use “usted”." },
+    A1: {
+      fill: [["🙋","Hola, me ___ Camila.","Hi, my name is Camila.",["llamo","llamas","llama"],0],["🎂","Yo ___ diez años.","I am ten years old.",["tengo","soy","estoy"],0]],
+      build: [["👋","Mucho gusto en conocerte","Nice to meet you"]],
+      talk: [["🙋","¿Cómo te llamas y de dónde eres?","What is your name and where are you from?"]],
+    },
+    A2: {
+      fill: [["🏠","Yo ___ en Christchurch con mi familia.","I live in Christchurch with my family.",["vivo","vive","vives"],0],["⏰","Me ___ a las siete de la mañana.","I get up at seven in the morning.",["levanto","levantas","levanta"],0]],
+      build: [["👨‍👩‍👧","Tengo dos hermanos y una hermana","I have two brothers and one sister"]],
+      talk: [["📅","¿Cómo es un día normal para ti?","What is a normal day like for you?"]],
+    },
+    B1: {
+      fill: [["🎓","Cuando era niño, ___ en el campo.","When I was a child, I lived in the countryside.",["vivía","viví","viviré"],0],["💭","Si tuviera más tiempo, ___ más.","If I had more time, I would read more.",["leería","leí","leeré"],0]],
+      build: [["🌱","Me gustaría aprender algo nuevo cada año","I would like to learn something new every year"]],
+      talk: [["💬","Cuéntame algo que te haya sorprendido esta semana.","Tell me something that has surprised you this week."]],
+    },
+    B2: {
+      fill: [["🧠","Aunque ___ cansado, fui al gimnasio.","Although I was tired, I went to the gym.",["estaba","esté","estuve"],0],["🔮","Espero que mis hijos ___ felices en el futuro.","I hope my children are happy in the future.",["sean","son","serán"],0]],
+      build: [["🤔","Si pudiera cambiar algo de mi vida, cambiaría mi rutina","If I could change something in my life, I would change my routine"]],
+      talk: [["🗣️","¿Qué opinas de la idea de que la personalidad cambia con los años?","What do you think of the idea that personality changes over the years?"]],
+    },
+  },
+  travel: {
+    note: { es: "Nota colombiana: para el billete de viaje se dice “tiquete” (o “pasaje”), “carro” para el coche, y “bus” o “buseta” para el transporte urbano.", en: "Colombian note: for a travel ticket people say “tiquete” (or “pasaje”), “carro” for car, and “bus” or “buseta” for city transport." },
+    A1: {
+      fill: [["🧳","Quiero ___ tiquete, por favor.","I want a ticket, please.",["un","una","unas"],0],["🏨","¿Dónde ___ el hotel?","Where is the hotel?",["está","es","están"],0]],
+      build: [["🚌","¿Dónde está la estación de bus?","Where is the bus station?"]],
+      talk: [["🗺️","¿A qué ciudad de Colombia te gustaría viajar?","Which city in Colombia would you like to travel to?"]],
+    },
+    A2: {
+      fill: [["✈️","El vuelo ___ a las ocho de la noche.","The flight leaves at eight at night.",["sale","salgo","salen"],0],["🏖️","El año pasado ___ a Cartagena.","Last year I went to Cartagena.",["fui","voy","iba"],0]],
+      build: [["🏨","Quisiera reservar una habitación para dos noches","I would like to book a room for two nights"]],
+      talk: [["🌎","¿Qué lugar te gustaría visitar y por qué?","What place would you like to visit and why?"]],
+    },
+    B1: {
+      fill: [["🧭","Cuando llegamos al aeropuerto, el vuelo ya ___.","When we got to the airport, the flight had already left.",["había salido","salió","salía"],0],["🎒","Si viajo a Colombia, ___ el Eje Cafetero.","If I travel to Colombia, I will visit the Coffee Region.",["visitaré","visité","visitaría"],0]],
+      build: [["📍","Me perdí y tuve que pedir indicaciones","I got lost and had to ask for directions"]],
+      talk: [["🧳","Cuéntame sobre el mejor viaje que hayas hecho.","Tell me about the best trip you have taken."]],
+    },
+    B2: {
+      fill: [["🌋","Habría disfrutado más el viaje si ___ mejor el itinerario.","I would have enjoyed the trip more if I had planned the itinerary better.",["hubiera planeado","planeé","planeaba"],0],["🛂","Es probable que el vuelo se ___ por el clima.","The flight will probably be delayed because of the weather.",["retrase","retrasa","retrasará"],0]],
+      build: [["🌍","Viajar te permite entender otras culturas","Travelling lets you understand other cultures"]],
+      talk: [["⚖️","¿Qué ventajas y desventajas tiene el turismo masivo?","What are the advantages and disadvantages of mass tourism?"]],
+    },
+  },
+  tech: {
+    note: { es: "Nota colombiana: se dice “celular” (no “móvil”), “computador” y “clave” (o “contraseña”).", en: "Colombian note: people say “celular” (not “móvil”), “computador” and “clave” (or “contraseña”)." },
+    A1: {
+      fill: [["📱","Mi ___ es nuevo.","My mobile phone is new.",["celular","carro","tinto"],0],["💻","Tengo un ___ en mi casa.","I have a computer at home.",["computador","tenedor","zapato"],0]],
+      build: [["📶","¿Cuál es la clave del wifi?","What is the wifi password?"]],
+      talk: [["📱","¿Qué aplicaciones usas todos los días?","What apps do you use every day?"]],
+    },
+    A2: {
+      fill: [["💬","Te ___ un mensaje por WhatsApp.","I am sending you a message on WhatsApp.",["envío","envías","envía"],0],["🔋","Mi celular no ___ batería.","My phone has no battery.",["tiene","tengo","tienes"],0]],
+      build: [["📸","Me gusta tomar fotos con mi celular","I like taking photos with my phone"]],
+      talk: [["🎮","¿Qué haces en tu tiempo libre con tu celular o tu computador?","What do you do in your free time with your phone or computer?"]],
+    },
+    B1: {
+      fill: [["🔒","Hay que ___ la clave cada tres meses.","You have to change the password every three months.",["cambiar","cambio","cambió"],0],["📡","Ayer el internet ___ todo el día.","Yesterday the internet was down all day.",["falló","fallaba","fallará"],0]],
+      build: [["🤖","La inteligencia artificial está cambiando el trabajo","Artificial intelligence is changing work"]],
+      talk: [["📵","¿Crees que pasamos demasiado tiempo frente a las pantallas?","Do you think we spend too much time in front of screens?"]],
+    },
+    B2: {
+      fill: [["🛡️","Es fundamental que las empresas ___ los datos personales.","It is essential that companies protect personal data.",["protejan","protegen","protegerán"],0],["🧩","Si no hubiera redes sociales, la gente ___ más tiempo libre.","If there were no social media, people would have more free time.",["tendría","tiene","tendrá"],0]],
+      build: [["⚖️","Debería existir una regulación más clara sobre la privacidad digital","There should be clearer regulation about digital privacy"]],
+      talk: [["🔮","¿Cómo imaginas la tecnología dentro de veinte años?","How do you imagine technology in twenty years’ time?"]],
+    },
+  },
+  sports: {
+    note: { es: "Nota colombiana: en Bogotá, la ciclovía cierra calles principales los domingos y festivos para que la gente monte en bicicleta, camine y haga ejercicio.", en: "Colombian note: in Bogotá, the ciclovía closes main streets on Sundays and public holidays so people can cycle, walk and exercise." },
+    A1: {
+      fill: [["⚽","Me gusta jugar ___ fútbol.","I like playing football.",["al","a la","el"],0],["🏃","Yo ___ por la mañana.","I run in the morning.",["corro","corre","corres"],0]],
+      build: [["🚴","Me gusta montar en bicicleta","I like riding a bike"]],
+      talk: [["🏅","¿Qué deporte te gusta más?","Which sport do you like most?"]],
+    },
+    A2: {
+      fill: [["🥾","El domingo ___ a caminar por la montaña.","On Sunday we are going walking in the mountains.",["vamos","van","voy"],0],["🏊","Ayer ___ en la piscina por una hora.","Yesterday I swam in the pool for an hour.",["nadé","nado","nadaba"],0]],
+      build: [["🏞️","Prefiero hacer deporte al aire libre","I prefer to exercise outdoors"]],
+      talk: [["🌄","¿Qué actividades al aire libre haces en Nueva Zelanda?","What outdoor activities do you do in New Zealand?"]],
+    },
+    B1: {
+      fill: [["🏆","Cuando era joven, ___ fútbol todos los fines de semana.","When I was young I played football every weekend.",["jugaba","jugué","jugaré"],0],["🦵","Me lesioné la rodilla mientras ___.","I hurt my knee while I was running.",["corría","corrí","correré"],0]],
+      build: [["🏔️","Subir una montaña requiere preparación y paciencia","Climbing a mountain takes preparation and patience"]],
+      talk: [["🇨🇴","¿Qué sabes del ciclismo en Colombia?","What do you know about cycling in Colombia?"]],
+    },
+    B2: {
+      fill: [["🏅","Si hubiéramos entrenado más, ___ el partido.","If we had trained more, we would have won the match.",["habríamos ganado","ganamos","ganaríamos"],0],["🌲","Es importante que los turistas ___ la naturaleza.","It is important that tourists respect nature.",["respeten","respetan","respetarán"],0]],
+      build: [["⛰️","El senderismo me ayuda a desconectarme del estrés diario","Hiking helps me disconnect from daily stress"]],
+      talk: [["💪","¿Deberían los colegios dar más importancia al deporte? ¿Por qué?","Should schools give more importance to sport? Why?"]],
+    },
+  },
+  food: {
+    note: { es: "Nota colombiana: el “mesero” te atiende en el restaurante, el “tinto” es un café negro, y para pagar se dice “La cuenta, por favor”. La propina a veces ya viene incluida: revisa la cuenta.", en: "Colombian note: the “mesero” is the waiter, “tinto” is a black coffee, and to pay you say “La cuenta, por favor”. The tip is sometimes already included: check the bill." },
+    A1: {
+      fill: [["☕","Quiero un ___, por favor.","I would like a black coffee, please.",["tinto","lápiz","tiquete"],0],["🍽️","La ___, por favor.","The bill, please.",["cuenta","cuento","cuerda"],0]],
+      build: [["🥟","Quisiera una empanada y un jugo","I would like an empanada and a juice"]],
+      talk: [["🍲","¿Cuál es tu comida favorita?","What is your favourite food?"]],
+    },
+    A2: {
+      fill: [["🧑‍🍳","¿Me ___ el menú, por favor?","Could you bring me the menu, please?",["trae","traigo","traes"],0],["🥗","Yo no ___ carne, soy vegetariano.","I don’t eat meat, I am vegetarian.",["como","comes","come"],0]],
+      build: [["🍽️","Una mesa para cuatro personas, por favor","A table for four people, please"]],
+      talk: [["🥘","¿Qué sueles pedir cuando sales a comer?","What do you usually order when you go out to eat?"]],
+    },
+    B1: {
+      fill: [["🍴","Ayer ___ en un restaurante muy bueno.","Yesterday we ate at a very good restaurant.",["comimos","comíamos","comeremos"],0],["👨‍🍳","Me recomendó que ___ el ajiaco.","He recommended that I try the ajiaco.",["probara","pruebo","probé"],0]],
+      build: [["📋","¿Qué me recomienda del menú de hoy?","What do you recommend from today’s menu?"]],
+      talk: [["🇨🇴","¿Qué platos colombianos has probado o te gustaría probar?","Which Colombian dishes have you tried or would you like to try?"]],
+    },
+    B2: {
+      fill: [["🍷","Si hubiera sabido que estaba lleno, ___ una reserva.","If I had known it was full, I would have made a reservation.",["habría hecho","hice","haría"],0],["🍰","El servicio fue tan lento que ___ quejarnos.","The service was so slow that we had to complain.",["tuvimos que","teníamos","tengamos"],0]],
+      build: [["🌮","La comida es una parte importante de la identidad cultural","Food is an important part of cultural identity"]],
+      talk: [["🥦","¿Crees que la gente come mejor hoy que hace cincuenta años? ¿Por qué?","Do you think people eat better today than fifty years ago? Why?"]],
+    },
+  },
+};
+
+function buildTutorPool(cats, level) {
+  const pool = [];
+  cats.forEach((c) => {
+    const d = TZ_DATA[c];
+    if (!d || !d[level]) return;
+    d[level].fill.forEach((f, i) => {
+      const opts = shuffle(f[3].map((label, k) => ({ id: `${c}${level}f${i}o${k}`, label })));
+      pool.push({ id: `${c}-${level}-fill-${i}`, kind: "finisher", cat: c, visual: { type: "icon", emoji: f[0] }, promptEs: f[1], promptEn: f[2], options: opts, correctId: `${c}${level}f${i}o${f[4]}`, answer: f[3][f[4]] });
+    });
+    d[level].build.forEach((b, i) => pool.push({ id: `${c}-${level}-build-${i}`, kind: "builder", cat: c, visual: { type: "icon", emoji: b[0] }, words: b[1].split(" "), promptEn: b[2] }));
+    d[level].talk.forEach((t, i) => pool.push({ id: `${c}-${level}-talk-${i}`, kind: "talk", cat: c, emoji: t[0], es: t[1], en: t[2] }));
+  });
+  const shuffled = shuffle(pool);
+  // one cultural note per chosen category, placed at random spots
+  cats.forEach((c) => {
+    if (TZ_DATA[c]) shuffled.splice(Math.floor(Math.random() * (shuffled.length + 1)), 0, { id: `${c}-${level}-note`, kind: "note", cat: c, note: TZ_DATA[c].note });
+  });
+  return shuffled;
+}
+
+function speakSpanish(text) {
+  if (typeof window === "undefined" || !window.speechSynthesis) return;
+  window.speechSynthesis.cancel();
+  const utter = new SpeechSynthesisUtterance(text);
+  const voices = window.speechSynthesis.getVoices();
+  const v = voices.find((x) => /^es[-_]?CO/i.test(x.lang)) || voices.find((x) => /^es[-_]?(419|MX|US|AR)/i.test(x.lang)) || voices.find((x) => /^es/i.test(x.lang));
+  if (v) { utter.voice = v; utter.lang = v.lang; } else { utter.lang = "es-CO"; }
+  utter.rate = 0.82;
+  window.speechSynthesis.speak(utter);
+}
+
+// Bilingual label: English line, Spanish line directly underneath. Spanish-only mode hides English.
+function Bi({ en, es, mode, className }) {
+  return (
+    <span className={`bi ${className || ""}`}>
+      {mode !== "es" && <span className="bi-en">{en}</span>}
+      <span className={`bi-es ${mode === "es" ? "solo" : ""}`}>{es}</span>
+    </span>
+  );
+}
+
+function TzSpeak({ text, mode }) {
+  return (
+    <button className="reo-pronounce-btn" onClick={() => speakSpanish(text)} title="Listen / Escuchar (P)">
+      🔊 <span className="reo-key-badge">P</span> <Bi mode={mode} en="Listen" es="Escuchar" />
+    </button>
+  );
+}
+
+function TzHintBtn({ mode, onClick }) {
+  return (
+    <button className="reo-hint-btn" onClick={onClick}>
+      💡 <span className="reo-key-badge">H</span> <Bi mode={mode} en="Hint" es="Pista" />
+    </button>
+  );
+}
+
+function TzFinisher({ task, registerKeyHandler, onAnswered, mode }) {
+  const [selected, setSelected] = useState(null);
+  const [showHint, setShowHint] = useState(false);
+  function choose(opt) {
+    if (selected) return;
+    setSelected(opt);
+    if (onAnswered) onAnswered(opt.id === task.correctId);
+  }
+  useEffect(() => { setSelected(null); setShowHint(false); }, [task.id]);
+  useEffect(() => {
+    return registerKeyHandler((e) => {
+      const key = e.key.toLowerCase();
+      if (key === "h") { setShowHint((s) => !s); return; }
+      if (key === "p") { speakSpanish(task.promptEs.replace("___", task.answer)); return; }
+      const idx = OPTION_KEYS.indexOf(key);
+      if (idx !== -1 && task.options[idx]) choose(task.options[idx]);
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [task, selected]);
+  const answered = !!selected;
+  const isCorrect = answered && selected.id === task.correctId;
+  const [before, after] = task.promptEs.split("___");
+  return (
+    <div className="reo-task">
+      <span className="reo-task-kind">💬 <Bi mode={mode} en="Finish the sentence" es="Completa la frase" /></span>
+      <ReoVisual visual={task.visual} />
+      <h1 className="reo-sentence">{before}<span className="reo-blank">{answered ? selected.label : "___"}</span>{after}</h1>
+      {mode !== "es" && <p className="reo-english-hint">{task.promptEn}</p>}
+      <div className="reo-options">
+        {task.options.map((opt, i) => (
+          <button key={opt.id} className={`reo-option ${answered && opt.id === selected.id ? (isCorrect ? "correct" : "incorrect") : ""} ${answered && opt.id === task.correctId && !isCorrect ? "reveal-correct" : ""}`} onClick={() => choose(opt)} disabled={answered}>
+            <span className="reo-key-badge">{OPTION_KEYS[i].toUpperCase()}</span> {opt.label}
+          </button>
+        ))}
+      </div>
+      <div className="reo-task-footer">
+        <TzSpeak text={task.promptEs.replace("___", task.answer)} mode={mode} />
+        <TzHintBtn mode={mode} onClick={() => setShowHint((s) => !s)} />
+      </div>
+      {showHint && !answered && (
+        <p className="reo-hint-text">💡 <Bi mode={mode} en={`It starts with “${task.answer[0]}” and has ${task.answer.length} letters.`} es={`Empieza con “${task.answer[0]}” y tiene ${task.answer.length} letras.`} /></p>
+      )}
+      {answered && (
+        <p className={`reo-feedback ${isCorrect ? "good" : "oops"}`}>
+          {isCorrect ? <>✅ <Bi mode={mode} en="Correct!" es="¡Correcto!" /></> : <>❌ <Bi mode={mode} en={`Not quite — it’s “${task.answer}”.`} es={`Casi — es “${task.answer}”.`} /></>}
+        </p>
+      )}
+    </div>
+  );
+}
+
+function TzBuilder({ task, registerKeyHandler, onAnswered, mode }) {
+  const mk = () => shuffle(task.words.map((w, i) => ({ word: w, key: i })));
+  const [bank, setBank] = useState(mk);
+  const [answer, setAnswer] = useState([]);
+  const [checked, setChecked] = useState(false);
+  const [correct, setCorrect] = useState(false);
+  const [showHint, setShowHint] = useState(false);
+  useEffect(() => { setBank(mk()); setAnswer([]); setChecked(false); setShowHint(false); /* eslint-disable-next-line */ }, [task.id]);
+  function addToAnswer(tile) { if (checked || !tile) return; setAnswer((a) => [...a, tile]); setBank((b) => b.filter((t) => t.key !== tile.key)); }
+  function removeLast() { if (checked || answer.length === 0) return; const t = answer[answer.length - 1]; setAnswer((a) => a.slice(0, -1)); setBank((b) => [...b, t]); }
+  function removeFromAnswer(tile) { if (checked) return; setAnswer((a) => a.filter((t) => t.key !== tile.key)); setBank((b) => [...b, tile]); }
+  function handleDrop(e) { e.preventDefault(); if (checked) return; const key = Number(e.dataTransfer.getData("text/plain")); addToAnswer(bank.find((t) => t.key === key)); }
+  function check() {
+    const ok = answer.map((t) => t.word).join(" ") === task.words.join(" ");
+    setCorrect(ok); setChecked(true); if (onAnswered) onAnswered(ok);
+  }
+  function reset() { setBank(mk()); setAnswer([]); setChecked(false); }
+  useEffect(() => {
+    return registerKeyHandler((e) => {
+      const key = e.key.toLowerCase();
+      if (key === "h") { setShowHint((s) => !s); return; }
+      if (key === "p") { speakSpanish(task.words.join(" ")); return; }
+      if (key === "r") { reset(); return; }
+      if (key === "backspace") { removeLast(); return; }
+      if (key === "enter") { if (bank.length === 0) check(); return; }
+      const num = parseInt(e.key, 10);
+      if (!isNaN(num) && num >= 1 && num <= bank.length) addToAnswer(bank[num - 1]);
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [task, bank, answer, checked]);
+  const full = task.words.join(" ");
+  return (
+    <div className="reo-task">
+      <span className="reo-task-kind">🧩 <Bi mode={mode} en="Build the sentence" es="Construye la frase" /></span>
+      <ReoVisual visual={task.visual} />
+      {mode !== "es" && <p className="reo-english-hint">{task.promptEn}</p>}
+      <div className="reo-answer-row" onDragOver={(e) => e.preventDefault()} onDrop={handleDrop}>
+        {answer.length === 0 && <span className="reo-answer-placeholder"><Bi mode={mode} en="Tap, drag, or press number keys to add words in order" es="Toca, arrastra o pulsa los números para poner las palabras en orden" /></span>}
+        {answer.map((tile) => (<button key={tile.key} className="reo-tile answer" onClick={() => removeFromAnswer(tile)}>{tile.word}</button>))}
+      </div>
+      <div className="reo-word-bank">
+        {bank.map((tile, i) => (
+          <button key={tile.key} className="reo-tile" draggable onDragStart={(e) => e.dataTransfer.setData("text/plain", String(tile.key))} onClick={() => addToAnswer(tile)}>
+            <span className="reo-key-badge small">{i + 1}</span> {tile.word}
+          </button>
+        ))}
+      </div>
+      <div className="reo-builder-buttons">
+        <button className="btn btn-secondary" onClick={reset} disabled={answer.length === 0}>↺ <span className="reo-key-badge">R</span> <Bi mode={mode} en="Reset" es="Reiniciar" /></button>
+        <button className="btn btn-primary" onClick={check} disabled={checked || bank.length > 0}>✓ <span className="reo-key-badge">⏎</span> <Bi mode={mode} en="Check" es="Comprobar" /></button>
+      </div>
+      <div className="reo-task-footer">
+        <TzSpeak text={full} mode={mode} />
+        <TzHintBtn mode={mode} onClick={() => setShowHint((s) => !s)} />
+      </div>
+      {showHint && <p className="reo-hint-text">💡 <Bi mode={mode} en={`Full sentence: “${full}”`} es={`Frase completa: “${full}”`} /></p>}
+      {checked && (
+        <p className={`reo-feedback ${correct ? "good" : "oops"}`}>
+          {correct ? <>✅ <Bi mode={mode} en="Perfect order!" es="¡Orden perfecto!" /></> : <>❌ <Bi mode={mode} en={`Not quite — it’s “${full}”`} es={`Casi — es “${full}”`} /></>}
+        </p>
+      )}
+    </div>
+  );
+}
+
+function TzTalk({ task, registerKeyHandler, mode }) {
+  useEffect(() => registerKeyHandler((e) => { if (e.key.toLowerCase() === "p") speakSpanish(task.es); }), [task]); // eslint-disable-line
+  return (
+    <div className="reo-task">
+      <span className="reo-task-kind">🗣️ <Bi mode={mode} en="Talk about it with your tutor" es="Conversa con tu tutor" /></span>
+      <ReoVisual visual={{ type: "icon", emoji: task.emoji }} />
+      <h1 className="title-en">{task.es}</h1>
+      {mode !== "es" && <h2 className="title-hi">{task.en}</h2>}
+      <div className="reo-task-footer"><TzSpeak text={task.es} mode={mode} /></div>
+    </div>
+  );
+}
+
+function TzNote({ task, mode }) {
+  return (
+    <div className="reo-task">
+      <span className="reo-task-kind">🇨🇴 <Bi mode={mode} en="Colombian Spanish tip" es="Dato del español de Colombia" /></span>
+      <ReoVisual visual={{ type: "icon", emoji: "🇨🇴" }} />
+      <h2 className="title-en" style={{ fontSize: 22 }}>{task.note.es}</h2>
+      {mode !== "es" && <h2 className="title-hi">{task.note.en}</h2>}
+    </div>
+  );
+}
+
+function TutorZoneScreen({ onHome }) {
+  const [step, setStep] = useState("hub"); // hub | spanish
+  const [mode, setMode] = useState("both"); // both | es
+  const [level, setLevel] = useState("A1");
+  const [cats, setCats] = useState(["personal"]);
+  const [tasks, setTasks] = useState(() => buildTutorPool(["personal"], "A1"));
+  const [index, setIndex] = useState(0);
+  const [animKey, setAnimKey] = useState(0);
+  const keyRef = React.useRef(null);
+
+  useEffect(() => { setTasks(buildTutorPool(cats, level)); setIndex(0); setAnimKey((k) => k + 1); /* eslint-disable-next-line */ }, [cats.join(","), level]);
+
+  const total = tasks.length;
+  const current = tasks[index];
+  function goNext() { setAnimKey((k) => k + 1); setIndex((i) => (i + 1 < tasks.length ? i + 1 : i)); }
+  function goBack() { setAnimKey((k) => k + 1); setIndex((i) => Math.max(0, i - 1)); }
+  function reshuffle() { setTasks(buildTutorPool(cats, level)); setIndex(0); setAnimKey((k) => k + 1); }
+  function handleAnswered(ok) {
+    if (ok) return;
+    setTasks((t) => { const c = [...t]; c.splice(Math.min(index + 3, c.length), 0, { ...current, id: `${current.id}-retry-${Date.now()}` }); return c; });
+  }
+  function registerKeyHandler(fn) { keyRef.current = fn; return () => { if (keyRef.current === fn) keyRef.current = null; }; }
+
+  useEffect(() => {
+    if (step !== "spanish") return undefined;
+    function handleKey(e) {
+      const key = e.key.toLowerCase();
+      if (key === "arrowright" || key === "n") { e.preventDefault(); goNext(); return; }
+      if (key === "arrowleft" || key === "b") { e.preventDefault(); goBack(); return; }
+      if (key === "s") { e.preventDefault(); reshuffle(); return; }
+      if (keyRef.current) keyRef.current(e);
+    }
+    window.addEventListener("keydown", handleKey);
+    return () => window.removeEventListener("keydown", handleKey);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [step, index, tasks, cats, level]);
+
+  function toggleCat(c) { setCats((s) => (s.includes(c) ? s.filter((x) => x !== c) : [...s, c])); }
+
+  const modeToggle = (
+    <button className={`reo-english-toggle ${mode === "both" ? "on" : ""}`} onClick={() => setMode((m) => (m === "both" ? "es" : "both"))} aria-pressed={mode === "both"}>
+      <span className="reo-english-toggle-dot" />
+      <span className="bi">
+        {mode === "both" ? <><span className="bi-en">🇬🇧 Spanish + English</span><span className="bi-es">🇨🇴 Español + inglés</span></> : <span className="bi-es solo">🇨🇴 Solo español</span>}
+      </span>
+    </button>
+  );
+
+  if (step === "hub") {
+    return (
+      <div className="game-screen">
+        <div style={{ marginBottom: 8, display: "flex", justifyContent: "center" }}><Logo onClick={onHome} /></div>
+        <h1 className="title-en"><Bi mode={mode} en="🎓 Tutor Zone" es="🎓 Zona de Tutoría" /></h1>
+        <p className="reo-tagline"><Bi mode={mode} en="Choose what you want to learn." es="Elige qué quieres aprender." /></p>
+        {modeToggle}
+        <div className="category-grid" style={{ marginTop: 16 }}>
+          <button className="reo-launch-btn tutor-launch-btn" onClick={() => setStep("spanish")}>
+            <span className="reo-launch-emoji">🇨🇴</span>
+            <span className="reo-launch-text">
+              <span className="reo-launch-title"><Bi mode={mode} en="Language Learning — Spanish" es="Aprendizaje de idiomas — Español" /></span>
+              <span className="reo-launch-desc"><Bi mode={mode} en="Colombian Spanish for your tutor sessions. 5 topics, levels A1–B2." es="Español de Colombia para tus clases con el tutor. 5 temas, niveles A1–B2." /></span>
+            </span>
+          </button>
+        </div>
+        <div className="shuffle-row">
+          <button className="btn btn-secondary" onClick={onHome}>← <Bi mode={mode} en="Back to Timefillers" es="Volver a Timefillers" /></button>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="game-screen">
+      <div style={{ marginBottom: 8, display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap", justifyContent: "center" }}>
+        <Logo onClick={onHome} />
+      </div>
+      <h1 className="title-en"><Bi mode={mode} en="🇨🇴 Spanish — Colombian Spanish" es="🇨🇴 Español — español de Colombia" /></h1>
+      <p className="reo-tagline"><Bi mode={mode} en="1. Pick your level. 2. Pick topics. 3. Practise." es="1. Elige tu nivel. 2. Elige los temas. 3. Practica." /></p>
+
+      <div className="age-selector" role="group" aria-label="Nivel / Level">
+        {Object.entries(TZ_LEVELS).map(([code, m]) => (
+          <button key={code} className={`age-option ${level === code ? "active" : ""}`} onClick={() => setLevel(code)}>
+            {code} · <Bi mode={mode} en={m.en} es={m.es} />
+          </button>
+        ))}
+      </div>
+      <div style={{ height: 12 }} />
+      <div className="reo-category-block">
+        <div className="reo-category-grid" role="group" aria-label="Temas / Topics">
+          {Object.entries(TZ_CATS).map(([code, m]) => (
+            <button key={code} className={`age-option reo-category-pill ${cats.includes(code) ? "active" : ""}`} onClick={() => toggleCat(code)} aria-pressed={cats.includes(code)}>
+              {cats.includes(code) ? "✓ " : ""}{m.emoji} <Bi mode={mode} en={m.en} es={m.es} />
+            </button>
+          ))}
+        </div>
+        <div className="reo-category-actions">
+          <button className="reo-mini-btn" onClick={() => setCats(Object.keys(TZ_CATS))}><Bi mode={mode} en="Select All" es="Elegir todo" /></button>
+          <button className="reo-mini-btn" onClick={() => setCats([])}><Bi mode={mode} en="Clear" es="Borrar" /></button>
+        </div>
+      </div>
+      {modeToggle}
+
+      {total === 0 ? (
+        <div className="game-card"><p className="reo-english-hint"><Bi mode={mode} en="Select at least one topic above to start." es="Elige al menos un tema arriba para empezar." /></p></div>
+      ) : (
+        <>
+          <div className="game-card" key={animKey}>
+            {current.kind === "finisher" && <TzFinisher task={current} registerKeyHandler={registerKeyHandler} onAnswered={handleAnswered} mode={mode} />}
+            {current.kind === "builder" && <TzBuilder task={current} registerKeyHandler={registerKeyHandler} onAnswered={handleAnswered} mode={mode} />}
+            {current.kind === "talk" && <TzTalk task={current} registerKeyHandler={registerKeyHandler} mode={mode} />}
+            {current.kind === "note" && <TzNote task={current} mode={mode} />}
+          </div>
+          <div className="nav-bar">
+            <button className="btn btn-secondary" onClick={goBack} disabled={index === 0}>← <span className="reo-key-badge">B</span> <Bi mode={mode} en="Back" es="Atrás" /></button>
+            <div className="progress" aria-live="polite"><Bi mode={mode} en={`Task ${index + 1} / ${total}`} es={`Tarea ${index + 1} / ${total}`} /></div>
+            <button className="btn btn-primary" onClick={goNext}><Bi mode={mode} en="Next" es="Siguiente" /> <span className="reo-key-badge">N</span> →</button>
+          </div>
+          <div className="shuffle-row">
+            <button className="btn btn-secondary shuffle-btn" onClick={reshuffle}>🔀 <span className="reo-key-badge">S</span> <Bi mode={mode} en="Shuffle" es="Mezclar" /></button>
+            <button className="btn btn-secondary" onClick={() => setStep("hub")}>← <Bi mode={mode} en="Tutor Zone menu" es="Menú de Tutoría" /></button>
+          </div>
+          <p className="reo-keys-legend">
+            ⌨️ <Bi mode={mode}
+              en="A–E answer · 1–9 add a word · Backspace undo · Enter check · H hint · P listen · N/→ next · B/← back · S shuffle"
+              es="A–E responder · 1–9 añadir palabra · Retroceso deshacer · Enter comprobar · H pista · P escuchar · N/→ siguiente · B/← atrás · S mezclar" />
+          </p>
+        </>
+      )}
+    </div>
+  );
+}
+
+
 const CATEGORIES = [
   {
     id: "weird",
@@ -1568,7 +2036,7 @@ function CategoryCard({ category, primaryLanguage, secondaryLanguage, onSelect }
   );
 }
 
-function HomeScreen({ primaryLanguage, secondaryLanguage, ageGroup, setAgeGroup, randomSelectEnabled, setRandomSelectEnabled, onSelectCategory, onOpenReo }) {
+function HomeScreen({ primaryLanguage, secondaryLanguage, ageGroup, setAgeGroup, randomSelectEnabled, setRandomSelectEnabled, onSelectCategory, onOpenReo, onOpenTutor }) {
   return (
     <div className="home-screen">
       <div className="home-hero">
@@ -1587,6 +2055,14 @@ function HomeScreen({ primaryLanguage, secondaryLanguage, ageGroup, setAgeGroup,
         <span className="reo-launch-text">
           <span className="reo-launch-title">Reo Practice — Kōrero Reo</span>
           <span className="reo-launch-desc">Sentence starters, finishers & a drag-and-drop builder, with picture prompts. Starter to Fluent.</span>
+        </span>
+      </button>
+
+      <button className="reo-launch-btn tutor-launch-btn" onClick={onOpenTutor}>
+        <span className="reo-launch-emoji">🎓</span>
+        <span className="reo-launch-text">
+          <span className="reo-launch-title"><span className="bi"><span className="bi-en">Tutor Zone — Language Learning</span><span className="bi-es">Zona de Tutoría — Aprendizaje de idiomas</span></span></span>
+          <span className="reo-launch-desc"><span className="bi"><span className="bi-en">Colombian Spanish practice: 5 topics, A1–B2.</span><span className="bi-es">Práctica de español de Colombia: 5 temas, A1–B2.</span></span></span>
         </span>
       </button>
 
@@ -1879,6 +2355,11 @@ export default function App() {
 
   function goHome() {
     setScreen("home");
+    setCategory(null);
+  }
+
+  function openTutor() {
+    setScreen("tutor");
     setCategory(null);
   }
 
@@ -2384,6 +2865,11 @@ export default function App() {
           cursor: pointer;
           transition: transform 180ms ease, box-shadow 180ms ease;
         }
+        .bi { display: inline-flex; flex-direction: column; align-items: inherit; line-height: 1.25; vertical-align: middle; text-align: inherit; }
+        .bi-en { display: block; }
+        .bi-es { display: block; font-size: 0.82em; font-style: italic; color: #1F8A7E; font-weight: 700; }
+        .bi-es.solo { font-size: 1em; font-style: normal; color: inherit; }
+        .tutor-launch-btn { border-color: #2BB3A3; }
         .reo-launch-btn:hover { transform: translateY(-3px); box-shadow: 0 16px 30px -12px rgba(43,38,33,0.2); }
         .reo-launch-emoji { font-size: 40px; flex-shrink: 0; }
         .reo-launch-text { display: flex; flex-direction: column; gap: 4px; }
@@ -2832,9 +3318,12 @@ export default function App() {
           setRandomSelectEnabled={setRandomSelectEnabled}
           onSelectCategory={selectCategory}
           onOpenReo={openReo}
+          onOpenTutor={openTutor}
         />
       ) : screen === "reo" ? (
         <ReoPracticeScreen onHome={goHome} />
+      ) : screen === "tutor" ? (
+        <TutorZoneScreen onHome={goHome} />
       ) : (
         <>
           <div style={{ marginBottom: 8, display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap", justifyContent: "center" }}>
