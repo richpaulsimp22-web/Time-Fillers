@@ -1395,6 +1395,36 @@ const CATEGORIES = [
       { id: "w18", type: "question", minTier: 1, emoji: "🔑", title: "You find a key that opens any lock in the world, but it only works once. What do you unlock?", translations: { hi: "आपको एक चाबी मिलती है जो दुनिया के किसी भी ताले को खोल सकती है, लेकिन यह केवल एक बार काम करती है। आप क्या खोलेंगे?", es: "Encuentras una llave que abre cualquier cerradura del mundo, pero solo funciona una vez. ¿Qué desbloqueas?", fr: "Tu trouves une clé qui ouvre n'importe quelle serrure au monde, mais elle ne fonctionne qu'une seule fois. Qu'est-ce que tu déverrouilles ?", mi: "Ka kitea e koe he kī e whakatuwhera ana i ngā rakiraki katoa o te ao, engari kotahi noa te wā ka mahi. He aha tāu e whakatuwhera?", zh: "你找到一把能打开世界上任何锁的钥匙,但它只能用一次。你会打开什么?", sm: "E te maua se ki e mafai ona tatalaina lokaga uma i le lalolagi, ae na o le tasi taimi e aoga ai. O le a le mea e te tatalaina?" } },
       { id: "w19", type: "question", minTier: 0, emoji: "🔢", simple: "The numbers in maths class come alive! What does number 7 do?", title: "All the numbers in maths class come to life and start walking around. What does number 7 do?", translations: { hi: "गणित की कक्षा में सभी संख्याएँ जीवित हो जाती हैं और चलने लगती हैं। संख्या 7 क्या करती है?", es: "Todos los números en la clase de matemáticas cobran vida y empiezan a caminar. ¿Qué hace el número 7?", fr: "Tous les nombres du cours de maths prennent vie et se mettent à marcher. Que fait le nombre 7 ?", mi: "Ka ora ngā tau katoa i te akomanga pāngarau, ā, ka tīmata ki te hīkoi haere. He aha te mahi a te tau 7?", zh: "数学课上所有的数字都活了过来,开始四处走动。数字7会做什么?", sm: "Ua ola numera uma i le vasega numera ma amata ona savavali. O le a le mea e faia e le numera 7?" } },
       { id: "w20", type: "question", minTier: 0, emoji: "🐧", title: "You wake up speaking fluent penguin. What's the first thing you say to one?", translations: { hi: "आप उठते हैं और धाराप्रवाह पेंगुइन भाषा बोल सकते हैं। आप एक पेंगुइन से सबसे पहले क्या कहेंगे?", es: "Te despiertas hablando pingüino con fluidez. ¿Qué es lo primero que le dices a uno?", fr: "Tu te réveilles en parlant couramment le pingouin. Que dis-tu en premier à l'un d'eux ?", mi: "Ka oho koe, ā, ka mōhio koe ki te kōrero i te reo o te pengiuana. He aha tāu kupu tuatahi ki tētahi?", zh: "你醒来后发现自己能说流利的企鹅语。你会对企鹅说的第一句话是什么?", sm: "E te ala ma e lelei ona tautala i le gagana penguin. O le a le mea muamua e te fai atu i se penguin?" } },
+      { id: "w36", type: "question", minTier: 0, emoji: "🧦", simple: "Every sock turns into a puppet! What happens at school?", title: "Overnight, every sock in the world turns into a tiny puppet. What happens at school the next day?", translations: { hi: "रात भर में दुनिया की हर जुराब एक छोटी कठपुतली बन जाती है। अगले दिन स्कूल में क्या होता है?", es: "Durante la noche, todos los calcetines del mundo se convierten en pequeñas marionetas. ¿Qué pasa en la escuela al día siguiente?", fr: "Pendant la nuit, toutes les chaussettes du monde se transforment en petites marionnettes. Que se passe-t-il à l'école le lendemain ?", mi: "I te pō, ka huri ngā tōkena katoa o te ao hei karetao iti. He aha ka pā ki te kura ā te rā i muri mai?", zh: "一夜之间,世界上所有的袜子都变成了小木偶。第二天学校里会发生什么?", sm: "I le po, ua suia ofuvae uma o le lalolagi i pupeta la'ititi. O le a le mea e tupu i le a'oga i le aso na sosoo ai?" } },
+      { id: "w37", type: "question", minTier: 0, emoji: "🌧️", simple: "It rains upwards from the ground! What do you do?", title: "It starts raining upwards, from the ground to the sky. What do you do?", translations: { hi: "बारिश उल्टी होने लगती है, ज़मीन से आसमान की ओर। आप क्या करते हैं?", es: "Empieza a llover hacia arriba, del suelo al cielo. ¿Qué haces?", fr: "Il se met à pleuvoir vers le haut, du sol vers le ciel. Que fais-tu ?", mi: "Ka tīmata te ua ki te ara whakarunga, mai i te whenua ki te rangi. He aha tāu mahi?", zh: "雨开始向上下,从地面落向天空。你会怎么做?", sm: "Ua amata ona timu i luga, mai le eleele i le lagi. O le a lau faia?" } },
+      { id: "w38", type: "question", minTier: 0, emoji: "🥝", simple: "A kiwi is reading in the school library! What is it reading?", title: "You find a kiwi bird in the school library reading a book. What is it reading?", translations: { hi: "आपको स्कूल की लाइब्रेरी में एक कीवी पक्षी किताब पढ़ता मिलता है। वह क्या पढ़ रहा है?", es: "Encuentras un kiwi en la biblioteca de la escuela leyendo un libro. ¿Qué está leyendo?", fr: "Tu trouves un kiwi dans la bibliothèque de l'école en train de lire un livre. Que lit-il ?", mi: "Ka kitea e koe he kiwi i te whare pukapuka o te kura e pānui pukapuka ana. He aha tāna e pānui nei?", zh: "你在学校图书馆发现一只几维鸟正在看书。它在看什么?", sm: "E te maua se kiwi i le faletusi o le a'oga o faitau se tusi. O le a le mea o loo faitau ai?" } },
+      { id: "w39", type: "question", minTier: 1, emoji: "🎒", title: "Your school bag becomes bottomless. What's the strangest thing you pull out?", translations: { hi: "आपका स्कूल बैग अथाह हो जाता है। आप उसमें से सबसे अजीब चीज़ क्या निकालते हैं?", es: "Tu mochila escolar se vuelve sin fondo. ¿Qué es lo más extraño que sacas de ella?", fr: "Ton cartable devient sans fond. Quelle est la chose la plus étrange que tu en sors ?", mi: "Ka kore he take o tō pēke kura. He aha te mea rerekē rawa ka tangohia mai e koe?", zh: "你的书包变得深不见底。你从里面拿出的最奇怪的东西是什么?", sm: "Ua leai se pito i lalo o lau taga a'oga. O le a le mea sili ona uiga ese e te aumai ai?" } },
+      { id: "w40", type: "question", minTier: 1, emoji: "🕰️", title: "You discover a clock that makes time run backwards for ten seconds. When would you use it?", translations: { hi: "आपको एक ऐसी घड़ी मिलती है जो दस सेकंड के लिए समय को उल्टा चला देती है। आप इसे कब इस्तेमाल करेंगे?", es: "Descubres un reloj que hace que el tiempo retroceda diez segundos. ¿Cuándo lo usarías?", fr: "Tu découvres une horloge qui fait reculer le temps de dix secondes. Quand l'utiliserais-tu ?", mi: "Ka kitea e koe he karaka e hoki whakamuri ai te wā mō te tekau hēkona. Ahea koe whakamahi ai?", zh: "你发现一个能让时间倒流十秒的钟。你会在什么时候用它?", sm: "E te maua se uati e toe foi tua ai le taimi mo sekone e sefulu. O afea e te faaaogaina ai?" } },
+      { id: "w41", type: "question", minTier: 0, emoji: "🪑", simple: "Your chair walks around the room by itself! Where does it take you?", title: "Your classroom chair starts walking around the room by itself. Where does it take you?", translations: { hi: "आपकी कक्षा की कुर्सी अपने आप कमरे में चलने लगती है। वह आपको कहाँ ले जाती है?", es: "Tu silla del salón empieza a caminar sola por el aula. ¿Adónde te lleva?", fr: "Ta chaise de classe se met à marcher toute seule dans la pièce. Où t'emmène-t-elle ?", mi: "Ka tīmata tō tūru akomanga ki te hīkoi i te ruma i a ia anō. Ki hea koe e kawe ai?", zh: "你教室的椅子自己在房间里走了起来。它会带你去哪里?", sm: "Ua amata ona savali lau nofoa i totonu o le potu na o ia. O fea e ave ai oe?" } },
+      { id: "w42", type: "question", minTier: 0, emoji: "🍎", simple: "A playground tree grows a different fruit every day! What grows today?", title: "A tree in the playground grows a different fruit every day. What is growing on it today?", translations: { hi: "खेल के मैदान का एक पेड़ हर दिन अलग फल उगाता है। आज उस पर क्या उग रहा है?", es: "Un árbol del patio de recreo da una fruta distinta cada día. ¿Qué está creciendo hoy?", fr: "Un arbre de la cour produit un fruit différent chaque jour. Qu'est-ce qui pousse aujourd'hui ?", mi: "Ka tupu he hua rerekē i tētahi rākau o te papa tākaro ia rā. He aha te mea e tupu ana i āianei?", zh: "操场上的一棵树每天结出不同的果实。今天它结了什么?", sm: "O se la'au i le malae ta'aloga e tupu mai ai se fua eseese i aso uma. O le a le fua o loo tupu i le aso?" } },
+      { id: "w43", type: "question", minTier: 1, emoji: "📞", title: "A phone rings in your bag, but you don't own a phone. Who is calling?", translations: { hi: "आपके बैग में फ़ोन बजता है, लेकिन आपके पास फ़ोन है ही नहीं। कौन फ़ोन कर रहा है?", es: "Suena un teléfono en tu mochila, pero tú no tienes teléfono. ¿Quién llama?", fr: "Un téléphone sonne dans ton sac, mais tu n'as pas de téléphone. Qui appelle ?", mi: "Ka tangi he waea i tō pēke, engari kāore koe i te whai waea. Ko wai tērā e waea mai ana?", zh: "你的包里有电话响了,但你根本没有电话。是谁打来的?", sm: "E tatagi se telefoni i lau taga, ae e leai sou telefoni. O wai o loo vala'au mai?" } },
+      { id: "w44", type: "question", minTier: 1, emoji: "🌴", title: "The school hall turns into a rainforest for one day. What lessons happen there?", translations: { hi: "स्कूल का हॉल एक दिन के लिए वर्षावन बन जाता है। वहाँ कौन से पाठ होते हैं?", es: "El salón de actos de la escuela se convierte en una selva tropical por un día. ¿Qué clases se dan allí?", fr: "La salle de l'école se transforme en forêt tropicale pour une journée. Quels cours y ont lieu ?", mi: "Ka huri te wharenui o te kura hei ngahere ua mō te kotahi rā. He aha ngā akoranga ka tū ki reira?", zh: "学校礼堂变成了热带雨林,持续一天。那里会上什么课?", sm: "E suia le fale tele o le a'oga i vaomatua timu mo le tasi aso. O a vasega e faia iina?" } },
+      { id: "w45", type: "question", minTier: 0, emoji: "🥪", simple: "Your lunch box starts talking! What does it complain about?", title: "Your lunch box starts talking at lunchtime. What does it complain about?", translations: { hi: "दोपहर के खाने के समय आपका लंच बॉक्स बोलने लगता है। वह किस बात की शिकायत करता है?", es: "Tu lonchera empieza a hablar a la hora del almuerzo. ¿De qué se queja?", fr: "Ta boîte à lunch se met à parler à l'heure du déjeuner. De quoi se plaint-elle ?", mi: "Ka tīmata tō pouaka tina ki te kōrero i te wā kai. He aha tāna e amuamu nei?", zh: "午餐时间你的饭盒开始说话了。它在抱怨什么?", sm: "Ua amata ona tautala lau pusa o le taeao i le taimi o le aiga o le aso. O le a le mea o loo ia tagi mai ai?" } },
+      { id: "w46", type: "question", minTier: 1, emoji: "🐟", title: "A fish in the school pond starts giving advice. What advice does it give?", translations: { hi: "स्कूल के तालाब की एक मछली सलाह देने लगती है। वह क्या सलाह देती है?", es: "Un pez del estanque de la escuela empieza a dar consejos. ¿Qué consejo da?", fr: "Un poisson du bassin de l'école se met à donner des conseils. Quel conseil donne-t-il ?", mi: "Ka tīmata tētahi ika o te harotoroa o te kura ki te hoatu tohutohu. He aha tāna tohutohu?", zh: "学校池塘里的一条鱼开始给人建议。它给了什么建议?", sm: "Ua amata ona tuuina mai e se i'a i le vaitafe o le a'oga ni fautuaga. O le a le fautuaga e ia tuuina mai?" } },
+      { id: "w47", type: "question", minTier: 0, emoji: "🎨", title: "Everything you touch changes colour for one hour. What would you change first?", translations: { hi: "एक घंटे के लिए आप जिस चीज़ को छूते हैं उसका रंग बदल जाता है। आप सबसे पहले क्या बदलेंगे?", es: "Todo lo que tocas cambia de color durante una hora. ¿Qué cambiarías primero?", fr: "Tout ce que tu touches change de couleur pendant une heure. Que changerais-tu en premier ?", mi: "Ka rerekē te tae o ngā mea katoa ka pā koe mō te kotahi hāora. He aha tāu e huri tuatahi?", zh: "一个小时内,你碰到的一切都会变颜色。你会先改变什么?", sm: "Mo le tasi itula, e suia le lanu o mea uma e te pa i ai. O le a le mea e te suia muamua?" } },
+      { id: "w48", type: "question", minTier: 2, emoji: "🔊", title: "You can hear what objects are thinking. What is the school clock thinking about?", translations: { hi: "आप सुन सकते हैं कि चीज़ें क्या सोच रही हैं। स्कूल की घड़ी किस बारे में सोच रही है?", es: "Puedes oír lo que piensan los objetos. ¿En qué piensa el reloj de la escuela?", fr: "Tu peux entendre ce que pensent les objets. À quoi pense l'horloge de l'école ?", mi: "Ka rangona e koe ngā whakaaro o ngā mea. He aha te whakaaro o te karaka o te kura?", zh: "你能听到物品在想什么。学校的钟在想什么?", sm: "E mafai ona e faalogo i mea o loo mafaufau i ai mea. O le a le mea o loo mafaufau i ai le uati o le a'oga?" } },
+      { id: "w49", type: "question", minTier: 2, emoji: "🌉", title: "A bridge appears in the sky leading somewhere nobody has been. Would you cross it? Why?", translations: { hi: "आसमान में एक पुल दिखाई देता है जो ऐसी जगह जाता है जहाँ कोई नहीं गया। क्या आप उसे पार करेंगे? क्यों?", es: "Aparece un puente en el cielo que lleva a un lugar donde nadie ha estado. ¿Lo cruzarías? ¿Por qué?", fr: "Un pont apparaît dans le ciel et mène à un endroit où personne n'est allé. Le traverserais-tu ? Pourquoi ?", mi: "Ka puta mai he piriti i te rangi e ārahi ana ki tētahi wāhi kāore anō kia tae atu he tangata. Ka whiti koe? He aha ai?", zh: "天空中出现了一座桥,通向没有人去过的地方。你会走过去吗?为什么?", sm: "E aliali mai se alalupe i le lagi e agai i se nofoaga e le'i alu i ai se tasi. E te alu atu ea? Aisea?" } },
+      { id: "w50", type: "question", minTier: 2, emoji: "🪞", title: "You walk through a mirror into a world where everything is the opposite. What's different?", translations: { hi: "आप एक आईने से गुज़रकर ऐसी दुनिया में पहुँचते हैं जहाँ सब कुछ उल्टा है। क्या अलग है?", es: "Atraviesas un espejo y llegas a un mundo donde todo es lo contrario. ¿Qué es diferente?", fr: "Tu traverses un miroir et arrives dans un monde où tout est à l'envers. Qu'est-ce qui est différent ?", mi: "Ka haere koe mā tētahi whakaata ki tētahi ao e whakarērekē ana ngā mea katoa. He aha te rerekētanga?", zh: "你穿过一面镜子,来到一个一切都相反的世界。有什么不同?", sm: "E te ui atu i se faata ma o'o atu i se lalolagi e fesuiaiga mea uma. O le a le eseesega?" } },
+      { id: "w51", type: "question", minTier: 0, emoji: "📦", simple: "A mystery box with your name on it is at your door! What's inside?", title: "A mysterious box with your name on it appears on your doorstep. What do you hope is inside?", translations: { hi: "आपके दरवाज़े पर आपके नाम का एक रहस्यमयी डिब्बा आता है। आप उम्मीद करते हैं कि उसमें क्या होगा?", es: "Aparece una caja misteriosa con tu nombre en la puerta de tu casa. ¿Qué esperas que haya dentro?", fr: "Une boîte mystérieuse avec ton nom apparaît devant ta porte. Qu'espères-tu y trouver ?", mi: "Ka puta mai he pouaka mīharo me tō ingoa ki tō tatau. He aha tāu e tūmanako ai kei roto?", zh: "一个写着你名字的神秘盒子出现在你家门口。你希望里面是什么?", sm: "E aliali mai se pusa lilo ma lou igoa i lou faitoto. O le a le mea e te faamoemoe o loo i totonu?" } },
+      { id: "w52", type: "question", minTier: 1, emoji: "🧩", title: "You get the answer to one question you've always wondered about. What is the question?", translations: { hi: "आपको उस एक सवाल का जवाब मिल जाता है जिसके बारे में आप हमेशा सोचते रहे हैं। वह सवाल क्या है?", es: "Recibes la respuesta a una pregunta que siempre te has hecho. ¿Cuál es la pregunta?", fr: "Tu reçois la réponse à une question que tu t'es toujours posée. Quelle est cette question ?", mi: "Ka whiwhi koe i te whakautu ki tētahi pātai kua roa nei koe e whakaaro ana. He aha te pātai?", zh: "你得到了一直好奇的某个问题的答案。这个问题是什么?", sm: "E maua e oe le tali i se fesili ua leva ona e mafaufau i ai. O le a le fesili?" } },
+      { id: "w53", type: "question", minTier: 2, emoji: "🌌", title: "Overnight, the stars rearrange themselves into a message. What does it say?", translations: { hi: "रात भर में तारे ख़ुद को एक संदेश में सजा लेते हैं। उसमें क्या लिखा है?", es: "Durante la noche, las estrellas se reorganizan formando un mensaje. ¿Qué dice?", fr: "Pendant la nuit, les étoiles se réorganisent pour former un message. Que dit-il ?", mi: "I te pō, ka whakarite ngā whetū i a rātou anō hei karere. He aha tāna e kī ana?", zh: "一夜之间,星星重新排列成一条信息。上面写着什么?", sm: "I le po, ua toe faatulaga e fetu se feau. O le a le mea o loo fai mai ai?" } },
+      { id: "w54", type: "question", minTier: 0, emoji: "🥄", simple: "Spoons are escaping from kitchens everywhere! Where are they going?", title: "Spoons start escaping from kitchens all around the world. Where are they going?", translations: { hi: "दुनिया भर की रसोइयों से चम्मच भागने लगते हैं। वे कहाँ जा रहे हैं?", es: "Las cucharas empiezan a escapar de las cocinas de todo el mundo. ¿Adónde van?", fr: "Les cuillères se mettent à s'échapper des cuisines du monde entier. Où vont-elles ?", mi: "Ka tīmata ngā kapu tīkākā ki te mawhiti i ngā kīhini puta noa i te ao. Ka haere ki hea rātou?", zh: "世界各地厨房里的勺子开始逃跑。它们要去哪里?", sm: "Ua amata ona sola ipu lauti mai umukuka i le lalolagi atoa. O fea o loo alu i ai?" } },
+      { id: "w55", type: "question", minTier: 1, emoji: "🏔️", title: "A mountain appears in the middle of your town overnight. What do people do with it?", translations: { hi: "रात भर में आपके शहर के बीच एक पहाड़ आ जाता है। लोग उसका क्या करते हैं?", es: "Una montaña aparece en medio de tu pueblo durante la noche. ¿Qué hace la gente con ella?", fr: "Une montagne apparaît au milieu de ta ville pendant la nuit. Que font les gens avec elle ?", mi: "I te pō ka puta mai he maunga ki waenganui i tō tāone. He aha tā te iwi mahi ki reira?", zh: "一夜之间,你的镇中心出现了一座山。人们会用它做什么?", sm: "I le po e aliali mai se mauga i le ogatotonu o lou taulaga. O le a le mea e faia e tagata ia te ia?" } },
+      { id: "w56", type: "question", minTier: 3, emoji: "📖", title: "You find a diary that writes tomorrow's page today. Would you read it? Why or why not?", translations: { hi: "आपको एक ऐसी डायरी मिलती है जो आज ही कल का पन्ना लिख देती है। क्या आप उसे पढ़ेंगे? क्यों या क्यों नहीं?", es: "Encuentras un diario que escribe hoy la página de mañana. ¿La leerías? ¿Por qué sí o por qué no?", fr: "Tu trouves un journal qui écrit aujourd'hui la page de demain. La lirais-tu ? Pourquoi ou pourquoi pas ?", mi: "Ka kitea e koe he pukapuka rātaka e tuhi ana i te whārangi o apōpō i tēnei rā. Ka pānui koe? He aha ai, he aha rānei te take kāore?", zh: "你发现一本日记,今天就写好了明天的那一页。你会读吗?为什么会或为什么不会?", sm: "E te maua se tusi o aso e tusia i aso nei le itulau o taeao. E te faitau ea? Aisea e te faitau ai po'o le a le mea e te le faitau ai?" } },
+      { id: "w57", type: "question", minTier: 0, emoji: "🌼", simple: "Every time you say thank you, a flower grows! What does your day look like?", title: "Every time you say 'thank you', a flower grows nearby. What does your day look like?", translations: { hi: "हर बार जब आप 'धन्यवाद' कहते हैं, पास में एक फूल उग जाता है। आपका दिन कैसा दिखता है?", es: "Cada vez que dices 'gracias', crece una flor cerca. ¿Cómo es tu día?", fr: "Chaque fois que tu dis « merci », une fleur pousse près de toi. À quoi ressemble ta journée ?", mi: "Ia kōrero koe i te 'kia ora', ka tupu he putiputi i tō taha. He pēhea te āhua o tō rā?", zh: "每次你说“谢谢”,身边就会长出一朵花。你的一天会是什么样?", sm: "Pe a e fai atu 'faafetai', e tupu mai se fugalaau i tafatafa. E fa'apefea lou aso?" } },
+      { id: "w58", type: "question", minTier: 2, emoji: "🗣️", title: "Overnight, all the world's languages mix into one. How do people cope in the morning?", translations: { hi: "रात भर में दुनिया की सारी भाषाएँ एक में मिल जाती हैं। सुबह लोग कैसे निपटते हैं?", es: "Durante la noche, todos los idiomas del mundo se mezclan en uno. ¿Cómo se las arregla la gente por la mañana?", fr: "Pendant la nuit, toutes les langues du monde se mélangent en une seule. Comment les gens s'en sortent-ils le matin ?", mi: "I te pō, ka whakakotahi ngā reo katoa o te ao. Ka pēhea te iwi i te ata?", zh: "一夜之间,世界上所有的语言混合成了一种。早晨人们怎么应对?", sm: "I le po, ua tuufaatasia gagana uma o le lalolagi i le tasi. E faapefea ona taulimaina e tagata i le taeao?" } },
+      { id: "w59", type: "question", minTier: 1, emoji: "🚪", title: "You find a tiny door in a tree. What's behind it, and who lives there?", translations: { hi: "आपको एक पेड़ में एक छोटा दरवाज़ा मिलता है। उसके पीछे क्या है और वहाँ कौन रहता है?", es: "Encuentras una puertecita en un árbol. ¿Qué hay detrás y quién vive allí?", fr: "Tu trouves une minuscule porte dans un arbre. Qu'y a-t-il derrière, et qui y habite ?", mi: "Ka kitea e koe he tatau iti i tētahi rākau. He aha kei muri, ā, ko wai e noho ana ki reira?", zh: "你在一棵树上发现一扇小门。门后有什么?谁住在那里?", sm: "E te maua se faitoto la'ititi i se la'au. O le a le mea o loo i tua, ma o ai o loo nofo i ai?" } },
+      { id: "w60", type: "question", minTier: 0, emoji: "🪁", simple: "A kite carries you gently over your town! What do you see?", title: "A kite carries you gently over your town. What do you see?", translations: { hi: "एक पतंग आपको धीरे से आपके शहर के ऊपर ले जाती है। आपको क्या दिखता है?", es: "Una cometa te lleva suavemente sobre tu pueblo. ¿Qué ves?", fr: "Un cerf-volant te porte doucement au-dessus de ta ville. Que vois-tu ?", mi: "Ka kawea koe e tētahi manu tukutuku ki runga i tō tāone. He aha tāu e kite ai?", zh: "一只风筝轻轻地带着你飞过你的小镇。你看到了什么?", sm: "E ave malie oe e se manupiko i luga o lou taulaga. O le a le mea e te vaai i ai?" } },
+      { id: "w61", type: "question", minTier: 2, emoji: "🔬", title: "A science experiment shrinks the whole class to the size of ants. What do you explore first?", translations: { hi: "एक विज्ञान प्रयोग पूरी कक्षा को चींटियों जितना छोटा कर देता है। आप सबसे पहले क्या खोजेंगे?", es: "Un experimento de ciencias reduce a toda la clase al tamaño de hormigas. ¿Qué exploras primero?", fr: "Une expérience de sciences réduit toute la classe à la taille de fourmis. Que explores-tu en premier ?", mi: "Ka whakaiti tētahi whakamātau pūtaiao i te akomanga katoa kia rite ki te iti o te popokorua. He aha tāu e torotoro tuatahi?", zh: "一个科学实验把全班同学缩小到蚂蚁那么大。你会先探索什么?", sm: "O se faataitaiga faasaienisi e faaitiitia ai le vasega atoa i le lapopoa o loomatua. O le a le mea e te suʻesuʻe muamua?" } },
+      { id: "w62", type: "question", minTier: 1, emoji: "😂", title: "A wave of laughter spreads through the whole school and nobody can stop. What's so funny?", translations: { hi: "हँसी की एक लहर पूरे स्कूल में फैल जाती है और कोई रुक नहीं पाता। इतना मज़ेदार क्या है?", es: "Una ola de risa se extiende por toda la escuela y nadie puede parar. ¿Qué es tan gracioso?", fr: "Une vague de rires se propage dans toute l'école et personne ne peut s'arrêter. Qu'est-ce qui est si drôle ?", mi: "Ka horapa te ngau o te kata puta noa i te kura, ā, kāore tētahi e āhei ki te mutu. He aha te mea rawe?", zh: "一阵笑声传遍整个学校,没有人能停下来。到底有什么这么好笑?", sm: "Ua sosolo se galu o le talatala i le a'oga atoa ma e le mafai e se tasi ona taofi. O le a le mea e malie ai?" } },
+      { id: "w63", type: "question", minTier: 3, emoji: "💭", title: "Everyone's dreams are connected for one night. What would you want to see?", translations: { hi: "एक रात के लिए सबके सपने आपस में जुड़ जाते हैं। आप क्या देखना चाहेंगे?", es: "Los sueños de todos se conectan durante una noche. ¿Qué te gustaría ver?", fr: "Les rêves de tout le monde sont reliés le temps d'une nuit. Que voudrais-tu voir ?", mi: "Ka honoa ngā moemoeā o te katoa mō te kotahi pō. He aha tāu e hiahia ai ki te kite?", zh: "一夜之间,每个人的梦都连在一起。你想看到什么?", sm: "Ua fesootai miti o tagata uma mo le tasi po. O le a le mea e te manao e vaai i ai?" } },
+      { id: "w64", type: "question", minTier: 3, emoji: "🌙", title: "Imagine a town where nobody ever needs to sleep. What changes, good and bad?", translations: { hi: "एक ऐसे शहर की कल्पना कीजिए जहाँ किसी को कभी सोना नहीं पड़ता। अच्छा और बुरा क्या बदलता है?", es: "Imagina un pueblo donde nadie necesita dormir nunca. ¿Qué cambia, para bien y para mal?", fr: "Imagine une ville où personne n'a jamais besoin de dormir. Qu'est-ce qui change, en bien et en mal ?", mi: "Whakaarohia he tāone kāore he tangata e hiahia ana ki te moe. He aha ngā huringa, te pai me te kino?", zh: "想象一个没有人需要睡觉的小镇。有哪些好的和坏的变化?", sm: "Mafaufau i se taulaga e le manaomia ai e se tasi le moe. O a suiga, lelei ma le leaga?" } },
+      { id: "w65", type: "question", minTier: 2, emoji: "✉️", title: "A message in a bottle washes up with your name on it. What does it say?", translations: { hi: "एक बोतल में बंद संदेश आपके नाम के साथ किनारे पर आ लगता है। उसमें क्या लिखा है?", es: "Una botella con un mensaje y tu nombre llega a la orilla. ¿Qué dice el mensaje?", fr: "Une bouteille à la mer arrive sur la plage avec ton nom dessus. Que dit le message ?", mi: "Ka tae mai he pātaka karere ki uta me tō ingoa. He aha tāna e kī ana?", zh: "一个写着你名字的漂流瓶被冲上了岸。里面写了什么?", sm: "Ua tafea mai se fagu ma se feau ma lou igoa i le matafaga. O le a le mea o loo fai mai ai?" } },
       { id: "wa1", type: "activity", minTier: 0, emoji: "🧍", title: "Everyone freeze like a statue for five seconds.", translations: { hi: "सब लोग पाँच सेकंड के लिए मूर्ति की तरह जम जाएँ।", es: "Todos quédense congelados como una estatua durante cinco segundos.", fr: "Tout le monde se fige comme une statue pendant cinq secondes.", mi: "Whakarērea te katoa hei whakapakoko mō ngā hēkona e rima.", zh: "大家像雕像一样静止五秒钟。", sm: "Tagata uma ia le gaoioi e pei o se faatagata mo le lima sekone." } },
       { id: "wa2", type: "activity", minTier: 0, emoji: "🤪", title: "Everyone make the weirdest face you can think of.", translations: { hi: "सब लोग सबसे अजीब चेहरा बनाइए जो आप सोच सकते हैं।", es: "Todos hagan la cara más rara que se les ocurra.", fr: "Tout le monde fait la grimace la plus bizarre possible.", mi: "Waihangatia e te katoa te mata tino rerekē e taea ana e koe te whakaaro.", zh: "大家做出你能想到的最奇怪的表情。", sm: "Tagata uma ia faia le foliga sili ona ese e mafai ona e mafaufau i ai." } },
       { id: "wa3", type: "activity", minTier: 0, emoji: "🦆", title: "Everyone waddle like a duck to the nearest wall and back.", translations: { hi: "सब लोग बत्तख की तरह चलते हुए नज़दीकी दीवार तक जाएँ और वापस आएँ।", es: "Todos caminen como un pato hasta la pared más cercana y regresen.", fr: "Tout le monde marche comme un canard jusqu'au mur le plus proche et revient.", mi: "Hīkoi ai te katoa hei rakiraki ki te pakitara tata rawa ā hoki mai anō.", zh: "大家像鸭子一样摇摇摆摆走到最近的墙边再走回来。", sm: "Tagata uma ia savali e pei o se pato i le puipui lata ane ma toe fo'i mai." } },
@@ -1444,6 +1474,36 @@ const CATEGORIES = [
       { id: "r18", type: "question", minTier: 0, emoji: "🌴", title: "Would you rather explore a jungle or explore a cave?", translations: { hi: "क्या आप जंगल का अन्वेषण करना पसंद करेंगे या गुफा का?", es: "¿Preferirías explorar una selva o explorar una cueva?", fr: "Préférerais-tu explorer une jungle ou explorer une grotte ?", mi: "He pai ake ki a koe te torotoro i te ngahere maroke, te torotoro rānei i te ana?", zh: "你想探索丛林还是洞穴?", sm: "E te mana'o e su'esu'e le vaomatua po'o se ana?" } },
       { id: "r19", type: "question", minTier: 1, emoji: "⏪", title: "Would you rather have a rewind button on your day or a fast-forward button?", translations: { hi: "क्या आप अपने दिन पर रिवाइंड बटन चाहेंगे या फास्ट-फॉरवर्ड बटन?", es: "¿Preferirías tener un botón de retroceso en tu día o un botón de avance rápido?", fr: "Préférerais-tu avoir un bouton retour en arrière sur ta journée ou un bouton avance rapide ?", mi: "He pai ake ki a koe he pātene hoki whakamuri mō tō rā, he pātene tere whakamua rānei?", zh: "你想要在你的一天中有一个倒退按钮还是快进按钮?", sm: "E te mana'o i se pusi toe fo'i i tua mo lou aso po'o se pusi vave i luma?" } },
       { id: "r20", type: "question", minTier: 0, emoji: "🌿", title: "Would you rather be able to talk to plants or talk to insects?", translations: { hi: "क्या आप पौधों से बात कर पाना पसंद करेंगे या कीड़ों से?", es: "¿Preferirías poder hablar con las plantas o con los insectos?", fr: "Préférerais-tu pouvoir parler aux plantes ou aux insectes ?", mi: "He pai ake ki a koe te kōrero ki ngā tipu, te kōrero rānei ki ngā ngārara?", zh: "你想要能和植物说话还是和昆虫说话?", sm: "E te mana'o e mafai ona talanoa i la'au po'o iniseti?" } },
+      { id: "r36", type: "question", minTier: 0, emoji: "🐘", title: "Would you rather have a tiny elephant as a pet or a giant hamster?", translations: { hi: "क्या आप पालतू के रूप में छोटा हाथी रखना पसंद करेंगे या विशाल हैम्स्टर?", es: "¿Preferirías tener un elefante diminuto como mascota o un hámster gigante?", fr: "Préférerais-tu avoir un minuscule éléphant comme animal de compagnie ou un hamster géant ?", mi: "He pai ake ki a koe he arewhana iti hei mōkai, he hamutā nui rānei?", zh: "你更愿意养一头小象还是一只巨型仓鼠?", sm: "E te sili ona e fiafia i se elefane la'ititi e fai ma fagafao po'o se hamisa tele?" } },
+      { id: "r37", type: "question", minTier: 0, emoji: "🌊", title: "Would you rather breathe underwater or jump really high?", translations: { hi: "क्या आप पानी के अंदर साँस लेना पसंद करेंगे या बहुत ऊँचा कूदना?", es: "¿Preferirías respirar bajo el agua o saltar muy alto?", fr: "Préférerais-tu respirer sous l'eau ou sauter très haut ?", mi: "He pai ake ki a koe te manawa i raro i te wai, te peke tiketike rānei?", zh: "你更愿意在水下呼吸还是跳得特别高?", sm: "E te sili ona e manao e manava i lalo o le vai po'o oso i luga?" } },
+      { id: "r38", type: "question", minTier: 0, emoji: "🧹", title: "Would you rather never do homework or never tidy your room?", translations: { hi: "क्या आप कभी होमवर्क न करना पसंद करेंगे या कभी अपना कमरा साफ़ न करना?", es: "¿Preferirías no hacer nunca la tarea o no ordenar nunca tu cuarto?", fr: "Préférerais-tu ne jamais faire tes devoirs ou ne jamais ranger ta chambre ?", mi: "He pai ake ki a koe kia kore rawa he mahi kāinga, kia kore rānei e whakapai i tō ruma?", zh: "你更愿意永远不做作业还是永远不整理房间?", sm: "E te sili ona e manao e le faia lava se meaaoga i le fale po'o le le faamaoti lou potu?" } },
+      { id: "r39", type: "question", minTier: 0, emoji: "⛵", title: "Would you rather live on a boat or in a caravan?", translations: { hi: "क्या आप नाव पर रहना पसंद करेंगे या कैरावैन में?", es: "¿Preferirías vivir en un barco o en una caravana?", fr: "Préférerais-tu vivre sur un bateau ou dans une caravane ?", mi: "He pai ake ki a koe te noho ki runga poti, ki tētahi whare nekeneke rānei?", zh: "你更愿意住在船上还是住在房车里?", sm: "E te sili ona e nofo i se vaa po'o se fale tafafao?" } },
+      { id: "r40", type: "question", minTier: 0, emoji: "🤖", title: "Would you rather have a robot helper or a magic wand?", translations: { hi: "क्या आप रोबोट सहायक पसंद करेंगे या जादुई छड़ी?", es: "¿Preferirías tener un robot ayudante o una varita mágica?", fr: "Préférerais-tu avoir un robot assistant ou une baguette magique ?", mi: "He pai ake ki a koe he karetao āwhina, he tokotoko makutu rānei?", zh: "你更愿意有一个机器人助手还是一根魔法棒?", sm: "E te sili ona e maua se robota fesoasoani po'o se la'au faataulaitu?" } },
+      { id: "r41", type: "question", minTier: 0, emoji: "🍕", title: "Would you rather eat only pizza for a week or only fruit for a week?", translations: { hi: "क्या आप एक हफ्ते सिर्फ़ पिज़्ज़ा खाना पसंद करेंगे या सिर्फ़ फल?", es: "¿Preferirías comer solo pizza durante una semana o solo fruta durante una semana?", fr: "Préférerais-tu manger uniquement de la pizza pendant une semaine ou uniquement des fruits ?", mi: "He pai ake ki a koe te kai pītsa anake mō te wiki, he hua rākau anake rānei?", zh: "你更愿意一周只吃披萨还是一周只吃水果?", sm: "E te sili ona e 'ai na o pisa mo le vaiaso po'o fualaau na o ia mo le vaiaso?" } },
+      { id: "r42", type: "question", minTier: 1, emoji: "🐬", title: "Would you rather swim with dolphins or climb a volcano?", translations: { hi: "क्या आप डॉल्फ़िन के साथ तैरना पसंद करेंगे या ज्वालामुखी पर चढ़ना?", es: "¿Preferirías nadar con delfines o escalar un volcán?", fr: "Préférerais-tu nager avec des dauphins ou escalader un volcan ?", mi: "He pai ake ki a koe te kauhoe me ngā aihe, te piki ahi puia rānei?", zh: "你更愿意和海豚一起游泳还是爬火山?", sm: "E te sili ona e aau ma le tanifa po'o a'e i se mauga mu?" } },
+      { id: "r43", type: "question", minTier: 1, emoji: "🎻", title: "Would you rather play any instrument perfectly or speak five languages?", translations: { hi: "क्या आप कोई भी वाद्य यंत्र पूरी तरह बजाना पसंद करेंगे या पाँच भाषाएँ बोलना?", es: "¿Preferirías tocar perfectamente cualquier instrumento o hablar cinco idiomas?", fr: "Préférerais-tu jouer parfaitement de n'importe quel instrument ou parler cinq langues ?", mi: "He pai ake ki a koe te whakatangi pai i tētahi taonga puoro, te kōrero i ngā reo e rima rānei?", zh: "你更愿意完美演奏任何乐器还是会说五种语言?", sm: "E te sili ona e ta lelei se mea musika po'o tautala i gagana e lima?" } },
+      { id: "r44", type: "question", minTier: 0, emoji: "❄️", title: "Would you rather have a snow day or a beach day tomorrow?", translations: { hi: "क्या आप कल बर्फ़ का दिन पसंद करेंगे या समुद्र तट का दिन?", es: "¿Preferirías tener mañana un día de nieve o un día de playa?", fr: "Préférerais-tu une journée de neige ou une journée à la plage demain ?", mi: "He pai ake ki a koe he rā hukarere, he rā tahatai rānei apōpō?", zh: "你更愿意明天是雪天还是海滩日?", sm: "E te sili ona e maua se aso kiona po'o se aso matafaga taeao?" } },
+      { id: "r45", type: "question", minTier: 0, emoji: "🐦", title: "Would you rather be a bird for a day or a fish for a day?", translations: { hi: "क्या आप एक दिन के लिए पक्षी बनना पसंद करेंगे या मछली?", es: "¿Preferirías ser un pájaro por un día o un pez por un día?", fr: "Préférerais-tu être un oiseau pour une journée ou un poisson pour une journée ?", mi: "He pai ake ki a koe te noho hei manu mō te rā, hei ika rānei?", zh: "你更愿意当一天的鸟还是当一天的鱼?", sm: "E te sili ona e fai ma manulele mo le aso po'o se i'a mo le aso?" } },
+      { id: "r46", type: "question", minTier: 1, emoji: "⏳", title: "Would you rather visit the past or visit the future?", translations: { hi: "क्या आप अतीत में जाना पसंद करेंगे या भविष्य में?", es: "¿Preferirías visitar el pasado o visitar el futuro?", fr: "Préférerais-tu visiter le passé ou visiter le futur ?", mi: "He pai ake ki a koe te toro ki mua, ki muri rānei?", zh: "你更愿意去过去还是去未来?", sm: "E te sili ona e asia le taimi ua tuanai po'o le lumanai?" } },
+      { id: "r47", type: "question", minTier: 1, emoji: "📵", title: "Would you rather have a day without screens or a day without sweets?", translations: { hi: "क्या आप एक दिन बिना स्क्रीन के रहना पसंद करेंगे या एक दिन बिना मिठाई के?", es: "¿Preferirías pasar un día sin pantallas o un día sin dulces?", fr: "Préférerais-tu une journée sans écrans ou une journée sans sucreries ?", mi: "He pai ake ki a koe he rā kāore he mata, he rā kāore he kai reka rānei?", zh: "你更愿意一天不用屏幕还是一天不吃甜食?", sm: "E te sili ona e le faaaogaina ni lau mata mo le aso po'o le aai ni mea suamalie?" } },
+      { id: "r48", type: "question", minTier: 2, emoji: "🏆", title: "Would you rather be the best player on a losing team or an average player on a winning team?", translations: { hi: "क्या आप हारने वाली टीम के सबसे अच्छे खिलाड़ी बनना पसंद करेंगे या जीतने वाली टीम के औसत खिलाड़ी?", es: "¿Preferirías ser el mejor jugador de un equipo que pierde o un jugador promedio de un equipo que gana?", fr: "Préférerais-tu être le meilleur joueur d'une équipe qui perd ou un joueur moyen d'une équipe qui gagne ?", mi: "He pai ake ki a koe te noho hei kaitākaro pai rawa o tētahi kapa ka hinga, hei kaitākaro toharite o tētahi kapa ka toa rānei?", zh: "你更愿意做输球队伍里最好的球员还是赢球队伍里普通的球员?", sm: "E te sili ona e fai ma tagata taalo sili o se 'au e faatoilalo po'o se tagata taalo masani o se 'au e manumalo?" } },
+      { id: "r49", type: "question", minTier: 2, emoji: "🧠", title: "Would you rather always know how everyone feels or always know how everything works?", translations: { hi: "क्या आप हमेशा जानना पसंद करेंगे कि सब कैसा महसूस करते हैं या हमेशा जानना कि सब कुछ कैसे काम करता है?", es: "¿Preferirías saber siempre cómo se siente todo el mundo o saber siempre cómo funciona todo?", fr: "Préférerais-tu toujours savoir ce que ressent chacun ou toujours savoir comment tout fonctionne ?", mi: "He pai ake ki a koe te mōhio i ngā kare ā-roto o te katoa, te mōhio rānei ki te āhua o te mahi a ngā mea katoa?", zh: "你更愿意总是知道每个人的感受还是总是知道万物如何运转?", sm: "E te sili ona e iloa i taimi uma le lagona o tagata uma po'o le faatinoga o mea uma?" } },
+      { id: "r50", type: "question", minTier: 2, emoji: "🫂", title: "Would you rather have lots of friends or a few very close friends?", translations: { hi: "क्या आप बहुत सारे दोस्त रखना पसंद करेंगे या कुछ बहुत क़रीबी दोस्त?", es: "¿Preferirías tener muchos amigos o unos pocos amigos muy cercanos?", fr: "Préférerais-tu avoir beaucoup d'amis ou quelques amis très proches ?", mi: "He pai ake ki a koe he tini hoa, he torutoru hoa tata rawa rānei?", zh: "你更愿意有很多朋友还是有几个非常亲密的朋友?", sm: "E te sili ona e tele au uo po'o ni nai uo faapitoa?" } },
+      { id: "r51", type: "question", minTier: 1, emoji: "🎁", title: "Would you rather give an amazing gift or receive an amazing gift?", translations: { hi: "क्या आप एक शानदार तोहफ़ा देना पसंद करेंगे या पाना?", es: "¿Preferirías dar un regalo increíble o recibir un regalo increíble?", fr: "Préférerais-tu offrir un cadeau extraordinaire ou en recevoir un ?", mi: "He pai ake ki a koe te hoatu i tētahi koha rawe, te whiwhi rānei i tētahi koha rawe?", zh: "你更愿意送出一份很棒的礼物还是收到一份很棒的礼物?", sm: "E te sili ona e tuuina atu se meaalofa ofoofogia po'o maua se meaalofa ofoofogia?" } },
+      { id: "r52", type: "question", minTier: 1, emoji: "🌦️", title: "Would you rather live in a world with no winter or no summer?", translations: { hi: "क्या आप ऐसी दुनिया में रहना पसंद करेंगे जहाँ सर्दी न हो या गर्मी न हो?", es: "¿Preferirías vivir en un mundo sin invierno o sin verano?", fr: "Préférerais-tu vivre dans un monde sans hiver ou sans été ?", mi: "He pai ake ki a koe te noho ki tētahi ao kāore he hōtoke, kāore he raumati rānei?", zh: "你更愿意生活在没有冬天的世界还是没有夏天的世界?", sm: "E te sili ona e nofo i se lalolagi e leai se taumalulu po'o se taumafanafana?" } },
+      { id: "r53", type: "question", minTier: 1, emoji: "🪐", title: "Would you rather discover a new planet or a new animal?", translations: { hi: "क्या आप एक नया ग्रह खोजना पसंद करेंगे या एक नया जानवर?", es: "¿Preferirías descubrir un planeta nuevo o un animal nuevo?", fr: "Préférerais-tu découvrir une nouvelle planète ou un nouvel animal ?", mi: "He pai ake ki a koe te kite i tētahi aorangi hou, he kararehe hou rānei?", zh: "你更愿意发现一颗新行星还是一种新动物?", sm: "E te sili ona e maua se paneta fou po'o se manu fou?" } },
+      { id: "r54", type: "question", minTier: 3, emoji: "🌏", title: "Would you rather change one big thing about the world or help one person every day?", translations: { hi: "क्या आप दुनिया में एक बड़ी चीज़ बदलना पसंद करेंगे या हर दिन एक व्यक्ति की मदद करना?", es: "¿Preferirías cambiar una cosa grande del mundo o ayudar a una persona cada día?", fr: "Préférerais-tu changer une grande chose dans le monde ou aider une personne chaque jour ?", mi: "He pai ake ki a koe te whakarerekē i tētahi mea nui o te ao, te āwhina rānei i tētahi tangata ia rā?", zh: "你更愿意改变世界上一件大事还是每天帮助一个人?", sm: "E te sili ona e suia se mea tele i le lalolagi po'o fesoasoani i le tasi tagata i aso uma?" } },
+      { id: "r55", type: "question", minTier: 3, emoji: "🤐", title: "Would you rather always tell the truth even when it's hard or always keep a secret even when it's hard?", translations: { hi: "क्या आप मुश्किल होने पर भी हमेशा सच बोलना पसंद करेंगे या मुश्किल होने पर भी हमेशा राज़ रखना?", es: "¿Preferirías decir siempre la verdad aunque sea difícil o guardar siempre un secreto aunque sea difícil?", fr: "Préférerais-tu toujours dire la vérité même quand c'est difficile ou toujours garder un secret même quand c'est difficile ?", mi: "He pai ake ki a koe te kōrero pono i ngā wā katoa ahakoa he uaua, te pupuri rānei i tētahi muna ahakoa he uaua?", zh: "你更愿意即使很难也总是说实话,还是即使很难也总是保守秘密?", sm: "E te sili ona e tautala i le upumoni i taimi uma e tusa lava pe faigata po'o le teuina o se mea lilo e tusa lava pe faigata?" } },
+      { id: "r56", type: "question", minTier: 2, emoji: "🔁", title: "Would you rather have your best day repeat forever or have every day be a surprise?", translations: { hi: "क्या आप अपना सबसे अच्छा दिन हमेशा दोहराना पसंद करेंगे या हर दिन एक आश्चर्य होना?", es: "¿Preferirías que tu mejor día se repitiera para siempre o que cada día fuera una sorpresa?", fr: "Préférerais-tu que ta meilleure journée se répète pour toujours ou que chaque jour soit une surprise ?", mi: "He pai ake ki a koe kia hoki mai tō rā pai rawa mō ake tonu, kia ohorere rānei ia rā?", zh: "你更愿意最美好的一天永远重复还是每天都是惊喜?", sm: "E te sili ona e toe faia lau aso sili ona lelei e faavavau po'o aso uma o se mea faafuase'i?" } },
+      { id: "r57", type: "question", minTier: 0, emoji: "🌳", title: "Would you rather have a treehouse or a trampoline in your backyard?", translations: { hi: "क्या आप अपने आँगन में ट्रीहाउस पसंद करेंगे या ट्रैम्पोलिन?", es: "¿Preferirías tener una casa del árbol o una cama elástica en tu patio?", fr: "Préférerais-tu avoir une cabane dans les arbres ou un trampoline dans ton jardin ?", mi: "He pai ake ki a koe he whare rākau, he tarapirini rānei ki tō papa kāinga?", zh: "你更愿意在后院有一座树屋还是一张蹦床?", sm: "E te sili ona e maua se fale i le la'au po'o se tarampolini i lou lotoa?" } },
+      { id: "r58", type: "question", minTier: 0, emoji: "🐜", title: "Would you rather be tiny for a day or giant for a day?", translations: { hi: "क्या आप एक दिन के लिए बहुत छोटा बनना पसंद करेंगे या विशाल?", es: "¿Preferirías ser diminuto por un día o gigante por un día?", fr: "Préférerais-tu être minuscule pour une journée ou géant pour une journée ?", mi: "He pai ake ki a koe te noho iti rawa mō te rā, te noho nui rawa rānei?", zh: "你更愿意当一天的小人还是当一天的巨人?", sm: "E te sili ona e la'ititi mo le aso po'o le tele mo le aso?" } },
+      { id: "r59", type: "question", minTier: 1, emoji: "📚", title: "Would you rather have a library with every book or a cinema with every film?", translations: { hi: "क्या आप हर किताब वाली लाइब्रेरी पसंद करेंगे या हर फ़िल्म वाला सिनेमा?", es: "¿Preferirías tener una biblioteca con todos los libros o un cine con todas las películas?", fr: "Préférerais-tu avoir une bibliothèque avec tous les livres ou un cinéma avec tous les films ?", mi: "He pai ake ki a koe he whare pukapuka me ngā pukapuka katoa, he whare kiriata me ngā kiriata katoa rānei?", zh: "你更愿意拥有一座收藏所有书的图书馆还是一家放映所有电影的电影院?", sm: "E te sili ona e maua se faletusi ma tusi uma po'o se fale ata ma ata uma?" } },
+      { id: "r60", type: "question", minTier: 0, emoji: "💎", title: "Would you rather find hidden treasure or find a new friend?", translations: { hi: "क्या आप छिपा हुआ ख़ज़ाना खोजना पसंद करेंगे या एक नया दोस्त?", es: "¿Preferirías encontrar un tesoro escondido o hacer un amigo nuevo?", fr: "Préférerais-tu trouver un trésor caché ou te faire un nouvel ami ?", mi: "He pai ake ki a koe te kite i tētahi taonga huna, he hoa hou rānei?", zh: "你更愿意找到隐藏的宝藏还是交到一个新朋友?", sm: "E te sili ona e maua se oa lilo po'o se uo fou?" } },
+      { id: "r61", type: "question", minTier: 1, emoji: "🎈", title: "Would you rather plan the class party or lead the class trip?", translations: { hi: "क्या आप कक्षा की पार्टी की योजना बनाना पसंद करेंगे या कक्षा की सैर का नेतृत्व करना?", es: "¿Preferirías planear la fiesta de la clase o dirigir la excursión de la clase?", fr: "Préférerais-tu organiser la fête de la classe ou diriger la sortie de la classe ?", mi: "He pai ake ki a koe te whakarite i te hākari o te akomanga, te hautū rānei i te haerenga o te akomanga?", zh: "你更愿意策划班级派对还是带领班级出游?", sm: "E te sili ona e fuafua le pati a le vasega po'o taitai le malaga a le vasega?" } },
+      { id: "r62", type: "question", minTier: 1, emoji: "🔭", title: "Would you rather be an inventor or an explorer?", translations: { hi: "क्या आप आविष्कारक बनना पसंद करेंगे या खोजकर्ता?", es: "¿Preferirías ser inventor o explorador?", fr: "Préférerais-tu être inventeur ou explorateur ?", mi: "He pai ake ki a koe te noho hei kaihanga, hei kaitūhura rānei?", zh: "你更愿意当发明家还是探险家?", sm: "E te sili ona e fai ma tagata faufale po'o se tagata suʻesuʻe?" } },
+      { id: "r63", type: "question", minTier: 0, emoji: "🦜", title: "Would you rather learn from a robot teacher or a talking parrot?", translations: { hi: "क्या आप रोबोट शिक्षक से सीखना पसंद करेंगे या बोलने वाले तोते से?", es: "¿Preferirías aprender de un robot maestro o de un loro parlanchín?", fr: "Préférerais-tu apprendre avec un robot professeur ou un perroquet qui parle ?", mi: "He pai ake ki a koe te ako i tētahi kaiako karetao, i tētahi pārera kōrero rānei?", zh: "你更愿意向机器人老师学习还是向会说话的鹦鹉学习?", sm: "E te sili ona e aoao mai i se faiaoga robota po'o se aliimanu e tautala?" } },
+      { id: "r64", type: "question", minTier: 0, emoji: "😴", title: "Would you rather have an extra hour of sleep or an extra hour of play every day?", translations: { hi: "क्या आप हर दिन एक घंटा अतिरिक्त नींद पसंद करेंगे या एक घंटा अतिरिक्त खेल?", es: "¿Preferirías tener una hora extra de sueño o una hora extra de juego cada día?", fr: "Préférerais-tu une heure de sommeil en plus ou une heure de jeu en plus chaque jour ?", mi: "He pai ake ki a koe he hāora moe anō, he hāora tākaro anō rānei ia rā?", zh: "你更愿意每天多睡一小时还是多玩一小时?", sm: "E te sili ona e maua se itula faaopoopo o le moe po'o se itula faaopoopo o le taalo i aso uma?" } },
+      { id: "r65", type: "question", minTier: 2, emoji: "🌠", title: "Would you rather have one wish for yourself or three wishes for other people?", translations: { hi: "क्या आप अपने लिए एक इच्छा पसंद करेंगे या दूसरों के लिए तीन इच्छाएँ?", es: "¿Preferirías tener un deseo para ti o tres deseos para otras personas?", fr: "Préférerais-tu avoir un vœu pour toi ou trois vœux pour les autres ?", mi: "He pai ake ki a koe he hiahia kotahi mōu, e toru rānei ngā hiahia mō ētahi atu?", zh: "你更愿意为自己许一个愿望还是为别人许三个愿望?", sm: "E te sili ona e maua se manaoga e tasi mo oe po'o manaoga e tolu mo isi tagata?" } },
       { id: "ra1", type: "activity", minTier: 0, emoji: "👍", title: "Everyone give a thumbs up if you'd pick the first choice in the last question, thumbs down if you'd pick the second — no talking!", translations: { hi: "अगर आप पिछले सवाल में पहला विकल्प चुनेंगे तो थम्स अप दिखाएँ, दूसरा चुनेंगे तो थम्स डाउन — बिना बात किए!", es: "Todos den pulgar arriba si elegirían la primera opción de la última pregunta, pulgar abajo si elegirían la segunda — ¡sin hablar!", fr: "Tout le monde lève le pouce si tu choisirais la première option de la dernière question, baisse le pouce pour la seconde — sans parler !", mi: "Whakaaturia e te katoa te matimati whakarunga mehemea ko te kōwhiringa tuatahi tāu mō te pātai o mua, te matimati whakararo mō te tuarua — kaua e kōrero!", zh: "如果你会选择上一个问题的第一个选项就竖起大拇指,选择第二个就把大拇指向下——不许说话!", sm: "Tagata uma ia fa'ailoa le limamatua i luga pe a e filifilia le tali muamua o le fesili talu ai, po'o le limamatua i lalo pe a e filifilia le tali lona lua — aua ne'i tautala!" } },
       { id: "ra2", type: "activity", minTier: 0, emoji: "🦵", title: "Everyone stand on one leg for five seconds.", translations: { hi: "सब लोग पाँच सेकंड के लिए एक पैर पर खड़े हों।", es: "Todos párense en una pierna durante cinco segundos.", fr: "Tout le monde se tient sur une jambe pendant cinq secondes.", mi: "Tū ai te katoa i runga i te waewae kotahi mō ngā hēkona e rima.", zh: "大家单脚站立五秒钟。", sm: "Tagata uma ia tu i luga o le vae e tasi mo le lima sekone." } },
       { id: "ra3", type: "activity", minTier: 0, emoji: "🙋", title: "If you'd pick the first option in the last question, stand up. If the second, stay seated.", translations: { hi: "अगर आप पिछले सवाल में पहला विकल्प चुनेंगे, तो खड़े हो जाएँ। अगर दूसरा, तो बैठे रहें।", es: "Si elegirías la primera opción de la última pregunta, ponte de pie. Si la segunda, quédate sentado.", fr: "Si tu choisirais la première option de la dernière question, lève-toi. Si la seconde, reste assis.", mi: "Mehemea ko te kōwhiringa tuatahi tāu mō te pātai o mua, tū ake. Mehemea ko te tuarua, noho tonu.", zh: "如果你会选择上一个问题的第一个选项,就站起来。如果是第二个,就坐着不动。", sm: "Afai e te filifilia le tali muamua o le fesili talu ai, tu i luga. Afai o le tali lona lua, nofo i lalo." } },
@@ -1493,6 +1553,36 @@ const CATEGORIES = [
       { id: "i18", type: "question", minTier: 0, emoji: "🌳", simple: "Imagine trees grew books instead of leaves! What book would you want to find?", title: "Imagine if trees grew books instead of leaves. What book would you hope to find?", translations: { hi: "कल्पना करें कि पेड़ों में पत्तों की जगह किताबें उगतीं। आप कौन सी किताब पाना चाहेंगे?", es: "Imagina si los árboles crecieran libros en lugar de hojas. ¿Qué libro esperarías encontrar?", fr: "Imagine si les arbres faisaient pousser des livres au lieu de feuilles. Quel livre espérerais-tu trouver ?", mi: "Whakaarohia mehemea ka tupu he pukapuka i runga i te rākau, kaua he rau. He aha te pukapuka e hiahia ana koe kia kitea?", zh: "想象一下,如果树上长出的是书而不是叶子。你希望找到什么书?", sm: "Mafaufau pe ana tupu tusi i la'au nai lo lau. O le a le tusi e te fa'amoemoe e maua?" } },
       { id: "i19", type: "question", minTier: 0, emoji: "🛝", title: "Imagine if the playground turned into whatever game you were thinking about. What would you build first?", translations: { hi: "कल्पना करें कि खेल का मैदान उस खेल में बदल जाता जिसके बारे में आप सोच रहे थे। आप सबसे पहले क्या बनाएंगे?", es: "Imagina si el patio de juegos se convirtiera en el juego que estuvieras pensando. ¿Qué construirías primero?", fr: "Imagine si la cour de récréation se transformait en n'importe quel jeu auquel tu pensais. Que construirais-tu en premier ?", mi: "Whakaarohia mehemea ka huri te papa tākaro hei tākaro e whakaarohia ana e koe. He aha tāu mea tuatahi e hanga?", zh: "想象一下,如果操场会变成你正在想的任何游戏。你会先建造什么?", sm: "Mafaufau pe ana liua le malae ta'alo i so'o se ta'aloga o loo e mafaufau i ai. O le a le mea muamua e te fausia?" } },
       { id: "i20", type: "question", minTier: 0, emoji: "🚢", simple: "Imagine your school had a submarine, not a bus! Where would it take you?", title: "Imagine if your school had a submarine instead of a bus. Where would it take you?", translations: { hi: "कल्पना करें कि आपके स्कूल में बस की जगह पनडुब्बी होती। यह आपको कहाँ ले जाती?", es: "Imagina si tu escuela tuviera un submarino en lugar de un autobús. ¿A dónde te llevaría?", fr: "Imagine si ton école avait un sous-marin au lieu d'un bus. Où t'emmènerait-il ?", mi: "Whakaarohia mehemea he waka rukiruki tō tō kura, kaua he pahi. Ka kawea koe ki hea?", zh: "想象一下,如果你的学校有一艘潜水艇而不是巴士。它会带你去哪里?", sm: "Mafaufau pe ana i ai se va'a mai lalo o le vai a lau aoga nai lo se pasi. E te ave i fea?" } },
+      { id: "i36", type: "question", minTier: 0, emoji: "🛝", simple: "Imagine a giant slide from your school roof to the field! What would you shout on the way down?", title: "Imagine if your school had a giant slide from the roof to the field. What would you shout on the way down?", translations: { hi: "कल्पना कीजिए कि आपके स्कूल की छत से मैदान तक एक विशाल स्लाइड होती। नीचे आते समय आप क्या चिल्लाते?", es: "Imagina que tu escuela tuviera un tobogán gigante desde el techo hasta el campo. ¿Qué gritarías mientras bajas?", fr: "Imagine si ton école avait un toboggan géant du toit jusqu'au terrain. Que crierais-tu en descendant ?", mi: "Whakaarohia he retireti nui mai i te tuanui o tō kura ki te papa tākaro. He aha tāu e karanga ai i a koe e heke ana?", zh: "想象一下你的学校有一个从屋顶通到操场的巨大滑梯。你滑下来时会喊什么?", sm: "Mafaufau pe ana i ai se fa'au tele mai le taualuga o lou a'oga i le malae. O le a le mea e te ave'e ai i lou alu ifo?" } },
+      { id: "i37", type: "question", minTier: 0, emoji: "🌈", simple: "Imagine you can slide down a rainbow! Where would you land?", title: "Imagine if you could slide down a rainbow. Where would you land?", translations: { hi: "कल्पना कीजिए कि आप इंद्रधनुष से फिसल सकते हैं। आप कहाँ उतरेंगे?", es: "Imagina que pudieras deslizarte por un arcoíris. ¿Dónde aterrizarías?", fr: "Imagine si tu pouvais glisser le long d'un arc-en-ciel. Où atterrirais-tu ?", mi: "Whakaarohia me i taea e koe te retireti i te āniwaniwa. Ka tau koe ki hea?", zh: "想象一下你可以从彩虹上滑下来。你会落在哪里?", sm: "Mafaufau pe ana e mafai ona e fa'au i se nuanua. O fea e te alu i ai?" } },
+      { id: "i38", type: "question", minTier: 0, emoji: "🐘", simple: "Imagine an elephant joins your class! Where would it sit?", title: "Imagine if an elephant joined your class. Where would it sit?", translations: { hi: "कल्पना कीजिए कि एक हाथी आपकी कक्षा में शामिल हो जाता है। वह कहाँ बैठेगा?", es: "Imagina que un elefante se uniera a tu clase. ¿Dónde se sentaría?", fr: "Imagine si un éléphant rejoignait ta classe. Où s'assiérait-il ?", mi: "Whakaarohia he arewhana e uru mai ana ki tō akomanga. Ka noho ia ki hea?", zh: "想象一下一头大象加入了你们班。它会坐在哪里?", sm: "Mafaufau pe ana ma'i se elefane i lou vasega. O fea e nofo ai?" } },
+      { id: "i39", type: "question", minTier: 1, emoji: "🌧️", title: "Imagine if it only rained on weekends. How would school days and weekends change?", translations: { hi: "कल्पना कीजिए कि बारिश सिर्फ़ सप्ताहांत में होती। स्कूल के दिन और सप्ताहांत कैसे बदल जाते?", es: "Imagina que solo lloviera los fines de semana. ¿Cómo cambiarían los días de escuela y los fines de semana?", fr: "Imagine s'il ne pleuvait que le week-end. Comment les jours d'école et les week-ends changeraient-ils ?", mi: "Whakaarohia me i ua noa i ngā rā whakataa. Ka pēhea te huri o ngā rā kura me ngā rā whakataa?", zh: "想象一下如果只在周末下雨。上学日和周末会有什么变化?", sm: "Mafaufau pe ana na o le faaiuga o le vaiaso e timu ai. E faapefea ona suia aso a'oga ma faaiuga o vaiaso?" } },
+      { id: "i40", type: "question", minTier: 1, emoji: "🪐", title: "Imagine if your school had a space station next door. What experiments would you do?", translations: { hi: "कल्पना कीजिए कि आपके स्कूल के बगल में एक अंतरिक्ष स्टेशन होता। आप कौन से प्रयोग करते?", es: "Imagina que tu escuela tuviera una estación espacial al lado. ¿Qué experimentos harías?", fr: "Imagine si ton école avait une station spatiale juste à côté. Quelles expériences ferais-tu ?", mi: "Whakaarohia he teihana mokowhiti kei te taha o tō kura. He aha ngā whakamātau ka mahia e koe?", zh: "想象一下你的学校隔壁有一个空间站。你会做什么实验?", sm: "Mafaufau pe ana i ai se nofoaga vateatea i tafatafa o lou a'oga. O a faataitaiga e te faia?" } },
+      { id: "i41", type: "question", minTier: 0, emoji: "🎤", simple: "Imagine everyone sings instead of talking for a day! What song would you sing to say good morning?", title: "Imagine if everyone sang instead of talking for one day. What song would you sing to say good morning?", translations: { hi: "कल्पना कीजिए कि एक दिन सब बोलने की जगह गाते। 'सुप्रभात' कहने के लिए आप कौन सा गाना गाते?", es: "Imagina que todos cantaran en vez de hablar durante un día. ¿Qué canción cantarías para dar los buenos días?", fr: "Imagine si tout le monde chantait au lieu de parler pendant une journée. Quelle chanson chanterais-tu pour dire bonjour ?", mi: "Whakaarohia me i waiata te katoa kaua ki te kōrero mō te rā. He aha te waiata ka waiatatia e koe hei mihi i te ata?", zh: "想象一下大家一整天都用唱歌代替说话。你会唱什么歌来说早上好?", sm: "Mafaufau pe ana e pese tagata uma nai lo le tautala mo le aso. O le a le pese e te pese ai e fai atu ai manuia le taeao?" } },
+      { id: "i42", type: "question", minTier: 0, emoji: "🍰", simple: "Imagine you bake a cake that gives people a special power! What power does it give?", title: "Imagine if you could bake a cake that gives people a special power. What power would it give?", translations: { hi: "कल्पना कीजिए कि आप ऐसा केक बना सकते जो लोगों को ख़ास शक्ति देता। वह कौन सी शक्ति देता?", es: "Imagina que pudieras hornear un pastel que diera un poder especial a la gente. ¿Qué poder daría?", fr: "Imagine si tu pouvais préparer un gâteau qui donne un pouvoir spécial à ceux qui le mangent. Quel pouvoir donnerait-il ?", mi: "Whakaarohia me i taea e koe te tunu keke hei hoatu i tētahi mana motuhake ki te tangata. He aha taua mana?", zh: "想象一下你能烤一个让人拥有特殊能力的蛋糕。它会给人什么能力?", sm: "Mafaufau pe ana e mafai ona e tao se keke e tuuina atu ai se malosi faapitoa i tagata. O le a le malosi?" } },
+      { id: "i43", type: "question", minTier: 1, emoji: "🧙", title: "Imagine you meet a wise person in the forest who can answer one question. What would you ask?", translations: { hi: "कल्पना कीजिए कि आप जंगल में एक बुद्धिमान व्यक्ति से मिलते हैं जो एक सवाल का जवाब दे सकता है। आप क्या पूछेंगे?", es: "Imagina que encuentras en el bosque a una persona sabia que puede responder una pregunta. ¿Qué preguntarías?", fr: "Imagine que tu rencontres dans la forêt une personne sage qui peut répondre à une question. Que demanderais-tu ?", mi: "Whakaarohia ka tūtaki koe ki tētahi tangata mōhio i te ngahere ka taea te whakautu i tētahi pātai. He aha tāu e pātai ai?", zh: "想象一下你在森林里遇到一位智者,他能回答一个问题。你会问什么?", sm: "Mafaufau pe ana e te fetaui ma se tagata atamai i le vaomatua e mafai ona tali se fesili e tasi. O le a lau fesili?" } },
+      { id: "i44", type: "question", minTier: 1, emoji: "🌊", title: "Imagine you live in a city under the sea. How would you travel to school?", translations: { hi: "कल्पना कीजिए कि आप समुद्र के नीचे बसे शहर में रहते हैं। आप स्कूल कैसे जाते?", es: "Imagina que vives en una ciudad bajo el mar. ¿Cómo irías a la escuela?", fr: "Imagine que tu vis dans une ville sous la mer. Comment irais-tu à l'école ?", mi: "Whakaarohia kei te noho koe ki tētahi tāone i raro i te moana. Ka pēhea tō haere ki te kura?", zh: "想象一下你住在海底的城市里。你怎么去上学?", sm: "Mafaufau pe ana e te nofo i se aai i lalo o le sami. E faapefea ona e alu i le a'oga?" } },
+      { id: "i45", type: "question", minTier: 0, emoji: "🚂", simple: "Imagine you build your own train! What would each carriage hold?", title: "Imagine if you could build your own train. What would each carriage hold?", translations: { hi: "कल्पना कीजिए कि आप अपनी ख़ुद की ट्रेन बना सकते। हर डिब्बे में क्या होता?", es: "Imagina que pudieras construir tu propio tren. ¿Qué llevaría cada vagón?", fr: "Imagine si tu pouvais construire ton propre train. Que contiendrait chaque wagon ?", mi: "Whakaarohia me i taea e koe te hanga i tō anō tereina. He aha kei ia whare tereina?", zh: "想象一下你可以建造自己的火车。每节车厢里会有什么?", sm: "Mafaufau pe ana e mafai ona e fau lau nofoaafi. O le a le mea o i totonu o taavale taitasi?" } },
+      { id: "i46", type: "question", minTier: 1, emoji: "🏝️", title: "Imagine your class is stuck on a friendly island for a day. What job would everyone do?", translations: { hi: "कल्पना कीजिए कि आपकी कक्षा एक दिन के लिए एक दोस्ताना द्वीप पर फँस जाती है। हर कोई कौन सा काम करता?", es: "Imagina que tu clase queda atrapada un día en una isla amigable. ¿Qué trabajo haría cada uno?", fr: "Imagine que ta classe soit bloquée une journée sur une île accueillante. Quel rôle chacun aurait-il ?", mi: "Whakaarohia kua mahue tō akomanga ki tētahi motu atawhai mō te rā. He aha te mahi a ia tangata?", zh: "想象一下你们班被困在一个友好的小岛上一天。每个人会做什么工作?", sm: "Mafaufau pe ana ua taofia lou vasega i se motu aulelei mo le aso. O le a le galuega a tagata taitasi?" } },
+      { id: "i47", type: "question", minTier: 2, emoji: "🔭", title: "Imagine you discover a new planet. What would you name it and who would live there?", translations: { hi: "कल्पना कीजिए कि आप एक नया ग्रह खोजते हैं। आप उसका क्या नाम रखेंगे और वहाँ कौन रहेगा?", es: "Imagina que descubres un planeta nuevo. ¿Cómo lo llamarías y quién viviría allí?", fr: "Imagine que tu découvres une nouvelle planète. Comment l'appellerais-tu et qui y vivrait ?", mi: "Whakaarohia ka kite koe i tētahi aorangi hou. He aha tōna ingoa, ā, ko wai ngā tāngata ka noho ki reira?", zh: "想象一下你发现了一颗新行星。你会给它起什么名字?谁会住在那里?", sm: "Mafaufau pe ana e te maua se paneta fou. O le a se igoa e te tuuina ai ma o ai e nofo ai?" } },
+      { id: "i48", type: "question", minTier: 2, emoji: "⏱️", title: "Imagine if every wish lasted only one hour. What would you wish for?", translations: { hi: "कल्पना कीजिए कि हर इच्छा सिर्फ़ एक घंटे तक चलती। आप क्या माँगते?", es: "Imagina que cada deseo durara solo una hora. ¿Qué pedirías?", fr: "Imagine que chaque vœu ne dure qu'une heure. Que souhaiterais-tu ?", mi: "Whakaarohia me i kotahi noa te hāora e mau ai ia hiahia. He aha tāu e hiahia ai?", zh: "想象一下每个愿望只能持续一个小时。你会许什么愿?", sm: "Mafaufau pe ana e na o le tasi itula e tumau ai manaoga taitasi. O le a lau manaoga?" } },
+      { id: "i49", type: "question", minTier: 2, emoji: "🕰️", title: "Imagine you could go back and give advice to your younger self. What would you say?", translations: { hi: "कल्पना कीजिए कि आप पीछे जाकर अपने छोटे रूप को सलाह दे सकते। आप क्या कहते?", es: "Imagina que pudieras volver atrás y darle un consejo a tu yo más joven. ¿Qué le dirías?", fr: "Imagine que tu puisses revenir en arrière et donner un conseil à ta version plus jeune. Que dirais-tu ?", mi: "Whakaarohia me i taea e koe te hoki whakamuri ki te hoatu tohutohu ki a koe i te wā i tamariki ai koe. He aha tāu e kī ai?", zh: "想象一下你可以回到过去,给年轻时的自己一个建议。你会说什么?", sm: "Mafaufau pe ana e mafai ona e toe foi ma tuuina atu se fautuaga i lou tuagane laʻitiiti. O le a lau tala?" } },
+      { id: "i50", type: "question", minTier: 2, emoji: "📚", title: "Imagine you swap lives with a book character for a day. Who would you pick?", translations: { hi: "कल्पना कीजिए कि आप एक दिन के लिए किसी किताब के पात्र से अपनी ज़िंदगी बदलते हैं। आप किसे चुनते?", es: "Imagina que cambias de vida con un personaje de un libro por un día. ¿A quién elegirías?", fr: "Imagine que tu échanges ta vie avec un personnage de livre pour une journée. Lequel choisirais-tu ?", mi: "Whakaarohia ka whakawhiti koe i tō oranga ki tētahi tangata o tētahi pukapuka mō te rā. Ko wai tāu e kōwhiri ai?", zh: "想象一下你和书中的一个角色交换一天的生活。你会选谁?", sm: "Mafaufau pe ana e te fesuiai ma se tagata o se tusi mo le aso. O ai e te filifilia?" } },
+      { id: "i51", type: "question", minTier: 3, emoji: "🌍", title: "Imagine every country shared one big holiday. What would it celebrate?", translations: { hi: "कल्पना कीजिए कि हर देश एक साझा बड़ा त्योहार मनाता। वह किस बात का जश्न होता?", es: "Imagina que todos los países compartieran una gran fiesta. ¿Qué celebraría?", fr: "Imagine que tous les pays partagent une grande fête. Que célébrerait-elle ?", mi: "Whakaarohia he hararei nui kotahi e tohatohahia ana e ngā whenua katoa. He aha tāna e whakanui ai?", zh: "想象一下所有国家共享一个盛大的节日。它会庆祝什么?", sm: "Mafaufau pe ana e tasi le aso malolo tele e faasoa e atunuu uma. O le a le mea e faamanatuina?" } },
+      { id: "i52", type: "question", minTier: 3, emoji: "💡", title: "Imagine you could remove one invention from history. Which one would you remove and why?", translations: { hi: "कल्पना कीजिए कि आप इतिहास से एक आविष्कार हटा सकते। आप कौन सा हटाते और क्यों?", es: "Imagina que pudieras eliminar un invento de la historia. ¿Cuál eliminarías y por qué?", fr: "Imagine que tu puisses effacer une invention de l'histoire. Laquelle supprimerais-tu et pourquoi ?", mi: "Whakaarohia me i taea e koe te tango i tētahi mea hou o te hītori. Ko tēhea tāu e tango ai, he aha hoki?", zh: "想象一下你可以从历史上抹去一项发明。你会抹去哪一项?为什么?", sm: "Mafaufau pe ana e mafai ona e aveesea se mea na faia mai le tala faasolopito. O le fea e te aveesea ma aisea?" } },
+      { id: "i53", type: "question", minTier: 1, emoji: "⚡", title: "Imagine there was no electricity for one day. How would your day go?", translations: { hi: "कल्पना कीजिए कि एक दिन बिजली बिल्कुल न होती। आपका दिन कैसे बीतता?", es: "Imagina que no hubiera electricidad por un día. ¿Cómo sería tu día?", fr: "Imagine qu'il n'y ait pas d'électricité pendant une journée. Comment se passerait ta journée ?", mi: "Whakaarohia kāore he hiko mō te rā kotahi. Ka pēhea tō rā?", zh: "想象一下一整天都没有电。你的一天会怎么过?", sm: "Mafaufau pe ana e leai se eletise mo le aso. E faapefea lau aso?" } },
+      { id: "i54", type: "question", minTier: 0, emoji: "👖", simple: "Imagine a pocket that can hold anything! What would you keep in it?", title: "Imagine if you had a pocket that could hold anything. What would you keep in it?", translations: { hi: "कल्पना कीजिए कि आपके पास ऐसी जेब होती जिसमें कुछ भी समा सकता। आप उसमें क्या रखते?", es: "Imagina que tuvieras un bolsillo donde cupiera cualquier cosa. ¿Qué guardarías en él?", fr: "Imagine si tu avais une poche capable de tout contenir. Que mettrais-tu dedans ?", mi: "Whakaarohia he pūkoro e kaha ana ki te pupuri i tētahi mea. He aha tāu e whakaū ai ki roto?", zh: "想象一下你有一个什么都能装的口袋。你会在里面放什么?", sm: "Mafaufau pe ana i ai sau taga e mafai ona teu ai se mea uma. O le a le mea e te teuina i totonu?" } },
+      { id: "i55", type: "question", minTier: 1, emoji: "🌱", title: "Imagine you could grow a garden anywhere in the world. Where would you plant it?", translations: { hi: "कल्पना कीजिए कि आप दुनिया में कहीं भी बगीचा उगा सकते। आप उसे कहाँ लगाते?", es: "Imagina que pudieras cultivar un jardín en cualquier parte del mundo. ¿Dónde lo plantarías?", fr: "Imagine que tu puisses faire pousser un jardin n'importe où dans le monde. Où le planterais-tu ?", mi: "Whakaarohia me i taea e koe te whakatipu māra ki hea rānei o te ao. Ka whakatō koe ki hea?", zh: "想象一下你可以在世界上任何地方种一座花园。你会种在哪里?", sm: "Mafaufau pe ana e mafai ona e totoina se togalaau i soo se mea o le lalolagi. O fea e te totoina ai?" } },
+      { id: "i56", type: "question", minTier: 1, emoji: "🖼️", title: "Imagine you could step inside any painting. Which one would you choose?", translations: { hi: "कल्पना कीजिए कि आप किसी भी पेंटिंग के अंदर जा सकते। आप कौन सी चुनते?", es: "Imagina que pudieras entrar en cualquier pintura. ¿Cuál elegirías?", fr: "Imagine que tu puisses entrer dans n'importe quel tableau. Lequel choisirais-tu ?", mi: "Whakaarohia me i taea e koe te kuhu ki roto i tētahi peita. Ko tēhea tāu e kōwhiri ai?", zh: "想象一下你可以走进任何一幅画里。你会选哪一幅?", sm: "Mafaufau pe ana e mafai ona e ulu atu i se ata valiina. O le fea e te filifilia?" } },
+      { id: "i57", type: "question", minTier: 0, emoji: "🧸", title: "Imagine your toys could do your chores. Which toy would do which job?", translations: { hi: "कल्पना कीजिए कि आपके खिलौने आपके घर के काम कर सकते। कौन सा खिलौना कौन सा काम करता?", es: "Imagina que tus juguetes pudieran hacer tus tareas de la casa. ¿Qué juguete haría qué trabajo?", fr: "Imagine que tes jouets puissent faire tes corvées. Quel jouet ferait quelle tâche ?", mi: "Whakaarohia me i taea e ō taonga tākaro te mahi i ō mahi whare. Ko tēhea taonga tākaro hei mahi i tēhea mahi?", zh: "想象一下你的玩具能帮你做家务。哪个玩具做哪件事?", sm: "Mafaufau pe ana e mafai e meataalo ona faia au galuega i le fale. O le fea meataalo e faia le fea galuega?" } },
+      { id: "i58", type: "question", minTier: 0, emoji: "🌠", simple: "Imagine you catch a shooting star! What would you do with it?", title: "Imagine if you could catch a shooting star. What would you do with it?", translations: { hi: "कल्पना कीजिए कि आप एक टूटता तारा पकड़ सकते। आप उसका क्या करते?", es: "Imagina que pudieras atrapar una estrella fugaz. ¿Qué harías con ella?", fr: "Imagine si tu pouvais attraper une étoile filante. Qu'en ferais-tu ?", mi: "Whakaarohia me i taea e koe te hopu i tētahi whetū hinga. He aha tāu e mahi ai ki a ia?", zh: "想象一下你可以抓住一颗流星。你会用它做什么?", sm: "Mafaufau pe ana e mafai ona e pu'e se fetu tafe. O le a le mea e te faia ma ia?" } },
+      { id: "i59", type: "question", minTier: 2, emoji: "🚀", title: "Imagine you were the first person to live on Mars. What would you miss most?", translations: { hi: "कल्पना कीजिए कि आप मंगल ग्रह पर रहने वाले पहले इंसान होते। आप सबसे ज़्यादा किसे याद करते?", es: "Imagina que fueras la primera persona en vivir en Marte. ¿Qué echarías más de menos?", fr: "Imagine que tu sois la première personne à vivre sur Mars. Qu'est-ce qui te manquerait le plus ?", mi: "Whakaarohia ko koe te tangata tuatahi ki te noho ki Mārehe. He aha te mea ka nui rawa tō ngaro ki a koe?", zh: "想象一下你是第一个住在火星上的人。你最想念什么?", sm: "Mafaufau pe ana o oe le tagata muamua e nofo i Mars. O le a le mea e sili ona e misia?" } },
+      { id: "i60", type: "question", minTier: 1, emoji: "🏡", title: "Imagine you could design your dream bedroom with no limits. What would be inside?", translations: { hi: "कल्पना कीजिए कि आप बिना किसी सीमा के अपना सपनों का शयनकक्ष बना सकते। उसमें क्या होता?", es: "Imagina que pudieras diseñar tu dormitorio soñado sin límites. ¿Qué habría dentro?", fr: "Imagine que tu puisses concevoir la chambre de tes rêves sans aucune limite. Qu'y aurait-il dedans ?", mi: "Whakaarohia me i taea e koe te hoahoa i tō ruma moe moemoeā, kāore he tepe. He aha kei roto?", zh: "想象一下你可以无限制地设计自己梦想中的卧室。里面会有什么?", sm: "Mafaufau pe ana e mafai ona e fuafuaina lou potu moe e te manao i ai e aunoa ma se tapulaa. O le a le mea o i totonu?" } },
+      { id: "i61", type: "question", minTier: 3, emoji: "🤝", title: "Imagine everyone could perfectly understand each other's feelings for one day. What would change?", translations: { hi: "कल्पना कीजिए कि एक दिन के लिए सब एक-दूसरे की भावनाओं को पूरी तरह समझ पाते। क्या बदल जाता?", es: "Imagina que todos pudieran entender perfectamente los sentimientos de los demás por un día. ¿Qué cambiaría?", fr: "Imagine que chacun puisse comprendre parfaitement les sentiments des autres pendant une journée. Qu'est-ce qui changerait ?", mi: "Whakaarohia me i mārama pai te katoa ki ngā kare ā-roto o tētahi atu mō te rā. He aha ngā huringa?", zh: "想象一下每个人都能在一天里完全理解彼此的感受。会有什么改变?", sm: "Mafaufau pe ana e malamalama atoatoa tagata uma i lagona o le tasi i le isi mo le aso. O le a le mea e suia?" } },
+      { id: "i62", type: "question", minTier: 3, emoji: "🧭", title: "Imagine you had to lead an expedition with your class. Where would you go and who would do what?", translations: { hi: "कल्पना कीजिए कि आपको अपनी कक्षा के साथ एक अभियान का नेतृत्व करना पड़ता। आप कहाँ जाते और कौन क्या करता?", es: "Imagina que tuvieras que dirigir una expedición con tu clase. ¿Adónde irían y quién haría qué?", fr: "Imagine que tu doives diriger une expédition avec ta classe. Où irais-tu et qui ferait quoi ?", mi: "Whakaarohia me hautū koe i tētahi haerenga whakatūhura me tō akomanga. Ka haere koe ki hea, ā, ko wai hei mahi i tēhea mahi?", zh: "想象一下你要带领全班进行一次探险。你们会去哪里?谁负责什么?", sm: "Mafaufau pe ana e tatau ona e taitaia se malaga suʻesuʻe ma lou vasega. O fea e te alu i ai ma o ai e fai le a le galuega?" } },
+      { id: "i63", type: "question", minTier: 2, emoji: "📡", title: "Imagine you could send a message to the future. Who would read it and what would you say?", translations: { hi: "कल्पना कीजिए कि आप भविष्य को एक संदेश भेज सकते। उसे कौन पढ़ता और आप क्या लिखते?", es: "Imagina que pudieras enviar un mensaje al futuro. ¿Quién lo leería y qué dirías?", fr: "Imagine que tu puisses envoyer un message dans le futur. Qui le lirait et que dirais-tu ?", mi: "Whakaarohia me i taea e koe te tuku karere ki te anamata. Ko wai ka pānui, ā, he aha tāu e kī ai?", zh: "想象一下你可以给未来发一条信息。谁会读到它?你会说什么?", sm: "Mafaufau pe ana e mafai ona e auina atu se feau i le lumanai. O ai e faitau ma o le a lau tala?" } },
+      { id: "i64", type: "question", minTier: 0, emoji: "🌳", simple: "Imagine the playground has a talking tree! What would it tell you?", title: "Imagine if the playground had a talking tree. What would it tell you?", translations: { hi: "कल्पना कीजिए कि खेल के मैदान में एक बोलने वाला पेड़ होता। वह आपको क्या बताता?", es: "Imagina que el patio de recreo tuviera un árbol que habla. ¿Qué te diría?", fr: "Imagine si la cour de récréation avait un arbre qui parle. Que te dirait-il ?", mi: "Whakaarohia he rākau kōrero kei te papa tākaro. He aha tāna e kī ai ki a koe?", zh: "想象一下操场上有一棵会说话的树。它会对你说什么?", sm: "Mafaufau pe ana i ai se la'au e tautala i le malae ta'aloga. O le a le mea e fai atu ai ia te oe?" } },
+      { id: "i65", type: "question", minTier: 0, emoji: "🎈", simple: "Imagine you float with balloons for a day! Where would you float?", title: "Imagine if you could float with balloons for a day. Where would you float?", translations: { hi: "कल्पना कीजिए कि आप एक दिन के लिए गुब्बारों के साथ तैर सकते। आप कहाँ तैरते?", es: "Imagina que pudieras flotar con globos por un día. ¿Adónde flotarías?", fr: "Imagine si tu pouvais flotter avec des ballons pendant une journée. Où flotterais-tu ?", mi: "Whakaarohia me i taea e koe te tere me ngā poihau mō te rā. Ka tere koe ki hea?", zh: "想象一下你可以抱着气球飘一整天。你会飘到哪里?", sm: "Mafaufau pe ana e mafai ona e opeopea ma pulu mo le aso. O fea e te opeopea i ai?" } },
       { id: "ia1", type: "activity", minTier: 0, emoji: "🐒", title: "Everyone act like their favourite animal for three seconds.", translations: { hi: "सब लोग तीन सेकंड के लिए अपने पसंदीदा जानवर की तरह अभिनय करें।", es: "Todos actúen como su animal favorito durante tres segundos.", fr: "Tout le monde imite son animal préféré pendant trois secondes.", mi: "Whakaari ai te katoa hei kararehe tino pai ki a rātou mō ngā hēkona e toru.", zh: "大家模仿自己最喜欢的动物三秒钟。", sm: "Tagata uma ia fai ma manu e sili ona latou fiafia i ai mo le tolu sekone." } },
       { id: "ia2", type: "activity", minTier: 0, emoji: "🤫", title: "Everyone whisper their favourite word to the person next to them.", translations: { hi: "सब लोग अपने बगल वाले व्यक्ति को अपना पसंदीदा शब्द फुसफुसाकर बताएँ।", es: "Todos susurren su palabra favorita a la persona de al lado.", fr: "Tout le monde chuchote son mot préféré à la personne à côté.", mi: "Whakapāha ai te katoa i tō rātou kupu tino pai ki te tangata kei tō rātou taha.", zh: "大家小声告诉旁边的人自己最喜欢的一个词。", sm: "Tagata uma ia musumusu le upu e sili ona latou fiafia i ai i le tagata o loo tu i o latou tafatafa." } },
       { id: "ia3", type: "activity", minTier: 0, emoji: "🚀", title: "Everyone count down from five and blast off out of your chair.", translations: { hi: "सब लोग पाँच से उल्टी गिनती करें और अपनी कुर्सी से उड़ान भरें।", es: "Todos cuenten regresivamente desde cinco y despeguen de su silla.", fr: "Tout le monde compte à rebours à partir de cinq et décolle de sa chaise.", mi: "Tatau ai te katoa mai i te rima ki raro, kātahi ka rere atu i tō tūru.", zh: "大家从五开始倒数,然后从椅子上\u201c发射\u201d起来。", sm: "Tagata uma ia faitau i lalo mai le lima ma osooso ese mai i lo latou nofoa." } },
@@ -1542,6 +1632,36 @@ const CATEGORIES = [
       { id: "q18", type: "question", minTier: 0, emoji: "⛺", title: "Camping or hotel?", translations: { hi: "कैंपिंग या होटल?", es: "¿Acampar o ir a un hotel?", fr: "Camping ou hôtel ?", mi: "Puni, hōtera rānei?", zh: "露营还是酒店?", sm: "Tolauapiga po'o faletalimalo?" } },
       { id: "q19", type: "question", minTier: 0, emoji: "🏀", title: "Basketball or soccer?", translations: { hi: "बास्केटबॉल या फुटबॉल?", es: "¿Baloncesto o fútbol?", fr: "Basket ou foot ?", mi: "Poitūkohu, whutupaoro rānei?", zh: "篮球还是足球?", sm: "Pasiketipolo po'o le lakapi soka?" } },
       { id: "q20", type: "question", minTier: 0, emoji: "🎤", title: "Karaoke or dancing?", translations: { hi: "कराओके या डांसिंग?", es: "¿Karaoke o baile?", fr: "Karaoké ou danse ?", mi: "Karaoke, kanikani rānei?", zh: "卡拉OK还是跳舞?", sm: "Karaoke po'o siva?" } },
+      { id: "q36", type: "question", minTier: 0, emoji: "🌅", title: "Sunrise or sunset?", translations: { hi: "सूर्योदय या सूर्यास्त?", es: "¿Amanecer o atardecer?", fr: "Lever ou coucher de soleil ?", mi: "Te putanga o te rā, te to o te rā rānei?", zh: "日出还是日落?", sm: "Tula'i mai o le la po'o le goto o le la?" } },
+      { id: "q37", type: "question", minTier: 0, emoji: "🌦️", title: "Rain or sunshine?", translations: { hi: "बारिश या धूप?", es: "¿Lluvia o sol?", fr: "Pluie ou soleil ?", mi: "Te ua, te rā rānei?", zh: "下雨还是晴天?", sm: "Timu po'o le la?" } },
+      { id: "q38", type: "question", minTier: 0, emoji: "⛄", title: "Snowman or sandcastle?", translations: { hi: "स्नोमैन या रेत का महल?", es: "¿Muñeco de nieve o castillo de arena?", fr: "Bonhomme de neige ou château de sable ?", mi: "Tangata hukarere, whare onepū rānei?", zh: "雪人还是沙堡?", sm: "Tagata kiona po'o fale oneone?" } },
+      { id: "q39", type: "question", minTier: 0, emoji: "🚆", title: "Bus or train?", translations: { hi: "बस या ट्रेन?", es: "¿Autobús o tren?", fr: "Bus ou train ?", mi: "Pahi, tereina rānei?", zh: "公共汽车还是火车?", sm: "Pasi po'o nofoaafi?" } },
+      { id: "q40", type: "question", minTier: 0, emoji: "🏏", title: "Cricket or rugby?", translations: { hi: "क्रिकेट या रग्बी?", es: "¿Críquet o rugby?", fr: "Cricket ou rugby ?", mi: "Kirikiti, whutupōro rānei?", zh: "板球还是橄榄球?", sm: "Kirikiti po'o lakapi?" } },
+      { id: "q41", type: "question", minTier: 0, emoji: "🍦", title: "Ice cream or cake?", translations: { hi: "आइसक्रीम या केक?", es: "¿Helado o pastel?", fr: "Glace ou gâteau ?", mi: "Aihikirīmi, keke rānei?", zh: "冰淇淋还是蛋糕?", sm: "Aisakulimi po'o keke?" } },
+      { id: "q42", type: "question", minTier: 0, emoji: "🍌", title: "Banana or apple?", translations: { hi: "केला या सेब?", es: "¿Plátano o manzana?", fr: "Banane ou pomme ?", mi: "Panana, āporo rānei?", zh: "香蕉还是苹果?", sm: "Fa'i po'o apelu?" } },
+      { id: "q43", type: "question", minTier: 0, emoji: "🥪", title: "Sandwich or salad?", translations: { hi: "सैंडविच या सलाद?", es: "¿Sándwich o ensalada?", fr: "Sandwich ou salade ?", mi: "Hanawiti, huamata rānei?", zh: "三明治还是沙拉?", sm: "Sanuisi po'o salati?" } },
+      { id: "q44", type: "question", minTier: 0, emoji: "🌳", title: "Garden or playground?", translations: { hi: "बगीचा या खेल का मैदान?", es: "¿Jardín o patio de recreo?", fr: "Jardin ou terrain de jeu ?", mi: "Māra, papa tākaro rānei?", zh: "花园还是游乐场?", sm: "Togalaau po'o malae ta'aloga?" } },
+      { id: "q45", type: "question", minTier: 0, emoji: "📖", title: "Story or song?", translations: { hi: "कहानी या गीत?", es: "¿Cuento o canción?", fr: "Histoire ou chanson ?", mi: "Pūrākau, waiata rānei?", zh: "故事还是歌曲?", sm: "Tala po'o pese?" } },
+      { id: "q46", type: "question", minTier: 0, emoji: "⭐", title: "Stars or clouds?", translations: { hi: "तारे या बादल?", es: "¿Estrellas o nubes?", fr: "Étoiles ou nuages ?", mi: "Ngā whetū, ngā kapua rānei?", zh: "星星还是云朵?", sm: "Fetu po'o ao?" } },
+      { id: "q47", type: "question", minTier: 0, emoji: "🌈", title: "Rainbow or lightning?", translations: { hi: "इंद्रधनुष या बिजली?", es: "¿Arcoíris o rayo?", fr: "Arc-en-ciel ou éclair ?", mi: "Āniwaniwa, uira rānei?", zh: "彩虹还是闪电?", sm: "Nuanua po'o uila?" } },
+      { id: "q48", type: "question", minTier: 0, emoji: "🚲", title: "Walking or biking to school?", translations: { hi: "स्कूल पैदल जाना या साइकिल से?", es: "¿Ir a la escuela caminando o en bici?", fr: "Aller à l'école à pied ou à vélo ?", mi: "Hīkoi, eke pahikara rānei ki te kura?", zh: "走路还是骑自行车去学校?", sm: "Savali po'o ti'eti'e i le pasikala i le a'oga?" } },
+      { id: "q49", type: "question", minTier: 0, emoji: "🥛", title: "Milk or water?", translations: { hi: "दूध या पानी?", es: "¿Leche o agua?", fr: "Lait ou eau ?", mi: "Miraka, wai rānei?", zh: "牛奶还是水?", sm: "Susu po'o vai?" } },
+      { id: "q50", type: "question", minTier: 0, emoji: "🍚", title: "Bread or rice?", translations: { hi: "रोटी या चावल?", es: "¿Pan o arroz?", fr: "Pain ou riz ?", mi: "Parāoa, raihi rānei?", zh: "面包还是米饭?", sm: "Falaoa po'o araisa?" } },
+      { id: "q51", type: "question", minTier: 0, emoji: "🏊", title: "Swimming or running?", translations: { hi: "तैरना या दौड़ना?", es: "¿Nadar o correr?", fr: "Nager ou courir ?", mi: "Kauhoe, oma rānei?", zh: "游泳还是跑步?", sm: "Aau po'o tamo'e?" } },
+      { id: "q52", type: "question", minTier: 1, emoji: "🎉", title: "Surprise party or quiet dinner?", translations: { hi: "सरप्राइज़ पार्टी या शांत रात का खाना?", es: "¿Fiesta sorpresa o cena tranquila?", fr: "Fête surprise ou dîner tranquille ?", mi: "Hākari ohorere, kai pō marie rānei?", zh: "惊喜派对还是安静的晚餐?", sm: "Pati faafuase'i po'o taumafataga filemu?" } },
+      { id: "q53", type: "question", minTier: 1, emoji: "🏙️", title: "Big city or small town?", translations: { hi: "बड़ा शहर या छोटा कस्बा?", es: "¿Ciudad grande o pueblo pequeño?", fr: "Grande ville ou petite ville ?", mi: "Tāone nui, tāone iti rānei?", zh: "大城市还是小镇?", sm: "Aai tele po'o taulaga laiti?" } },
+      { id: "q54", type: "question", minTier: 0, emoji: "🏝️", title: "Island holiday or mountain holiday?", translations: { hi: "द्वीप की छुट्टी या पहाड़ की छुट्टी?", es: "¿Vacaciones en una isla o en la montaña?", fr: "Vacances sur une île ou à la montagne ?", mi: "Hararei motu, hararei maunga rānei?", zh: "海岛度假还是山中度假?", sm: "Malologa i le motu po'o le mauga?" } },
+      { id: "q55", type: "question", minTier: 0, emoji: "🐠", title: "A fish or a bird as a pet?", translations: { hi: "पालतू के रूप में मछली या चिड़िया?", es: "¿Un pez o un pájaro como mascota?", fr: "Un poisson ou un oiseau comme animal de compagnie ?", mi: "He ika, he manu rānei hei mōkai?", zh: "养鱼还是养鸟?", sm: "Se i'a po'o se manulele e fai ma fagafao?" } },
+      { id: "q56", type: "question", minTier: 1, emoji: "⛰️", title: "Mountain climb or beach walk?", translations: { hi: "पहाड़ चढ़ना या समुद्र तट पर टहलना?", es: "¿Escalar una montaña o caminar por la playa?", fr: "Escalader une montagne ou marcher sur la plage ?", mi: "Piki maunga, hīkoi tahatai rānei?", zh: "爬山还是在沙滩上散步?", sm: "A'e i le mauga po'o savali i le matafaga?" } },
+      { id: "q57", type: "question", minTier: 1, emoji: "🌤️", title: "Summer morning or winter evening?", translations: { hi: "गर्मी की सुबह या सर्दी की शाम?", es: "¿Una mañana de verano o una tarde de invierno?", fr: "Un matin d'été ou un soir d'hiver ?", mi: "Te ata raumati, te ahiahi hōtoke rānei?", zh: "夏天的早晨还是冬天的傍晚?", sm: "Taeao o le taumafanafana po'o le afiafi o le taumalulu?" } },
+      { id: "q58", type: "question", minTier: 0, emoji: "🎨", title: "Painting or building with blocks?", translations: { hi: "पेंटिंग करना या ब्लॉक से बनाना?", es: "¿Pintar o construir con bloques?", fr: "Peindre ou construire avec des blocs ?", mi: "Peita, hanga poraka rānei?", zh: "画画还是用积木搭建?", sm: "Valiina po'o fau i poloka?" } },
+      { id: "q59", type: "question", minTier: 0, emoji: "🥁", title: "Piano or drums?", translations: { hi: "पियानो या ढोल?", es: "¿Piano o tambor?", fr: "Piano ou tambour ?", mi: "Piana, pahū rānei?", zh: "钢琴还是鼓?", sm: "Piano po'o pate?" } },
+      { id: "q60", type: "question", minTier: 0, emoji: "🌙", title: "Sun or moon?", translations: { hi: "सूरज या चाँद?", es: "¿Sol o luna?", fr: "Soleil ou lune ?", mi: "Te rā, te marama rānei?", zh: "太阳还是月亮?", sm: "Le la po'o le masina?" } },
+      { id: "q61", type: "question", minTier: 2, emoji: "🧭", title: "Plan ahead or go with the flow?", translations: { hi: "पहले से योजना बनाना या हालात के साथ चलना?", es: "¿Planificar con tiempo o dejarse llevar?", fr: "Planifier à l'avance ou se laisser porter ?", mi: "Whakamahere i mua, tuku noa rānei?", zh: "提前计划还是顺其自然?", sm: "Fuafua muamua po'o tuu atu e alu ai?" } },
+      { id: "q62", type: "question", minTier: 2, emoji: "🧠", title: "Learn something new or get better at something you know?", translations: { hi: "कुछ नया सीखना या जो आता है उसमें बेहतर होना?", es: "¿Aprender algo nuevo o mejorar en algo que ya sabes?", fr: "Apprendre quelque chose de nouveau ou t'améliorer dans ce que tu sais déjà ?", mi: "Ako i tētahi mea hou, whakapai ake rānei i tētahi mea e mōhio ana koe?", zh: "学新东西还是把已经会的做得更好?", sm: "Aoao se mea fou po'o faaleleia atili se mea ua e iloa?" } },
+      { id: "q63", type: "question", minTier: 1, emoji: "🚶", title: "Lead the group or help the group?", translations: { hi: "समूह का नेतृत्व करना या समूह की मदद करना?", es: "¿Dirigir al grupo o ayudar al grupo?", fr: "Diriger le groupe ou aider le groupe ?", mi: "Hautū i te rōpū, āwhina i te rōpū rānei?", zh: "带领小组还是帮助小组?", sm: "Taitai le vaega po'o fesoasoani i le vaega?" } },
+      { id: "q64", type: "question", minTier: 1, emoji: "📚", title: "Read a book or watch a film?", translations: { hi: "किताब पढ़ना या फ़िल्म देखना?", es: "¿Leer un libro o ver una película?", fr: "Lire un livre ou regarder un film ?", mi: "Pānui pukapuka, mātakitaki kiriata rānei?", zh: "读书还是看电影?", sm: "Faitau se tusi po'o matamata i se ata?" } },
+      { id: "q65", type: "question", minTier: 0, emoji: "🏖️", title: "Beach or pool?", translations: { hi: "समुद्र तट या स्विमिंग पूल?", es: "¿Playa o piscina?", fr: "Plage ou piscine ?", mi: "Tahatai, puna kaukau rānei?", zh: "海滩还是游泳池?", sm: "Matafaga po'o vaita'ele?" } },
       { id: "qa1", type: "activity", minTier: 0, emoji: "👏", title: "Everyone clap once if you said yes to the last question, don't clap if you said no.", translations: { hi: "अगर आपने पिछले सवाल का जवाब हाँ में दिया तो एक बार ताली बजाएँ, अगर नहीं तो मत बजाएँ।", es: "Todos aplaudan una vez si dijeron sí a la última pregunta, no aplaudan si dijeron no.", fr: "Tout le monde applaudit une fois si vous avez répondu oui à la dernière question, n'applaudissez pas si non.", mi: "Pakipaki kotahi te katoa mehemea i kī 'āe' rātou ki te pātai o mua, kaua e pakipaki mehemea i kī 'kāo'.", zh: "如果你对上一个问题回答\u201c是\u201d,就拍一次手,如果回答\u201c否\u201d就不要拍手。", sm: "Tagata uma ia patipati faatasi pe a e tali ioe i le fesili talu ai, aua le patipati pe a e tali leai." } },
       { id: "qa2", type: "activity", minTier: 0, emoji: "🙏", title: "High five the person next to you.", translations: { hi: "अपने बगल वाले व्यक्ति को हाई-फाइव दें।", es: "Choca los cinco con la persona de al lado.", fr: "Tape dans la main de la personne à côté de toi.", mi: "Pāwhiri ringa ki te tangata kei tō taha.", zh: "和旁边的人击掌。", sm: "Tapa lima maualuga i le tagata o loo tu i ou tafatafa." } },
       { id: "qa3", type: "activity", minTier: 0, emoji: "🤸", title: "Everyone jump up and down three times.", translations: { hi: "सब लोग तीन बार ऊपर-नीचे कूदें।", es: "Todos salten hacia arriba y hacia abajo tres veces.", fr: "Tout le monde saute trois fois de haut en bas.", mi: "Peke ai te katoa ki runga, ki raro, e toru ngā wā.", zh: "大家上下跳三次。", sm: "Tagata uma ia osooso i luga ma lalo faatolu." } },
@@ -1724,12 +1844,54 @@ function RandomSelectPanel({ onClose }) {
 /* ---------------------------- Autopilot ---------------------------- */
 
 const AUTOPILOT_DURATIONS = [
+  { seconds: 30, label: "0:30" },
   { seconds: 60, label: "1:00" },
   { seconds: 90, label: "1:30" },
   { seconds: 180, label: "3:00" },
 ];
 
 const STUDENT_COUNT_OPTIONS = [1, 2, 3, 4];
+
+// Quick challenges: the first student to do the thing gets to share.
+// "{L}" is replaced with a random letter each time.
+const CHALLENGE_LETTERS = ["B", "C", "D", "F", "G", "H", "J", "K", "L", "M", "N", "P", "R", "S", "T", "W"];
+const AUTOPILOT_CHALLENGES = [
+  "✋ The first student to put their hand up (quietly!)",
+  "🔤 The first student to say a word starting with “{L}”",
+  "🐾 The first student to name an animal starting with “{L}”",
+  "🍎 The first student to name a fruit or vegetable",
+  "🌍 The first student to name a country",
+  "🏙️ The first student to name a place in New Zealand",
+  "🎨 The first student to name something that is blue",
+  "🔢 The first student to say a number between 20 and 100",
+  "🧍 The first student to stand up silently",
+  "👋 The first student to say hello in another language",
+  "🍽️ The first student to name a food starting with “{L}”",
+  "🎵 The first student to name a song or a singer",
+  "🦵 The first student to stand on one leg",
+  "👏 The first student to clap three times, quietly",
+  "🧠 The first student to say a word that rhymes with “cat”",
+  "📚 The first student to name a book or a story character",
+];
+
+// Builds the (hidden) list of who will share for one card.
+function pickSpeakers(count, mode) {
+  const pickChallenges = (n) =>
+    shuffle(AUTOPILOT_CHALLENGES).slice(0, n).map((c) => c.replace("{L}", () => shuffle(CHALLENGE_LETTERS)[0]));
+  const crit = shuffle(RANDOM_CRITERIA);
+  const chal = pickChallenges(count);
+  if (mode === "challenge") return chal;
+  if (mode === "criteria") return crit.slice(0, count);
+  // mix: alternate randomly between the two
+  const out = [];
+  let ci = 0, hi = 0;
+  const startWithChallenge = Math.random() < 0.5;
+  for (let k = 0; k < count; k++) {
+    const useChal = (k % 2 === 0) === startWithChallenge;
+    out.push(useChal ? chal[hi++] : crit[ci++]);
+  }
+  return out;
+}
 
 const SHARE_DURATION_OPTIONS = [
   { seconds: 15, label: "0:15" },
@@ -1799,6 +1961,29 @@ function AutopilotSettingsModal({ settings, setSettings, onStart, onClose }) {
         </div>
 
         <div className="autopilot-field">
+          <div className="autopilot-field-label">🎯 How is the student chosen?</div>
+          <div className="age-selector" style={{ width: "100%" }}>
+            {[["mix", "🎲 Mix"], ["criteria", "👤 Random student"], ["challenge", "⚡ Quick challenge"]].map(([val, label]) => (
+              <button
+                key={val}
+                className={`age-option ${settings.whoMode === val ? "active" : ""}`}
+                style={{ flex: 1 }}
+                onClick={() => setSettings((st) => ({ ...st, whoMode: val }))}
+              >
+                {label}
+              </button>
+            ))}
+          </div>
+          <p className="onboarding-body" style={{ fontSize: 13, margin: "6px 0 0" }}>
+            {settings.whoMode === "challenge"
+              ? "Quick challenges: the first student to do it shares, e.g. “first to put their hand up” or “first to say a word starting with B”."
+              : settings.whoMode === "criteria"
+              ? "A random description picks the student, e.g. “the student with the longest hair”."
+              : "Mixes random descriptions with quick challenges."}
+          </p>
+        </div>
+
+        <div className="autopilot-field">
           <div className="autopilot-field-label">🙋 Students chosen per question</div>
           <div className="age-selector" style={{ width: "100%" }}>
             {STUDENT_COUNT_OPTIONS.map((n) => (
@@ -1850,7 +2035,7 @@ function AutopilotRunner({ deck, startIndex, settings, primaryLanguage, secondar
   const [phase, setPhase] = useState("discuss"); // 'discuss' | 'share'
   const [timeLeft, setTimeLeft] = useState(settings.duration);
   const [paused, setPaused] = useState(false);
-  const [selectedCriteria, setSelectedCriteria] = useState(() => shuffle(RANDOM_CRITERIA).slice(0, settings.studentsPerQuestion));
+  const [selectedCriteria, setSelectedCriteria] = useState(() => pickSpeakers(settings.studentsPerQuestion, settings.whoMode));
   const [studentIndex, setStudentIndex] = useState(0);
   const [animKey, setAnimKey] = useState(0);
   const [finished, setFinished] = useState(false);
@@ -1865,7 +2050,7 @@ function AutopilotRunner({ deck, startIndex, settings, primaryLanguage, secondar
   // Set up a fresh card: new hidden student list, reset phase & timer, play "choosing" sound
   useEffect(() => {
     if (finished) return;
-    setSelectedCriteria(shuffle(RANDOM_CRITERIA).slice(0, settings.studentsPerQuestion));
+    setSelectedCriteria(pickSpeakers(settings.studentsPerQuestion, settings.whoMode));
     setStudentIndex(0);
     setPhase("discuss");
     setTimeLeft(settings.duration);
@@ -2078,13 +2263,13 @@ function HomeScreen({ primaryLanguage, secondaryLanguage, ageGroup, setAgeGroup,
 
 function Card({ card, animKey, primaryLanguage, secondaryLanguage, ageGroup }) {
   const isActivity = card.type === "activity";
-  const accent = isActivity ? "#2BB3A3" : "#FF6B57";
+  const accent = isActivity ? "var(--a)" : "var(--q)";
   const primaryText = getCardText(card, primaryLanguage, ageGroup);
   const secondaryText = secondaryLanguage !== primaryLanguage ? getCardText(card, secondaryLanguage, ageGroup) : null;
 
   return (
     <div key={animKey} className="game-card">
-      <span className="card-kind" style={{ color: accent, background: isActivity ? "#DFF6F2" : "#FFE7E1" }}>
+      <span className="card-kind" style={{ color: accent, background: isActivity ? "var(--awash)" : "var(--qwash)" }}>
         {isActivity ? "🎲 Do this" : "💬 Talk about it"}
       </span>
 
@@ -2123,7 +2308,7 @@ function GameScreen({ category, primaryLanguage, secondaryLanguage, ageGroup, ra
   const [showRandomPanel, setShowRandomPanel] = useState(false);
   const [showAutopilotSettings, setShowAutopilotSettings] = useState(false);
   const [autopilotRunning, setAutopilotRunning] = useState(false);
-  const [autopilotSettings, setAutopilotSettings] = useState({ order: "sequential", duration: 60, studentsPerQuestion: 1, shareDuration: 30 });
+  const [autopilotSettings, setAutopilotSettings] = useState({ order: "sequential", duration: 60, studentsPerQuestion: 1, shareDuration: 30, whoMode: "mix" });
 
   const total = deck.length;
   const current = deck[index];
@@ -2347,6 +2532,7 @@ export default function App() {
   const [ageGroup, setAgeGroup] = useState("y5_6");
   const [randomSelectEnabled, setRandomSelectEnabled] = useState(false);
   const [showOnboarding, setShowOnboarding] = useState(true);
+  const [theme, setTheme] = useState("sunny");
 
   function selectCategory(cat) {
     setCategory(cat);
@@ -2369,18 +2555,46 @@ export default function App() {
   }
 
   return (
-    <div className={`app-root age-${ageGroup.replace("_", "-")}`}>
+    <div className={`app-root age-${ageGroup.replace("_", "-")} theme-${theme}`}>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@400;600;700;800&display=swap');
+        .app-root {
+          --bg:#FFF7ED; --bg2:#FFF1E4; --card:#FFFFFF; --ink:#2B2621; --ink2:#4A4339; --muted:#9C9284; --faint:#B0A695; --faint2:#C2B8A8;
+          --line:#EFE6DA; --line2:#D9CCB9; --q:#FF6B57; --q-rgb:255,107,87; --qwash:#FFE7E1; --qwash2:#FFD9CF; --qsoft:#FFB9AC; --qdark:#C1442C;
+          --a:#2BB3A3; --awash:#DFF6F2; --awash2:#C9F0E9; --adark:#1F6E63; --amid:#1F8A7E; --sand:#E8A94E; --sandline:#C2A876;
+          --warn:#B9761F; --warnwash:#FFF6E7; --warnline:#F4C77B; --dark:#3D3730; --ok:#2E8B57; --ok2:#4CAF7D; --okwash:#E4F7EC;
+        }
+        .app-root.theme-ocean {
+          --bg:#EFF9F9; --bg2:#DDF1F2; --card:#FFFFFF; --ink:#16323A; --ink2:#355760; --muted:#6B8D95; --faint:#97B2B8; --faint2:#B3CACE;
+          --line:#D3E9EB; --line2:#B2D3D8; --q:#2A86BA; --q-rgb:42,134,186; --qwash:#DCEEF8; --qwash2:#C2E0F1; --qsoft:#9CCBE6; --qdark:#1B5C84;
+          --a:#1FA58A; --awash:#DCF4EE; --awash2:#BFEADF; --adark:#12695A; --amid:#178A74; --sand:#4DB3BF; --sandline:#7FC4CC;
+          --warn:#1D7C86; --warnwash:#E1F4F5; --warnline:#8ED0D6; --dark:#1F4651; --ok:#1F8F6B; --ok2:#3DB88F; --okwash:#DDF4EC;
+        }
+        .app-root.theme-calm {
+          --bg:#F3F3F1; --bg2:#E9E9E7; --card:#FFFFFF; --ink:#262626; --ink2:#454545; --muted:#858585; --faint:#A6A6A6; --faint2:#BDBDBD;
+          --line:#E2E2E0; --line2:#CDCDCB; --q:#4D4D4D; --q-rgb:77,77,77; --qwash:#E7E7E5; --qwash2:#DADAD8; --qsoft:#BDBDBB; --qdark:#2E2E2E;
+          --a:#7A7A7A; --awash:#EDEDEB; --awash2:#E0E0DE; --adark:#3F3F3F; --amid:#5C5C5C; --sand:#9A9A9A; --sandline:#B5B5B3;
+          --warn:#5A5A5A; --warnwash:#ECECEA; --warnline:#C2C2C0; --dark:#444444; --ok:#5E5E5E; --ok2:#808080; --okwash:#EBEBE9;
+        }
+        .app-root.theme-calm .blob, .app-root.theme-calm .category-blob, .app-root.theme-calm .reo-launch-emoji, .app-root.theme-calm .onboarding-blob,
+        .app-root.theme-calm .confetti, .app-root.theme-calm .count-scene, .app-root.theme-calm .location-scene, .app-root.theme-calm .tile-blob { filter: grayscale(1); }
+        .app-root.theme-calm * { animation-duration: 0.4s !important; }
+        .theme-bar { display: flex; align-items: center; gap: 4px; margin: 36px 0 4px; padding: 4px; background: var(--card); border: 2px solid var(--line); border-radius: 999px; z-index: 5; }
+        .theme-btn { display: flex; align-items: center; gap: 6px; font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 13px; border: none; background: transparent; color: var(--muted); border-radius: 999px; padding: 7px 12px; cursor: pointer; }
+        .theme-btn:hover { color: var(--ink2); }
+        .theme-btn.active { background: var(--qwash); color: var(--q); }
+        .theme-dot { width: 14px; height: 14px; border-radius: 50%; border: 2px solid var(--card); box-shadow: 0 0 0 1px var(--line2); }
+        .theme-btn:focus-visible { outline: 3px solid var(--ink); outline-offset: 2px; }
+        @media (max-width: 560px) { .theme-btn { padding: 7px 9px; font-size: 12px; } .theme-bar { margin-top: 44px; } }
 
         * { box-sizing: border-box; }
 
         .app-root {
           min-height: 100vh;
           width: 100%;
-          background: radial-gradient(circle at 15% 10%, #FFF1E4 0%, #FFF7ED 45%, #FFF7ED 100%);
+          background: radial-gradient(circle at 15% 10%, var(--bg2) 0%, var(--bg) 45%, var(--bg) 100%);
           font-family: 'Nunito', sans-serif;
-          color: #2B2621;
+          color: var(--ink);
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -2399,24 +2613,24 @@ export default function App() {
           font-weight: 800;
           font-size: 22px;
           letter-spacing: 0.2px;
-          color: #2B2621;
+          color: var(--ink);
         }
-        .brand-text span { color: #FF6B57; }
+        .brand-text span { color: var(--q); }
 
         /* Clock-with-sand logo */
         .clock-logo { width: 34px; height: 34px; flex-shrink: 0; }
         .clock-face {
           width: 100%; height: 100%;
           border-radius: 50%;
-          border: 3px solid #2B2621;
-          background: #FFF7ED;
+          border: 3px solid var(--ink);
+          background: var(--bg);
           position: relative;
           overflow: hidden;
         }
         .sand-fill {
           position: absolute;
           bottom: 0; left: 0; right: 0;
-          background: linear-gradient(180deg, #F4C77B 0%, #E8A94E 100%);
+          background: linear-gradient(180deg, var(--warnline) 0%, var(--sand) 100%);
           animation: fillSand 6s ease-in-out infinite;
         }
         @keyframes fillSand {
@@ -2426,7 +2640,7 @@ export default function App() {
         }
         .clock-hand {
           position: absolute;
-          background: #2B2621;
+          background: var(--ink);
           left: 50%;
           bottom: 50%;
           transform-origin: bottom center;
@@ -2452,23 +2666,23 @@ export default function App() {
           font-family: 'Nunito', sans-serif;
           font-weight: 700;
           font-size: 13px;
-          background: #FFFFFF;
-          border: 2px solid #EFE6DA;
+          background: var(--card);
+          border: 2px solid var(--line);
           border-radius: 999px;
           padding: 9px 14px;
           cursor: pointer;
-          color: #4A4339;
+          color: var(--ink2);
           display: flex;
           align-items: center;
           gap: 6px;
         }
-        .lang-btn:hover { border-color: #D9CCB9; }
+        .lang-btn:hover { border-color: var(--line2); }
         .lang-current { font-size: 15px; }
         .lang-menu {
           position: absolute;
           top: calc(100% + 8px);
           right: 0;
-          background: #FFFFFF;
+          background: var(--card);
           border-radius: 16px;
           box-shadow: 0 12px 28px -8px rgba(43,38,33,0.2);
           padding: 8px;
@@ -2489,39 +2703,39 @@ export default function App() {
           font-weight: 700;
           font-size: 14px;
           cursor: pointer;
-          color: #4A4339;
+          color: var(--ink2);
         }
-        .lang-option:hover { background: #FFF7ED; }
-        .lang-option.active { background: #FFE7E1; color: #FF6B57; }
+        .lang-option:hover { background: var(--bg); }
+        .lang-option.active { background: var(--qwash); color: var(--q); }
 
         /* Random select toggle */
         .random-toggle {
           font-family: 'Nunito', sans-serif;
           font-weight: 800;
           font-size: 14px;
-          background: #FFFFFF;
-          border: 2px solid #EFE6DA;
+          background: var(--card);
+          border: 2px solid var(--line);
           border-radius: 999px;
           padding: 10px 18px 10px 14px;
           cursor: pointer;
-          color: #4A4339;
+          color: var(--ink2);
           display: flex;
           align-items: center;
           gap: 8px;
         }
         .random-toggle-dot {
           width: 10px; height: 10px; border-radius: 50%;
-          background: #D9CCB9;
+          background: var(--line2);
           transition: background 150ms ease;
         }
-        .random-toggle.on { border-color: #E8A94E; color: #B9761F; background: #FFF6E7; }
-        .random-toggle.on .random-toggle-dot { background: #E8A94E; }
+        .random-toggle.on { border-color: var(--sand); color: var(--warn); background: var(--warnwash); }
+        .random-toggle.on .random-toggle-dot { background: var(--sand); }
 
         /* Age group selector */
         .age-selector {
           display: flex;
-          background: #FFFFFF;
-          border: 2px solid #EFE6DA;
+          background: var(--card);
+          border: 2px solid var(--line);
           border-radius: 999px;
           padding: 4px;
           gap: 2px;
@@ -2535,10 +2749,10 @@ export default function App() {
           border-radius: 999px;
           padding: 8px 14px;
           cursor: pointer;
-          color: #9C9284;
+          color: var(--muted);
         }
-        .age-option:hover { color: #4A4339; }
-        .age-option.active { background: #FFE7E1; color: #FF6B57; }
+        .age-option:hover { color: var(--ink2); }
+        .age-option.active { background: var(--qwash); color: var(--q); }
 
         .home-random-row {
           margin-top: 26px;
@@ -2559,7 +2773,7 @@ export default function App() {
         }
         .home-hero { text-align: center; margin-bottom: 18px; }
         .home-hero .brand { justify-content: center; }
-        .home-tagline { color: #9C9284; font-weight: 600; margin-top: 10px; font-size: 15px; }
+        .home-tagline { color: var(--muted); font-weight: 600; margin-top: 10px; font-size: 15px; }
 
         .category-grid {
           width: 100%;
@@ -2570,7 +2784,7 @@ export default function App() {
         }
 
         .category-card {
-          background: #FFFFFF;
+          background: var(--card);
           border: none;
           border-radius: 28px;
           box-shadow: 0 14px 30px -12px rgba(43,38,33,0.14), 0 4px 10px rgba(43,38,33,0.05);
@@ -2589,7 +2803,7 @@ export default function App() {
           height: 96px;
           margin: 0 auto 14px;
           border-radius: 44% 56% 58% 42% / 48% 44% 56% 52%;
-          background: linear-gradient(135deg, #FFE7E1 0%, #FFD9CF 100%);
+          background: linear-gradient(135deg, var(--qwash) 0%, var(--qwash2) 100%);
           display: flex;
           align-items: center;
           justify-content: center;
@@ -2603,14 +2817,14 @@ export default function App() {
         }
         .category-desc {
           font-size: 14px;
-          color: #9C9284;
+          color: var(--muted);
           font-weight: 600;
           margin: 0;
           line-height: 1.4;
         }
         .category-desc-translated {
           font-size: 13px;
-          color: #C2A876;
+          color: var(--sandline);
           font-weight: 600;
           margin: 6px 0 0;
           line-height: 1.4;
@@ -2628,7 +2842,7 @@ export default function App() {
 
         .game-card {
           width: 100%;
-          background: #FFFFFF;
+          background: var(--card);
           border-radius: 32px;
           box-shadow: 0 18px 40px -12px rgba(43, 38, 33, 0.14), 0 4px 12px rgba(43,38,33,0.06);
           padding: 44px 40px 40px;
@@ -2681,7 +2895,7 @@ export default function App() {
           font-weight: 700;
           font-size: 30px;
           margin: 0 0 4px;
-          color: #2B2621;
+          color: var(--ink);
           line-height: 1.3;
         }
 
@@ -2689,7 +2903,7 @@ export default function App() {
           font-family: 'Nunito', sans-serif;
           font-weight: 700;
           font-size: 18px;
-          color: #9C9284;
+          color: var(--muted);
           margin: 0;
         }
 
@@ -2707,14 +2921,14 @@ export default function App() {
         .pick-student-btn {
           margin-top: 18px;
           max-width: 260px;
-          border-color: #E8A94E;
-          color: #B9761F;
+          border-color: var(--sand);
+          color: var(--warn);
         }
         .random-panel {
           margin-top: 18px;
           width: 100%;
-          background: #FFF6E7;
-          border: 2px solid #F4C77B;
+          background: var(--warnwash);
+          border: 2px solid var(--warnline);
           border-radius: 24px;
           padding: 22px 26px;
           text-align: center;
@@ -2724,14 +2938,14 @@ export default function App() {
           font-family: 'Nunito', sans-serif;
           font-weight: 800;
           font-size: 14px;
-          color: #B9761F;
+          color: var(--warn);
           margin-bottom: 6px;
         }
         .random-panel-criterion {
           font-family: 'Baloo 2', sans-serif;
           font-weight: 700;
           font-size: 22px;
-          color: #2B2621;
+          color: var(--ink);
           margin-bottom: 18px;
         }
         .random-panel-buttons {
@@ -2767,30 +2981,30 @@ export default function App() {
           font-family: 'Nunito', sans-serif;
           font-weight: 800;
           font-size: 15px;
-          background: #2B2621;
-          color: #FFFFFF;
+          background: var(--ink);
+          color: var(--card);
           border: none;
           border-radius: 18px;
           padding: 12px 20px;
           cursor: pointer;
           max-width: 220px;
         }
-        .autopilot-toggle:hover { background: #3D3730; }
+        .autopilot-toggle:hover { background: var(--dark); }
 
         .autopilot-field { margin-bottom: 18px; text-align: left; }
         .autopilot-field-label {
           font-family: 'Nunito', sans-serif;
           font-weight: 800;
           font-size: 13px;
-          color: #9C9284;
+          color: var(--muted);
           margin-bottom: 8px;
         }
         .autopilot-summary {
           font-size: 14px;
-          color: #4A4339;
+          color: var(--ink2);
           font-weight: 700;
           text-align: center;
-          background: #FFF7ED;
+          background: var(--bg);
           border-radius: 14px;
           padding: 12px 16px;
           margin: 4px 0 18px;
@@ -2808,7 +3022,7 @@ export default function App() {
           flex-direction: column;
           align-items: center;
         }
-        .turn-badge.sharing { background: #FFF6E7; color: #B9761F; }
+        .turn-badge.sharing { background: var(--warnwash); color: var(--warn); }
 
         .autopilot-timer {
           margin-top: 22px;
@@ -2818,14 +3032,14 @@ export default function App() {
           font-family: 'Nunito', sans-serif;
           font-weight: 800;
           font-size: 14px;
-          color: #9C9284;
+          color: var(--muted);
           margin-bottom: 4px;
         }
         .autopilot-timer-clock {
           font-family: 'Baloo 2', sans-serif;
           font-weight: 800;
           font-size: 56px;
-          color: #2B2621;
+          color: var(--ink);
           line-height: 1;
         }
         .autopilot-manual-row {
@@ -2839,14 +3053,14 @@ export default function App() {
           font-family: 'Nunito', sans-serif;
           font-weight: 700;
           font-size: 13px;
-          background: #FFFFFF;
-          border: 2px solid #EFE6DA;
+          background: var(--card);
+          border: 2px solid var(--line);
           border-radius: 999px;
           padding: 8px 14px;
           cursor: pointer;
-          color: #9C9284;
+          color: var(--muted);
         }
-        .autopilot-nav-btn:hover { border-color: #D9CCB9; color: #4A4339; }
+        .autopilot-nav-btn:hover { border-color: var(--line2); color: var(--ink2); }
         .autopilot-nav-btn:disabled { opacity: 0.35; cursor: not-allowed; }
 
         /* Reo Practice launch banner (home screen) */
@@ -2854,7 +3068,7 @@ export default function App() {
           width: 100%;
           max-width: 640px;
           margin-top: 22px;
-          background: linear-gradient(135deg, #DFF6F2 0%, #C9F0E9 100%);
+          background: linear-gradient(135deg, var(--awash) 0%, var(--awash2) 100%);
           border: none;
           border-radius: 24px;
           padding: 20px 24px;
@@ -2867,21 +3081,21 @@ export default function App() {
         }
         .bi { display: inline-flex; flex-direction: column; align-items: inherit; line-height: 1.25; vertical-align: middle; text-align: inherit; }
         .bi-en { display: block; }
-        .bi-es { display: block; font-size: 0.82em; font-style: italic; color: #1F8A7E; font-weight: 700; }
+        .bi-es { display: block; font-size: 0.82em; font-style: italic; color: var(--amid); font-weight: 700; }
         .bi-es.solo { font-size: 1em; font-style: normal; color: inherit; }
-        .tutor-launch-btn { border-color: #2BB3A3; }
+        .tutor-launch-btn { border-color: var(--a); }
         .reo-launch-btn:hover { transform: translateY(-3px); box-shadow: 0 16px 30px -12px rgba(43,38,33,0.2); }
         .reo-launch-emoji { font-size: 40px; flex-shrink: 0; }
         .reo-launch-text { display: flex; flex-direction: column; gap: 4px; }
-        .reo-launch-title { font-family: 'Baloo 2', sans-serif; font-weight: 700; font-size: 19px; color: #1F6E63; }
-        .reo-launch-desc { font-family: 'Nunito', sans-serif; font-weight: 600; font-size: 13px; color: #3E7A70; line-height: 1.4; }
+        .reo-launch-title { font-family: 'Baloo 2', sans-serif; font-weight: 700; font-size: 19px; color: var(--adark); }
+        .reo-launch-desc { font-family: 'Nunito', sans-serif; font-weight: 600; font-size: 13px; color: var(--adark); line-height: 1.4; }
 
         /* Reo Practice task screen */
-        .reo-tagline { color: #9C9284; font-weight: 600; font-size: 14px; margin: 4px 0 12px; text-align: center; }
+        .reo-tagline { color: var(--muted); font-weight: 600; font-size: 14px; margin: 4px 0 12px; text-align: center; }
         .reo-task { display: flex; flex-direction: column; align-items: center; width: 100%; }
         .reo-task-kind {
           font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 13px;
-          color: #2BB3A3; background: #DFF6F2; padding: 7px 16px; border-radius: 999px; margin-bottom: 18px;
+          color: var(--a); background: var(--awash); padding: 7px 16px; border-radius: 999px; margin-bottom: 18px;
         }
         .location-scene {
           position: relative; width: 140px; height: 140px; margin-bottom: 18px;
@@ -2889,34 +3103,34 @@ export default function App() {
         }
         .location-scene-noun { font-size: 72px; z-index: 1; }
         .location-scene-marker { position: absolute; font-size: 34px; }
-        .reo-english-hint { color: #9C9284; font-weight: 600; font-size: 15px; margin: 0 0 10px; }
-        .reo-sentence { font-family: 'Baloo 2', sans-serif; font-weight: 700; font-size: 28px; color: #2B2621; margin: 0 0 20px; text-align: center; }
-        .reo-blank { color: #FF6B57; border-bottom: 3px dashed #FFB9AC; padding: 0 4px; }
+        .reo-english-hint { color: var(--muted); font-weight: 600; font-size: 15px; margin: 0 0 10px; }
+        .reo-sentence { font-family: 'Baloo 2', sans-serif; font-weight: 700; font-size: 28px; color: var(--ink); margin: 0 0 20px; text-align: center; }
+        .reo-blank { color: var(--q); border-bottom: 3px dashed var(--qsoft); padding: 0 4px; }
         .reo-options { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-bottom: 14px; }
         .reo-option {
           font-family: 'Baloo 2', sans-serif; font-weight: 700; font-size: 17px;
-          background: #FFFFFF; border: 2px solid #EFE6DA; border-radius: 16px; padding: 12px 20px; cursor: pointer;
+          background: var(--card); border: 2px solid var(--line); border-radius: 16px; padding: 12px 20px; cursor: pointer;
         }
-        .reo-option:hover:not(:disabled) { border-color: #D9CCB9; }
-        .reo-option.correct { background: #E4F7EC; border-color: #4CAF7D; color: #2E8B57; }
-        .reo-option.incorrect { background: #FFE9E5; border-color: #FF6B57; color: #C1442C; }
-        .reo-option.reveal-correct { background: #E4F7EC; border-color: #4CAF7D; color: #2E8B57; }
+        .reo-option:hover:not(:disabled) { border-color: var(--line2); }
+        .reo-option.correct { background: var(--okwash); border-color: var(--ok2); color: var(--ok); }
+        .reo-option.incorrect { background: var(--qwash); border-color: var(--q); color: var(--qdark); }
+        .reo-option.reveal-correct { background: var(--okwash); border-color: var(--ok2); color: var(--ok); }
         .reo-option:disabled { cursor: default; }
         .reo-feedback { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 15px; margin-top: 4px; }
-        .reo-feedback.good { color: #2E8B57; }
-        .reo-feedback.oops { color: #C1442C; }
+        .reo-feedback.good { color: var(--ok); }
+        .reo-feedback.oops { color: var(--qdark); }
         .reo-answer-row {
-          min-height: 56px; width: 100%; max-width: 420px; background: #FFF7ED; border: 2px dashed #EFE6DA;
+          min-height: 56px; width: 100%; max-width: 420px; background: var(--bg); border: 2px dashed var(--line);
           border-radius: 16px; padding: 10px; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; justify-content: center; margin-bottom: 16px;
         }
-        .reo-answer-placeholder { color: #B0A695; font-weight: 600; font-size: 13px; }
+        .reo-answer-placeholder { color: var(--faint); font-weight: 600; font-size: 13px; }
         .reo-word-bank { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; margin-bottom: 18px; }
         .reo-tile {
           font-family: 'Baloo 2', sans-serif; font-weight: 700; font-size: 16px;
-          background: #FFFFFF; border: 2px solid #EFE6DA; border-radius: 12px; padding: 10px 16px; cursor: grab;
+          background: var(--card); border: 2px solid var(--line); border-radius: 12px; padding: 10px 16px; cursor: grab;
         }
-        .reo-tile:hover { border-color: #D9CCB9; }
-        .reo-tile.answer { background: #FFE7E1; border-color: #FF6B57; color: #C1442C; cursor: pointer; }
+        .reo-tile:hover { border-color: var(--line2); }
+        .reo-tile.answer { background: var(--qwash); border-color: var(--q); color: var(--qdark); cursor: pointer; }
         .reo-builder-buttons { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
 
         /* New Reo Practice visuals */
@@ -2935,55 +3149,55 @@ export default function App() {
         .reo-task-footer { display: flex; gap: 12px; align-items: center; justify-content: center; margin: 6px 0 4px; flex-wrap: wrap; }
         .reo-pronounce-btn, .reo-hint-btn {
           font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 13px;
-          background: #FFFFFF; border: 2px solid #EFE6DA; border-radius: 999px;
-          padding: 8px 14px; cursor: pointer; color: #4A4339; display: flex; align-items: center; gap: 6px;
+          background: var(--card); border: 2px solid var(--line); border-radius: 999px;
+          padding: 8px 14px; cursor: pointer; color: var(--ink2); display: flex; align-items: center; gap: 6px;
         }
-        .reo-pronounce-btn:hover, .reo-hint-btn:hover { border-color: #D9CCB9; }
+        .reo-pronounce-btn:hover, .reo-hint-btn:hover { border-color: var(--line2); }
         .reo-hint-text {
-          font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 14px; color: #B9761F;
-          background: #FFF6E7; border-radius: 12px; padding: 10px 14px; margin-top: 8px; text-align: center;
+          font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 14px; color: var(--warn);
+          background: var(--warnwash); border-radius: 12px; padding: 10px 14px; margin-top: 8px; text-align: center;
         }
         .reo-key-badge {
           display: inline-flex; align-items: center; justify-content: center;
           min-width: 20px; height: 20px; font-size: 11px; font-weight: 800;
-          background: #2B2621; color: #FFFFFF; border-radius: 6px; padding: 0 4px;
+          background: var(--ink); color: var(--card); border-radius: 6px; padding: 0 4px;
         }
         .reo-key-badge.small { min-width: 16px; height: 16px; font-size: 10px; }
         .reo-keys-legend {
-          margin-top: 16px; font-size: 12px; color: #B0A695; text-align: center; max-width: 640px; line-height: 1.6;
+          margin-top: 16px; font-size: 12px; color: var(--faint); text-align: center; max-width: 640px; line-height: 1.6;
         }
 
         .reo-category-block { width: 100%; max-width: 680px; display: flex; flex-direction: column; align-items: center; gap: 10px; margin-bottom: 8px; }
 
         .reo-english-toggle {
           font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 13px;
-          background: #FFFFFF; border: 2px solid #EFE6DA; border-radius: 999px;
-          padding: 9px 16px; cursor: pointer; color: #9C9284; margin-bottom: 14px;
+          background: var(--card); border: 2px solid var(--line); border-radius: 999px;
+          padding: 9px 16px; cursor: pointer; color: var(--muted); margin-bottom: 14px;
           display: flex; align-items: center; gap: 8px;
         }
-        .reo-english-toggle-dot { width: 10px; height: 10px; border-radius: 50%; background: #D9CCB9; }
-        .reo-english-toggle.on { border-color: #2BB3A3; color: #1F6E63; background: #E7F7F4; }
-        .reo-english-toggle.on .reo-english-toggle-dot { background: #2BB3A3; }
+        .reo-english-toggle-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--line2); }
+        .reo-english-toggle.on { border-color: var(--a); color: var(--adark); background: var(--awash); }
+        .reo-english-toggle.on .reo-english-toggle-dot { background: var(--a); }
         .reo-category-grid { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
         .reo-category-pill { font-size: 13px; }
         .reo-category-actions { display: flex; gap: 10px; }
         .reo-mini-btn {
           font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 12px;
-          background: none; border: none; color: #9C9284; text-decoration: underline; cursor: pointer; padding: 2px 4px;
+          background: none; border: none; color: var(--muted); text-decoration: underline; cursor: pointer; padding: 2px 4px;
         }
-        .reo-mini-btn:hover { color: #4A4339; }
+        .reo-mini-btn:hover { color: var(--ink2); }
 
         .student-mode-card {
-          margin-top: 26px; width: 100%; max-width: 640px; background: #F3F1EC;
-          border: 2px dashed #D9CCB9; border-radius: 20px; padding: 16px 20px;
+          margin-top: 26px; width: 100%; max-width: 640px; background: var(--bg2);
+          border: 2px dashed var(--line2); border-radius: 20px; padding: 16px 20px;
           display: flex; flex-direction: column; align-items: center; gap: 4px; cursor: pointer; text-align: center;
         }
         .student-mode-badge {
           font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 11px; letter-spacing: 0.5px;
-          background: #2B2621; color: #FFFFFF; border-radius: 999px; padding: 3px 10px; margin-bottom: 4px;
+          background: var(--ink); color: var(--card); border-radius: 999px; padding: 3px 10px; margin-bottom: 4px;
         }
-        .student-mode-title { font-family: 'Baloo 2', sans-serif; font-weight: 700; font-size: 17px; color: #4A4339; }
-        .student-mode-desc { font-family: 'Nunito', sans-serif; font-weight: 600; font-size: 12px; color: #9C9284; max-width: 480px; }
+        .student-mode-title { font-family: 'Baloo 2', sans-serif; font-weight: 700; font-size: 17px; color: var(--ink2); }
+        .student-mode-desc { font-family: 'Nunito', sans-serif; font-weight: 600; font-size: 12px; color: var(--muted); max-width: 480px; }
 
         /* Creator credit */
         .creator-credit {
@@ -2991,10 +3205,10 @@ export default function App() {
           text-align: center;
           font-family: 'Nunito', sans-serif;
           font-size: 12px;
-          color: #C2B8A8;
+          color: var(--faint2);
         }
-        .creator-credit a { color: #C2B8A8; text-decoration: underline; }
-        .creator-credit a:hover { color: #9C9284; }
+        .creator-credit a { color: var(--faint2); text-decoration: underline; }
+        .creator-credit a:hover { color: var(--muted); }
 
         .autopilot-controls {
           display: flex;
@@ -3023,7 +3237,7 @@ export default function App() {
           animation: fadeIn 200ms ease;
         }
         .reveal-popup {
-          background: #FFFFFF;
+          background: var(--card);
           border-radius: 32px;
           padding: 48px 56px;
           text-align: center;
@@ -3035,14 +3249,14 @@ export default function App() {
           font-family: 'Nunito', sans-serif;
           font-weight: 800;
           font-size: 18px;
-          color: #FF6B57;
+          color: var(--q);
           margin-bottom: 10px;
         }
         .reveal-popup-name {
           font-family: 'Baloo 2', sans-serif;
           font-weight: 800;
           font-size: 40px;
-          color: #2B2621;
+          color: var(--ink);
           line-height: 1.25;
           margin-bottom: 18px;
         }
@@ -3050,8 +3264,8 @@ export default function App() {
           font-family: 'Nunito', sans-serif;
           font-weight: 700;
           font-size: 18px;
-          color: #B9761F;
-          background: #FFF6E7;
+          color: var(--warn);
+          background: var(--warnwash);
           border-radius: 14px;
           padding: 12px 16px;
         }
@@ -3068,9 +3282,9 @@ export default function App() {
           font-family: 'Baloo 2', sans-serif;
           font-weight: 800;
           font-size: 24px;
-          color: #B9761F;
-          background: #FFF6E7;
-          border: 2px solid #F4C77B;
+          color: var(--warn);
+          background: var(--warnwash);
+          border: 2px solid var(--warnline);
           border-radius: 999px;
           padding: 14px 28px;
           box-shadow: 0 12px 28px -8px rgba(43,38,33,0.25);
@@ -3104,37 +3318,37 @@ export default function App() {
           justify-content: center;
         }
         .btn:active { transform: scale(0.97); }
-        .btn:focus-visible { outline: 3px solid #2B2621; outline-offset: 3px; }
+        .btn:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
 
         .btn-primary {
-          background: #FF6B57;
-          color: #FFFFFF;
-          box-shadow: 0 8px 18px -6px rgba(255,107,87,0.55);
+          background: var(--q);
+          color: var(--card);
+          box-shadow: 0 8px 18px -6px rgba(var(--q-rgb),0.55);
           flex: 1;
           max-width: 220px;
         }
-        .btn-primary:hover { box-shadow: 0 10px 22px -6px rgba(255,107,87,0.7); }
+        .btn-primary:hover { box-shadow: 0 10px 22px -6px rgba(var(--q-rgb),0.7); }
 
         .btn-secondary {
-          background: #FFFFFF;
-          color: #4A4339;
-          border: 2px solid #EFE6DA;
+          background: var(--card);
+          color: var(--ink2);
+          border: 2px solid var(--line);
           flex: 1;
           max-width: 220px;
         }
-        .btn-secondary:hover { border-color: #D9CCB9; }
+        .btn-secondary:hover { border-color: var(--line2); }
         .btn-secondary:disabled { opacity: 0.35; cursor: not-allowed; }
 
         .progress {
           font-family: 'Baloo 2', sans-serif;
           font-weight: 700;
           font-size: 17px;
-          color: #9C9284;
+          color: var(--muted);
           min-width: 100px;
           text-align: center;
         }
 
-        .hint { margin-top: 14px; font-size: 13px; color: #B0A695; text-align: center; }
+        .hint { margin-top: 14px; font-size: 13px; color: var(--faint); text-align: center; }
 
         /* Help button */
         .help-btn {
@@ -3145,14 +3359,14 @@ export default function App() {
           font-family: 'Nunito', sans-serif;
           font-weight: 700;
           font-size: 13px;
-          background: #FFFFFF;
-          border: 2px solid #EFE6DA;
+          background: var(--card);
+          border: 2px solid var(--line);
           border-radius: 999px;
           padding: 9px 14px;
           cursor: pointer;
-          color: #4A4339;
+          color: var(--ink2);
         }
-        .help-btn:hover { border-color: #D9CCB9; }
+        .help-btn:hover { border-color: var(--line2); }
 
         /* Onboarding modal (shares the generic modal look) */
         .modal-overlay {
@@ -3167,7 +3381,7 @@ export default function App() {
         }
         .modal-overlay.open { display: flex; }
         .modal {
-          background: #FFFFFF;
+          background: var(--card);
           border-radius: 28px;
           padding: 32px;
           width: 100%;
@@ -3187,7 +3401,7 @@ export default function App() {
           height: 84px;
           margin: 0 auto 16px;
           border-radius: 44% 56% 58% 42% / 48% 44% 56% 52%;
-          background: linear-gradient(135deg, #FFE7E1 0%, #FFD9CF 100%);
+          background: linear-gradient(135deg, var(--qwash) 0%, var(--qwash2) 100%);
           display: flex;
           align-items: center;
           justify-content: center;
@@ -3195,7 +3409,7 @@ export default function App() {
         }
         .onboarding-body {
           font-size: 15px;
-          color: #4A4339;
+          color: var(--ink2);
           font-weight: 600;
           line-height: 1.5;
           margin: 0 0 22px;
@@ -3210,9 +3424,9 @@ export default function App() {
           width: 8px;
           height: 8px;
           border-radius: 50%;
-          background: #EFE6DA;
+          background: var(--line);
         }
-        .onboarding-dot.active { background: #FF6B57; }
+        .onboarding-dot.active { background: var(--q); }
         .onboarding-buttons {
           display: flex;
           gap: 12px;
@@ -3230,19 +3444,19 @@ export default function App() {
           display: flex;
           align-items: center;
           gap: 8px;
-          background: #FFF7ED;
-          border: 2px solid #EFE6DA;
+          background: var(--bg);
+          border: 2px solid var(--line);
           border-radius: 14px;
           padding: 10px 12px;
           font-family: 'Nunito', sans-serif;
           font-weight: 700;
           font-size: 13px;
-          color: #4A4339;
+          color: var(--ink2);
           cursor: pointer;
           text-align: left;
         }
-        .onboarding-lang-option:hover { border-color: #D9CCB9; }
-        .onboarding-lang-option.active { background: #FFE7E1; border-color: #FF6B57; color: #FF6B57; }
+        .onboarding-lang-option:hover { border-color: var(--line2); }
+        .onboarding-lang-option.active { background: var(--qwash); border-color: var(--q); color: var(--q); }
         .onboarding-lang-flag { font-size: 17px; }
 
         /* Age-group visual scaling — bigger & bolder for younger years,
@@ -3295,6 +3509,15 @@ export default function App() {
         secondaryLanguage={secondaryLanguage}
         setSecondaryLanguage={setSecondaryLanguage}
       />
+
+      <div className="theme-bar" role="group" aria-label="Colour theme">
+        {[["sunny", "Sunny", "#FF6B57", "#2BB3A3"], ["ocean", "Ocean", "#2A86BA", "#1FA58A"], ["calm", "Calm", "#4D4D4D", "#BDBDBD"]].map(([id, label, c1, c2]) => (
+          <button key={id} className={`theme-btn ${theme === id ? "active" : ""}`} onClick={() => setTheme(id)} aria-pressed={theme === id}>
+            <span className="theme-dot" style={{ background: `linear-gradient(135deg, ${c1} 50%, ${c2} 50%)` }} />
+            {label}
+          </button>
+        ))}
+      </div>
 
       <button className="help-btn" onClick={() => setShowOnboarding(true)} aria-label="Show welcome tutorial">
         ❓ Help
